@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Rapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtQ-JG-pkH">
+                                <rect key="frame" x="270" y="114" width="60" height="30"/>
+                                <state key="normal" title="録音する"/>
+                                <connections>
+                                    <action selector="didTapRecodeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="reB-2w-Sh0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCM-OB-Ovb">
+                                <rect key="frame" x="270" y="210" width="60" height="30"/>
+                                <state key="normal" title="再生する"/>
+                                <connections>
+                                    <action selector="didTapPlayBackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Sl-wU-kos"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXx-ue-K49">
+                                <rect key="frame" x="263" y="291" width="75" height="30"/>
+                                <state key="normal" title="ビート流す"/>
+                                <connections>
+                                    <action selector="didTapBeatButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YcL-FM-MZg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TJ-CH-k3Z">
+                                <rect key="frame" x="270" y="162" width="60" height="30"/>
+                                <state key="normal" title="録音停止"/>
+                                <connections>
+                                    <action selector="didTapRecodeStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XJo-sL-wvP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1TJ-CH-k3Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="77E-Hg-Vf1"/>
+                            <constraint firstItem="lXx-ue-K49" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RRN-D6-2mx"/>
+                            <constraint firstItem="jtQ-JG-pkH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ly1-Dq-mRR"/>
+                            <constraint firstItem="aCM-OB-Ovb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wcm-fO-Kac"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

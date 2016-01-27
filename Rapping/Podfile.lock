@@ -1,0 +1,10 @@
+PODS:
+  - SwiftFilePath (0.0.6)
+
+DEPENDENCIES:
+  - SwiftFilePath
+
+SPEC CHECKSUMS:
+  SwiftFilePath: 52c1db61018e0a3941191eb71002cb5cbdaa39e7
+
+COCOAPODS: 0.39.0

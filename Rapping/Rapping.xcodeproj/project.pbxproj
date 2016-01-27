@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		88395D6C06A9916B370F2B17 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7BD1FF3B26F420F551A5A9 /* Pods.framework */; };
+		FFCA99AA1C58A4ED00F78684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCA99A91C58A4ED00F78684 /* AppDelegate.swift */; };
+		FFCA99AC1C58A4ED00F78684 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCA99AB1C58A4ED00F78684 /* ViewController.swift */; };
+		FFCA99AF1C58A4ED00F78684 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99AD1C58A4ED00F78684 /* Main.storyboard */; };
+		FFCA99B21C58A4ED00F78684 /* Rapping.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FFCA99B01C58A4ED00F78684 /* Rapping.xcdatamodeld */; };
+		FFCA99B41C58A4ED00F78684 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99B31C58A4ED00F78684 /* Assets.xcassets */; };
+		FFCA99B71C58A4ED00F78684 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99B51C58A4ED00F78684 /* LaunchScreen.storyboard */; };
+		FFCA99C21C58A4ED00F78684 /* RappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCA99C11C58A4ED00F78684 /* RappingTests.swift */; };
+		FFCA99CD1C58A4EE00F78684 /* RappingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCA99CC1C58A4EE00F78684 /* RappingUITests.swift */; };
+		FFCA99DB1C58A5C600F78684 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFCA99DA1C58A5C600F78684 /* AVFoundation.framework */; };
+		FFCA99DF1C58C2B100F78684 /* FS_89BPM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99DE1C58C2B100F78684 /* FS_89BPM.mp3 */; };
+		FFCA99E21C58EE5800F78684 /* HIPHOP_106BPM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99E11C58EE5800F78684 /* HIPHOP_106BPM.mp3 */; };
+		FFCA99E41C58EE7000F78684 /* RB_85BPM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99E31C58EE7000F78684 /* RB_85BPM.mp3 */; };
+		FFCA99E61C58EE8300F78684 /* HIPHOP_140BPM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99E51C58EE8300F78684 /* HIPHOP_140BPM.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FFCA99BE1C58A4ED00F78684 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFCA999E1C58A4ED00F78684 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFCA99A51C58A4ED00F78684;
+			remoteInfo = Rapping;
+		};
+		FFCA99C91C58A4EE00F78684 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFCA999E1C58A4ED00F78684 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFCA99A51C58A4ED00F78684;
+			remoteInfo = Rapping;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		682B5F0FFDD17E11249D8F55 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8B7BD1FF3B26F420F551A5A9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F71E139E42B286689C25AD8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		FFCA99A61C58A4ED00F78684 /* Rapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFCA99A91C58A4ED00F78684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FFCA99AB1C58A4ED00F78684 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FFCA99AE1C58A4ED00F78684 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FFCA99B11C58A4ED00F78684 /* Rapping.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rapping.xcdatamodel; sourceTree = "<group>"; };
+		FFCA99B31C58A4ED00F78684 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFCA99B61C58A4ED00F78684 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FFCA99B81C58A4ED00F78684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFCA99BD1C58A4ED00F78684 /* RappingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RappingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFCA99C11C58A4ED00F78684 /* RappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RappingTests.swift; sourceTree = "<group>"; };
+		FFCA99C31C58A4ED00F78684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFCA99C81C58A4EE00F78684 /* RappingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RappingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFCA99CC1C58A4EE00F78684 /* RappingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RappingUITests.swift; sourceTree = "<group>"; };
+		FFCA99CE1C58A4EE00F78684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFCA99DA1C58A5C600F78684 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FFCA99DE1C58C2B100F78684 /* FS_89BPM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FS_89BPM.mp3; sourceTree = "<group>"; };
+		FFCA99E11C58EE5800F78684 /* HIPHOP_106BPM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HIPHOP_106BPM.mp3; sourceTree = "<group>"; };
+		FFCA99E31C58EE7000F78684 /* RB_85BPM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = RB_85BPM.mp3; sourceTree = "<group>"; };
+		FFCA99E51C58EE8300F78684 /* HIPHOP_140BPM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HIPHOP_140BPM.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFCA99A31C58A4ED00F78684 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFCA99DB1C58A5C600F78684 /* AVFoundation.framework in Frameworks */,
+				88395D6C06A9916B370F2B17 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFCA99BA1C58A4ED00F78684 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFCA99C51C58A4EE00F78684 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		57B627FD474670D6198FBA97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B7BD1FF3B26F420F551A5A9 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C929C9C09E025DDBBD81400C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				682B5F0FFDD17E11249D8F55 /* Pods.debug.xcconfig */,
+				9F71E139E42B286689C25AD8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FFCA999D1C58A4ED00F78684 = {
+			isa = PBXGroup;
+			children = (
+				FFCA99DA1C58A5C600F78684 /* AVFoundation.framework */,
+				FFCA99A81C58A4ED00F78684 /* Rapping */,
+				FFCA99C01C58A4ED00F78684 /* RappingTests */,
+				FFCA99CB1C58A4EE00F78684 /* RappingUITests */,
+				FFCA99A71C58A4ED00F78684 /* Products */,
+				C929C9C09E025DDBBD81400C /* Pods */,
+				57B627FD474670D6198FBA97 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FFCA99A71C58A4ED00F78684 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFCA99A61C58A4ED00F78684 /* Rapping.app */,
+				FFCA99BD1C58A4ED00F78684 /* RappingTests.xctest */,
+				FFCA99C81C58A4EE00F78684 /* RappingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFCA99A81C58A4ED00F78684 /* Rapping */ = {
+			isa = PBXGroup;
+			children = (
+				FFCA99A91C58A4ED00F78684 /* AppDelegate.swift */,
+				FFCA99AB1C58A4ED00F78684 /* ViewController.swift */,
+				FFCA99AD1C58A4ED00F78684 /* Main.storyboard */,
+				FFCA99B31C58A4ED00F78684 /* Assets.xcassets */,
+				FFCA99B51C58A4ED00F78684 /* LaunchScreen.storyboard */,
+				FFCA99B81C58A4ED00F78684 /* Info.plist */,
+				FFCA99B01C58A4ED00F78684 /* Rapping.xcdatamodeld */,
+				FFCA99E01C58EE1B00F78684 /* Beats */,
+			);
+			path = Rapping;
+			sourceTree = "<group>";
+		};
+		FFCA99C01C58A4ED00F78684 /* RappingTests */ = {
+			isa = PBXGroup;
+			children = (
+				FFCA99C11C58A4ED00F78684 /* RappingTests.swift */,
+				FFCA99C31C58A4ED00F78684 /* Info.plist */,
+			);
+			path = RappingTests;
+			sourceTree = "<group>";
+		};
+		FFCA99CB1C58A4EE00F78684 /* RappingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FFCA99CC1C58A4EE00F78684 /* RappingUITests.swift */,
+				FFCA99CE1C58A4EE00F78684 /* Info.plist */,
+			);
+			path = RappingUITests;
+			sourceTree = "<group>";
+		};
+		FFCA99E01C58EE1B00F78684 /* Beats */ = {
+			isa = PBXGroup;
+			children = (
+				FFCA99E11C58EE5800F78684 /* HIPHOP_106BPM.mp3 */,
+				FFCA99DE1C58C2B100F78684 /* FS_89BPM.mp3 */,
+				FFCA99E51C58EE8300F78684 /* HIPHOP_140BPM.mp3 */,
+				FFCA99E31C58EE7000F78684 /* RB_85BPM.mp3 */,
+			);
+			name = Beats;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FFCA99A51C58A4ED00F78684 /* Rapping */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFCA99D11C58A4EE00F78684 /* Build configuration list for PBXNativeTarget "Rapping" */;
+			buildPhases = (
+				83C40D6F91DE2EB67E1FF8C8 /* Check Pods Manifest.lock */,
+				FFCA99A21C58A4ED00F78684 /* Sources */,
+				FFCA99A31C58A4ED00F78684 /* Frameworks */,
+				FFCA99A41C58A4ED00F78684 /* Resources */,
+				0C2096EA7FFF8620659364E5 /* Embed Pods Frameworks */,
+				0708E76589BB67C60B527B98 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rapping;
+			productName = Rapping;
+			productReference = FFCA99A61C58A4ED00F78684 /* Rapping.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FFCA99BC1C58A4ED00F78684 /* RappingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFCA99D41C58A4EE00F78684 /* Build configuration list for PBXNativeTarget "RappingTests" */;
+			buildPhases = (
+				FFCA99B91C58A4ED00F78684 /* Sources */,
+				FFCA99BA1C58A4ED00F78684 /* Frameworks */,
+				FFCA99BB1C58A4ED00F78684 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFCA99BF1C58A4ED00F78684 /* PBXTargetDependency */,
+			);
+			name = RappingTests;
+			productName = RappingTests;
+			productReference = FFCA99BD1C58A4ED00F78684 /* RappingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FFCA99C71C58A4EE00F78684 /* RappingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFCA99D71C58A4EE00F78684 /* Build configuration list for PBXNativeTarget "RappingUITests" */;
+			buildPhases = (
+				FFCA99C41C58A4EE00F78684 /* Sources */,
+				FFCA99C51C58A4EE00F78684 /* Frameworks */,
+				FFCA99C61C58A4EE00F78684 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFCA99CA1C58A4EE00F78684 /* PBXTargetDependency */,
+			);
+			name = RappingUITests;
+			productName = RappingUITests;
+			productReference = FFCA99C81C58A4EE00F78684 /* RappingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFCA999E1C58A4ED00F78684 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Dorirus;
+				TargetAttributes = {
+					FFCA99A51C58A4ED00F78684 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = VVPGU4ZJNW;
+					};
+					FFCA99BC1C58A4ED00F78684 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = VVPGU4ZJNW;
+						TestTargetID = FFCA99A51C58A4ED00F78684;
+					};
+					FFCA99C71C58A4EE00F78684 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = VVPGU4ZJNW;
+						TestTargetID = FFCA99A51C58A4ED00F78684;
+					};
+				};
+			};
+			buildConfigurationList = FFCA99A11C58A4ED00F78684 /* Build configuration list for PBXProject "Rapping" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FFCA999D1C58A4ED00F78684;
+			productRefGroup = FFCA99A71C58A4ED00F78684 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFCA99A51C58A4ED00F78684 /* Rapping */,
+				FFCA99BC1C58A4ED00F78684 /* RappingTests */,
+				FFCA99C71C58A4EE00F78684 /* RappingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFCA99A41C58A4ED00F78684 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFCA99B71C58A4ED00F78684 /* LaunchScreen.storyboard in Resources */,
+				FFCA99E41C58EE7000F78684 /* RB_85BPM.mp3 in Resources */,
+				FFCA99E61C58EE8300F78684 /* HIPHOP_140BPM.mp3 in Resources */,
+				FFCA99E21C58EE5800F78684 /* HIPHOP_106BPM.mp3 in Resources */,
+				FFCA99B41C58A4ED00F78684 /* Assets.xcassets in Resources */,
+				FFCA99DF1C58C2B100F78684 /* FS_89BPM.mp3 in Resources */,
+				FFCA99AF1C58A4ED00F78684 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFCA99BB1C58A4ED00F78684 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFCA99C61C58A4EE00F78684 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0708E76589BB67C60B527B98 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0C2096EA7FFF8620659364E5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83C40D6F91DE2EB67E1FF8C8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFCA99A21C58A4ED00F78684 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFCA99AC1C58A4ED00F78684 /* ViewController.swift in Sources */,
+				FFCA99AA1C58A4ED00F78684 /* AppDelegate.swift in Sources */,
+				FFCA99B21C58A4ED00F78684 /* Rapping.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFCA99B91C58A4ED00F78684 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFCA99C21C58A4ED00F78684 /* RappingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFCA99C41C58A4EE00F78684 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFCA99CD1C58A4EE00F78684 /* RappingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FFCA99BF1C58A4ED00F78684 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFCA99A51C58A4ED00F78684 /* Rapping */;
+			targetProxy = FFCA99BE1C58A4ED00F78684 /* PBXContainerItemProxy */;
+		};
+		FFCA99CA1C58A4EE00F78684 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFCA99A51C58A4ED00F78684 /* Rapping */;
+			targetProxy = FFCA99C91C58A4EE00F78684 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FFCA99AD1C58A4ED00F78684 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFCA99AE1C58A4ED00F78684 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FFCA99B51C58A4ED00F78684 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFCA99B61C58A4ED00F78684 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FFCA99CF1C58A4EE00F78684 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FFCA99D01C58A4EE00F78684 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FFCA99D21C58A4EE00F78684 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 682B5F0FFDD17E11249D8F55 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Rapping/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Dorirus.Rapping;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FFCA99D31C58A4EE00F78684 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F71E139E42B286689C25AD8 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Rapping/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Dorirus.Rapping;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FFCA99D51C58A4EE00F78684 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RappingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Dorirus.RappingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rapping.app/Rapping";
+			};
+			name = Debug;
+		};
+		FFCA99D61C58A4EE00F78684 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RappingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Dorirus.RappingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rapping.app/Rapping";
+			};
+			name = Release;
+		};
+		FFCA99D81C58A4EE00F78684 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RappingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Dorirus.RappingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Rapping;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		FFCA99D91C58A4EE00F78684 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RappingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Dorirus.RappingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Rapping;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFCA99A11C58A4ED00F78684 /* Build configuration list for PBXProject "Rapping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFCA99CF1C58A4EE00F78684 /* Debug */,
+				FFCA99D01C58A4EE00F78684 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFCA99D11C58A4EE00F78684 /* Build configuration list for PBXNativeTarget "Rapping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFCA99D21C58A4EE00F78684 /* Debug */,
+				FFCA99D31C58A4EE00F78684 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFCA99D41C58A4EE00F78684 /* Build configuration list for PBXNativeTarget "RappingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFCA99D51C58A4EE00F78684 /* Debug */,
+				FFCA99D61C58A4EE00F78684 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFCA99D71C58A4EE00F78684 /* Build configuration list for PBXNativeTarget "RappingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFCA99D81C58A4EE00F78684 /* Debug */,
+				FFCA99D91C58A4EE00F78684 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FFCA99B01C58A4ED00F78684 /* Rapping.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FFCA99B11C58A4ED00F78684 /* Rapping.xcdatamodel */,
+			);
+			currentVersion = FFCA99B11C58A4ED00F78684 /* Rapping.xcdatamodel */;
+			path = Rapping.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FFCA999E1C58A4ED00F78684 /* Project object */;
+}
