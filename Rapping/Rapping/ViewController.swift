@@ -27,6 +27,19 @@ class ViewController: UIViewController,
         self.beatTable.delegate = self;
         self.beatTable.dataSource = self;
         self.setupAudioSession()
+        
+        let documentsDirectory = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+        do {
+            var recodes = [NSURL]()
+            let urls = try NSFileManager.defaultManager().contentsOfDirectoryAtURL(documentsDirectory, includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions.SkipsHiddenFiles)
+            recodes = urls.filter( { (name: NSURL) -> Bool in
+                return name.lastPathComponent!.hasSuffix("wav")
+            })
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        } catch {
+            print("something went wrong listing recordings")
+        }
     
     }
     
@@ -45,7 +58,10 @@ class ViewController: UIViewController,
     func setupAudioRecorder() {
         // 録音用URLを設定
         let dirURL = documentsDirectoryURL()
-        let fileName = "recording" + ".wav"
+        let format = NSDateFormatter()
+        format.dateFormat="yyyy-MM-dd-HH-mm-ss"
+        let fileName = "recording-\(format.stringFromDate(NSDate())).wav"
+        print(fileName);
         let recordingsURL = dirURL.URLByAppendingPathComponent(fileName)
         
         // 録音設定
@@ -89,7 +105,9 @@ class ViewController: UIViewController,
         
         // 録音用URLを設定
         let dirURL = documentsDirectoryURL()
-        let fileName = "recording.wav"
+        let format = NSDateFormatter()
+        format.dateFormat="yyyy-MM-dd-HH-mm-ss"
+        let fileName = "recording-\(format.stringFromDate(NSDate())).m4a"
         let recordingsURL = dirURL.URLByAppendingPathComponent(fileName)
        
         
@@ -126,7 +144,7 @@ class ViewController: UIViewController,
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return BeatManager.sharedInstance.getAll().count
+        return BeatManager.sharedInstance.allBeat.count
     }
     
     
@@ -134,14 +152,14 @@ class ViewController: UIViewController,
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
        
-        let beat = BeatManager.sharedInstance.getAll()[indexPath.row]
+        let beat = BeatManager.sharedInstance.allBeat[indexPath.row]
         cell.textLabel?.text = beat.name
         return cell
     }
     
     // 7. セルがタップされた時
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
-        let path = BeatManager.sharedInstance.getAll()[indexPath.row].path
+        let path = BeatManager.sharedInstance.allBeat[indexPath.row].path
  
         do {
             audioPlayer = try AVAudioPlayer(contentsOfURL: path)

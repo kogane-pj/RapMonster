@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -49,14 +50,46 @@
                                     <action selector="didTapBeatButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YcL-FM-MZg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6s6-d8-Hoh">
+                                <rect key="frame" x="385" y="74" width="46" height="30"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJ2-Z8-xmn">
+                                <rect key="frame" x="535" y="28" width="45" height="30"/>
+                                <state key="normal" title="録音集"/>
+                                <connections>
+                                    <segue destination="Rfn-R5-wMh" kind="popoverPresentation" popoverAnchorView="DJ2-Z8-xmn" id="JOY-eu-sMd">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1TJ-CH-k3Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="77E-Hg-Vf1"/>
                             <constraint firstItem="UFx-TC-F8a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8Wc-M5-zFf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UFx-TC-F8a" secondAttribute="bottom" id="HQp-a8-g7K"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6s6-d8-Hoh" secondAttribute="trailing" constant="149" id="Qae-e4-xad"/>
                             <constraint firstItem="lXx-ue-K49" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RRN-D6-2mx"/>
+                            <constraint firstItem="6s6-d8-Hoh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="TNK-2o-0Pe"/>
                             <constraint firstAttribute="trailing" secondItem="UFx-TC-F8a" secondAttribute="trailing" id="UzW-vQ-8mb"/>
+                            <constraint firstItem="DJ2-Z8-xmn" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cMF-2z-c4B"/>
+                            <constraint firstItem="DJ2-Z8-xmn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="kwa-MO-CZh"/>
                             <constraint firstItem="jtQ-JG-pkH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ly1-Dq-mRR"/>
                             <constraint firstItem="UFx-TC-F8a" firstAttribute="top" secondItem="aCM-OB-Ovb" secondAttribute="bottom" constant="31" id="m1N-Z4-alX"/>
                             <constraint firstItem="aCM-OB-Ovb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wcm-fO-Kac"/>
@@ -68,7 +101,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="445" y="369"/>
+            <point key="canvasLocation" x="328" y="390"/>
+        </scene>
+        <!--Recode List View Controller-->
+        <scene sceneID="KqK-Pc-ZAr">
+            <objects>
+                <viewController id="Rfn-R5-wMh" customClass="RecodeListViewController" customModule="Rapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uSE-HV-0ad"/>
+                        <viewControllerLayoutGuide type="bottom" id="oKJ-u1-Mcd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZAO-WZ-PwJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4c7-Un-gkS">
+                                <rect key="frame" x="0.0" y="46" width="600" height="482"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="482" id="Laf-77-2fM"/>
+                                </constraints>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXy-RF-o8b">
+                                <rect key="frame" x="16" y="8" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BHS-wP-T6D"/>
+                                    <constraint firstAttribute="width" constant="30" id="kAT-za-cuv"/>
+                                </constraints>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="djd-vq-ig3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oKJ-u1-Mcd" firstAttribute="top" secondItem="4c7-Un-gkS" secondAttribute="bottom" constant="72" id="2He-pO-COl"/>
+                            <constraint firstItem="gXy-RF-o8b" firstAttribute="leading" secondItem="ZAO-WZ-PwJ" secondAttribute="leading" constant="16" id="6T4-bH-c75"/>
+                            <constraint firstItem="gXy-RF-o8b" firstAttribute="top" secondItem="ZAO-WZ-PwJ" secondAttribute="top" constant="8" id="kiU-pS-83s"/>
+                            <constraint firstItem="4c7-Un-gkS" firstAttribute="leading" secondItem="ZAO-WZ-PwJ" secondAttribute="leading" id="qiB-Jw-qJf"/>
+                            <constraint firstAttribute="trailing" secondItem="4c7-Un-gkS" secondAttribute="trailing" id="tpN-QP-4dC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MeZ-rW-BU9"/>
+                    <connections>
+                        <outlet property="recodeListTableView" destination="4c7-Un-gkS" id="diA-fn-Qbr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2tr-yN-Tjb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="390"/>
         </scene>
     </scenes>
 </document>

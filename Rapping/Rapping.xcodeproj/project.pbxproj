@@ -13,6 +13,8 @@
 		FF0A054F1C66458200B6511A /* FS_Reflection.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A054E1C66458200B6511A /* FS_Reflection.mp3 */; };
 		FF0A05511C6645BC00B6511A /* FS_Here_We_Come.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A05501C6645BC00B6511A /* FS_Here_We_Come.mp3 */; };
 		FF0A05531C66460A00B6511A /* FS_Still_Waving.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A05521C66460A00B6511A /* FS_Still_Waving.mp3 */; };
+		FF0A05551C6666AF00B6511A /* RecodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A05541C6666AF00B6511A /* RecodeListViewController.swift */; };
+		FF0A05571C6667C000B6511A /* Recode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A05561C6667C000B6511A /* Recode.swift */; };
 		FFCA99AA1C58A4ED00F78684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCA99A91C58A4ED00F78684 /* AppDelegate.swift */; };
 		FFCA99AC1C58A4ED00F78684 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCA99AB1C58A4ED00F78684 /* ViewController.swift */; };
 		FFCA99AF1C58A4ED00F78684 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99AD1C58A4ED00F78684 /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 		FF0A054E1C66458200B6511A /* FS_Reflection.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FS_Reflection.mp3; sourceTree = "<group>"; };
 		FF0A05501C6645BC00B6511A /* FS_Here_We_Come.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FS_Here_We_Come.mp3; sourceTree = "<group>"; };
 		FF0A05521C66460A00B6511A /* FS_Still_Waving.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FS_Still_Waving.mp3; sourceTree = "<group>"; };
+		FF0A05541C6666AF00B6511A /* RecodeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecodeListViewController.swift; sourceTree = "<group>"; };
+		FF0A05561C6667C000B6511A /* Recode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recode.swift; sourceTree = "<group>"; };
 		FFCA99A61C58A4ED00F78684 /* Rapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFCA99A91C58A4ED00F78684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFCA99AB1C58A4ED00F78684 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,7 +153,9 @@
 			children = (
 				FFCA99A91C58A4ED00F78684 /* AppDelegate.swift */,
 				FFCA99AB1C58A4ED00F78684 /* ViewController.swift */,
+				FF0A05541C6666AF00B6511A /* RecodeListViewController.swift */,
 				FFEEE54B1C66218500B8E0A6 /* Beat.swift */,
+				FF0A05561C6667C000B6511A /* Recode.swift */,
 				FFCA99AD1C58A4ED00F78684 /* Main.storyboard */,
 				FFCA99B31C58A4ED00F78684 /* Assets.xcassets */,
 				FFCA99B51C58A4ED00F78684 /* LaunchScreen.storyboard */,
@@ -391,7 +397,9 @@
 				FFCA99AC1C58A4ED00F78684 /* ViewController.swift in Sources */,
 				FFEEE54C1C66218500B8E0A6 /* Beat.swift in Sources */,
 				FFCA99AA1C58A4ED00F78684 /* AppDelegate.swift in Sources */,
+				FF0A05571C6667C000B6511A /* Recode.swift in Sources */,
 				FFCA99B21C58A4ED00F78684 /* Rapping.xcdatamodeld in Sources */,
+				FF0A05551C6666AF00B6511A /* RecodeListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
