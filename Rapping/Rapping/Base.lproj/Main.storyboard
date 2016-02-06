@@ -31,13 +31,6 @@
                                     <action selector="didTapPlayBackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Sl-wU-kos"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXx-ue-K49">
-                                <rect key="frame" x="263" y="291" width="75" height="30"/>
-                                <state key="normal" title="ビート流す"/>
-                                <connections>
-                                    <action selector="didTapBeatButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YcL-FM-MZg"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TJ-CH-k3Z">
                                 <rect key="frame" x="270" y="162" width="60" height="30"/>
                                 <state key="normal" title="録音停止"/>
@@ -45,18 +38,37 @@
                                     <action selector="didTapRecodeStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XJo-sL-wvP"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UFx-TC-F8a">
+                                <rect key="frame" x="0.0" y="269" width="600" height="329"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXx-ue-K49">
+                                <rect key="frame" x="412" y="140" width="75" height="30"/>
+                                <state key="normal" title="ビート流す"/>
+                                <connections>
+                                    <action selector="didTapBeatButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YcL-FM-MZg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1TJ-CH-k3Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="77E-Hg-Vf1"/>
+                            <constraint firstItem="UFx-TC-F8a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8Wc-M5-zFf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UFx-TC-F8a" secondAttribute="bottom" id="HQp-a8-g7K"/>
                             <constraint firstItem="lXx-ue-K49" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RRN-D6-2mx"/>
+                            <constraint firstAttribute="trailing" secondItem="UFx-TC-F8a" secondAttribute="trailing" id="UzW-vQ-8mb"/>
                             <constraint firstItem="jtQ-JG-pkH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ly1-Dq-mRR"/>
+                            <constraint firstItem="UFx-TC-F8a" firstAttribute="top" secondItem="aCM-OB-Ovb" secondAttribute="bottom" constant="31" id="m1N-Z4-alX"/>
                             <constraint firstItem="aCM-OB-Ovb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wcm-fO-Kac"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="beatTable" destination="UFx-TC-F8a" id="BaB-IG-AHR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="445" y="369"/>
         </scene>
     </scenes>
 </document>

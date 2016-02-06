@@ -9,17 +9,25 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDelegate
+class ViewController: UIViewController,
+    AVAudioRecorderDelegate,
+    AVAudioPlayerDelegate,
+    UITableViewDataSource,
+    UITableViewDelegate
 {
     var audioRecorder: AVAudioRecorder?
     var audioPlayer: AVAudioPlayer!
     // 再生とか録音周りを制御
     var audioSession: AVAudioSession!
+    @IBOutlet weak var beatTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.beatTable.delegate = self;
+        self.beatTable.dataSource = self;
         self.setupAudioSession()
+    
     }
     
     func setupAudioSession() {
@@ -101,7 +109,7 @@ class ViewController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDele
     
     @IBAction func didTapBeatButton(sender: AnyObject) {
         // 再生する audio ファイルのパスを取得
-        let audioPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("freeStyleBeat_89BPM", ofType: "mp3")!)
+        let audioPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("FS_89BPM", ofType: "mp3")!)
         // auido を再生するプレイヤーを作成する
 
         do {
@@ -117,6 +125,37 @@ class ViewController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDele
         self.audioPlayer.play()
     }
 
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return BeatManager.sharedInstance.getAll().count
+    }
+    
+    
+    // セルのテキストを追加
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
+       
+        let beat = BeatManager.sharedInstance.getAll()[indexPath.row]
+        cell.textLabel?.text = beat.name
+        return cell
+    }
+    
+    // 7. セルがタップされた時
+    func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
+        let path = BeatManager.sharedInstance.getAll()[indexPath.row].path
+ 
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOfURL: path)
+        } catch {
+            print("error")
+        }
+
+        self.audioPlayer.delegate = self
+        self.audioPlayer.volume = 1.0   
+        self.audioPlayer.prepareToPlay()
+        self.audioPlayer.play()       
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
