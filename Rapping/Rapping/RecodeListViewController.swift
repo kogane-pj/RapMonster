@@ -57,7 +57,6 @@ class RecodeListViewController: UIViewController,
         let recode = RecodeManager.sharedInstance.allRecode[indexPath.row]
         
         cell.textLabel?.text = recode.name
-        print(recode.name)
         return cell
     }
     

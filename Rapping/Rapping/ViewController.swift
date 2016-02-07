@@ -8,12 +8,14 @@
 
 import UIKit
 import AVFoundation
+import GoogleMobileAds
 
 class ViewController: UIViewController,
     AVAudioRecorderDelegate,
     AVAudioPlayerDelegate,
     UITableViewDataSource,
-    UITableViewDelegate
+    UITableViewDelegate,
+    GADBannerViewDelegate
 {
     var audioRecorder: AVAudioRecorder?
     var audioPlayer: AVAudioPlayer!
@@ -21,13 +23,19 @@ class ViewController: UIViewController,
     var audioSession: AVAudioSession!
     @IBOutlet weak var beatTable: UITableView!
     
+    
+    @IBOutlet weak var banner: GADBannerView!
+    var selectedIndexPath:NSIndexPath?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.beatTable.delegate = self;
         self.beatTable.dataSource = self;
         self.setupAudioSession()
+        self.setupBanner()
         
+        print(GADRequest.sdkVersion)
         let documentsDirectory = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
         do {
             var recodes = [NSURL]()
@@ -40,7 +48,25 @@ class ViewController: UIViewController,
         } catch {
             print("something went wrong listing recordings")
         }
+        
+    }
     
+    func setupBanner() {
+        self.banner.delegate = self
+        self.banner.adUnitID = "ca-app-pub-1112425838421412/4652740283"
+        self.banner.rootViewController = self
+        self.banner.adSize = kGADAdSizeSmartBannerPortrait
+        
+        var request:GADRequest = GADRequest()
+        
+        //TODO:マクロ書く
+        #if DEBUG
+            print("debug")
+            request.testDevices = ["754506767786e0acce9090c3c9028753"]
+        #endif
+        
+        self.banner.loadRequest(request)
+        
     }
     
     func setupAudioSession() {
@@ -82,7 +108,7 @@ class ViewController: UIViewController,
     /// DocumentsのURLを取得
     func documentsDirectoryURL() -> NSURL {
         let urls = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory,
-                                                        inDomains: NSSearchPathDomainMask.UserDomainMask)
+            inDomains: NSSearchPathDomainMask.UserDomainMask)
         
         if urls.isEmpty {
             fatalError("URLs for directory are empty.")
@@ -109,10 +135,10 @@ class ViewController: UIViewController,
         format.dateFormat="yyyy-MM-dd-HH-mm-ss"
         let fileName = "recording-\(format.stringFromDate(NSDate())).m4a"
         let recordingsURL = dirURL.URLByAppendingPathComponent(fileName)
-       
+        
         
         // auido を再生するプレイヤーを作成する
-    
+        
         do {
             audioPlayer = try AVAudioPlayer(contentsOfURL: recordingsURL)
         }
@@ -129,29 +155,28 @@ class ViewController: UIViewController,
         // 再生する audio ファイルのパスを取得
         let audioPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("FS_89BPM", ofType: "mp3")!)
         // auido を再生するプレイヤーを作成する
-
+        
         do {
             audioPlayer = try AVAudioPlayer(contentsOfURL: audioPath)
         } catch {
             print("error")
         }
-
+        
         
         self.audioPlayer.delegate = self
-        self.audioPlayer.volume = 1.0   
+        self.audioPlayer.volume = 1.0
         self.audioPlayer.prepareToPlay()
         self.audioPlayer.play()
     }
-
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return BeatManager.sharedInstance.allBeat.count
     }
     
-    
     // セルのテキストを追加
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
-       
+        
         let beat = BeatManager.sharedInstance.allBeat[indexPath.row]
         cell.textLabel?.text = beat.name
         return cell
@@ -159,26 +184,54 @@ class ViewController: UIViewController,
     
     // 7. セルがタップされた時
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
+        if self.selectedIndexPath == indexPath {
+            self.audioPlayer.stop()
+            self.audioPlayer.prepareToPlay()
+            
+            performSegueWithIdentifier("showRecodeVC" ,sender: nil)
+            return
+        }
+        
         let path = BeatManager.sharedInstance.allBeat[indexPath.row].path
- 
+        
         do {
             audioPlayer = try AVAudioPlayer(contentsOfURL: path)
         } catch {
             print("error")
         }
-
+        
+        self.selectedIndexPath = indexPath
+        self.beatTable.reloadData()
+        
         self.audioPlayer.delegate = self
-        self.audioPlayer.volume = 1.0   
+        self.audioPlayer.volume = 1.0
         self.audioPlayer.prepareToPlay()
-        self.audioPlayer.play()       
+        self.audioPlayer.play()
     }
     
-    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        guard let _selectedIndexPath = self.selectedIndexPath else {
+            return 50
+        }
+        
+        if _selectedIndexPath == indexPath {
+            return 100
+        }
+        
+        return 50
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    //MARK: Ad
+    func adViewDidReceiveAd(bannerView: GADBannerView!) {
+        print("sucess")
+    }
     
-    
+    func adView(bannerView: GADBannerView!, didFailToReceiveAdWithError error: GADRequestError!) {
+        print(error)
+    }
 }
 
