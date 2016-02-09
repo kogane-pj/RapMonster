@@ -28,7 +28,7 @@ class RecodeManager: NSObject {
         do {
             let urls = try NSFileManager.defaultManager().contentsOfDirectoryAtURL(documentsDirectory, includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions.SkipsHiddenFiles)
             recodes = urls.filter( { (name: NSURL) -> Bool in
-                return name.lastPathComponent!.hasSuffix("wav")
+                return name.lastPathComponent!.hasSuffix("caf")
             })
         } catch let error as NSError {
             print(error.localizedDescription)

@@ -18,6 +18,8 @@
 		FF0A05591C67097900B6511A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0A05581C67097900B6511A /* AdSupport.framework */; };
 		FF0A055B1C67097F00B6511A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0A055A1C67097F00B6511A /* AudioToolbox.framework */; };
 		FF0A055D1C67299F00B6511A /* RecodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A055C1C67299F00B6511A /* RecodeViewController.swift */; };
+		FF2B24A41C68F00C00FDF0D5 /* BeatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B24A21C68F00C00FDF0D5 /* BeatTableViewCell.swift */; };
+		FF2B24A51C68F00C00FDF0D5 /* BeatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2B24A31C68F00C00FDF0D5 /* BeatTableViewCell.xib */; };
 		FFCA99AA1C58A4ED00F78684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCA99A91C58A4ED00F78684 /* AppDelegate.swift */; };
 		FFCA99AC1C58A4ED00F78684 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCA99AB1C58A4ED00F78684 /* ViewController.swift */; };
 		FFCA99AF1C58A4ED00F78684 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99AD1C58A4ED00F78684 /* Main.storyboard */; };
@@ -65,6 +67,8 @@
 		FF0A05581C67097900B6511A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		FF0A055A1C67097F00B6511A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FF0A055C1C67299F00B6511A /* RecodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecodeViewController.swift; sourceTree = "<group>"; };
+		FF2B24A21C68F00C00FDF0D5 /* BeatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatTableViewCell.swift; sourceTree = "<group>"; };
+		FF2B24A31C68F00C00FDF0D5 /* BeatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeatTableViewCell.xib; sourceTree = "<group>"; };
 		FFCA99A61C58A4ED00F78684 /* Rapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFCA99A91C58A4ED00F78684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFCA99AB1C58A4ED00F78684 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 				FF0A055C1C67299F00B6511A /* RecodeViewController.swift */,
 				FFEEE54B1C66218500B8E0A6 /* Beat.swift */,
 				FF0A05561C6667C000B6511A /* Recode.swift */,
+				FF2B24A21C68F00C00FDF0D5 /* BeatTableViewCell.swift */,
+				FF2B24A31C68F00C00FDF0D5 /* BeatTableViewCell.xib */,
 				FFCA99AD1C58A4ED00F78684 /* Main.storyboard */,
 				FFCA99B31C58A4ED00F78684 /* Assets.xcassets */,
 				FFCA99B51C58A4ED00F78684 /* LaunchScreen.storyboard */,
@@ -322,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFCA99B71C58A4ED00F78684 /* LaunchScreen.storyboard in Resources */,
+				FF2B24A51C68F00C00FDF0D5 /* BeatTableViewCell.xib in Resources */,
 				FF0A05531C66460A00B6511A /* FS_Still_Waving.mp3 in Resources */,
 				FF0A054F1C66458200B6511A /* FS_Reflection.mp3 in Resources */,
 				FFCA99E41C58EE7000F78684 /* RB_85BPM.mp3 in Resources */,
@@ -406,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFCA99AC1C58A4ED00F78684 /* ViewController.swift in Sources */,
+				FF2B24A41C68F00C00FDF0D5 /* BeatTableViewCell.swift in Sources */,
 				FFEEE54C1C66218500B8E0A6 /* Beat.swift in Sources */,
 				FFCA99AA1C58A4ED00F78684 /* AppDelegate.swift in Sources */,
 				FF0A05571C6667C000B6511A /* Recode.swift in Sources */,

@@ -30,6 +30,7 @@ class ViewController: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.registerNib()
         self.beatTable.delegate = self;
         self.beatTable.dataSource = self;
         self.setupAudioSession()
@@ -41,14 +42,14 @@ class ViewController: UIViewController,
             var recodes = [NSURL]()
             let urls = try NSFileManager.defaultManager().contentsOfDirectoryAtURL(documentsDirectory, includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions.SkipsHiddenFiles)
             recodes = urls.filter( { (name: NSURL) -> Bool in
-                return name.lastPathComponent!.hasSuffix("wav")
+                return name.lastPathComponent!.hasSuffix("mp3")
             })
         } catch let error as NSError {
             print(error.localizedDescription)
         } catch {
             print("something went wrong listing recordings")
         }
-        
+       
     }
     
     func setupBanner() {
@@ -86,7 +87,7 @@ class ViewController: UIViewController,
         let dirURL = documentsDirectoryURL()
         let format = NSDateFormatter()
         format.dateFormat="yyyy-MM-dd-HH-mm-ss"
-        let fileName = "recording-\(format.stringFromDate(NSDate())).wav"
+        let fileName = "recording-\(format.stringFromDate(NSDate())).caf"
         print(fileName);
         let recordingsURL = dirURL.URLByAppendingPathComponent(fileName)
         
@@ -103,6 +104,11 @@ class ViewController: UIViewController,
             audioRecorder = nil
         }
         
+    }
+    
+    func registerNib() {
+        let nib = UINib(nibName: "BeatTableViewCell", bundle: nil)
+        self.beatTable.registerNib(nib, forCellReuseIdentifier: "Cell")
     }
     
     /// DocumentsのURLを取得
@@ -175,10 +181,10 @@ class ViewController: UIViewController,
     
     // セルのテキストを追加
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
+        var cell = self.beatTable.dequeueReusableCellWithIdentifier("Cell") as! BeatTableViewCell
         
         let beat = BeatManager.sharedInstance.allBeat[indexPath.row]
-        cell.textLabel?.text = beat.name
+        cell.titleLabel.text = beat.name
         return cell
     }
     
