@@ -48,20 +48,20 @@ class RecodeListViewController: UIViewController,
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return RecodeManager.sharedInstance.allRecode.count
+        return RapManager.sharedInstance.allRap.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
         
-        let recode = RecodeManager.sharedInstance.allRecode[indexPath.row]
+        let recode = RapManager.sharedInstance.allRap[indexPath.row]
         
         cell.textLabel?.text = recode.name
         return cell
     }
     
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
-        let path = RecodeManager.sharedInstance.allRecode[indexPath.row].path
+        let path = RapManager.sharedInstance.allRap[indexPath.row].path
         
         do {
             audioPlayer = try AVAudioPlayer(contentsOfURL: path)

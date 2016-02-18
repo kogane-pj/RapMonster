@@ -8,19 +8,19 @@
 
 import UIKit
 
-class RecodeManager: NSObject {
+class RapManager: NSObject {
     
-    static let sharedInstance = RecodeManager()
-    var allRecode:Array<Recode> = []
+    static let sharedInstance = RapManager()
+    var allRap:Array<Rap> = []
     
     override init() {
         super.init()
-        self.allRecode = self.getAll()
+        self.allRap = self.getAll()
     }
     
-    func getAll() -> Array<Recode> {
+    func getAll() -> Array<Rap> {
         
-        var recodeList:[Recode] = []
+        var recodeList:[Rap] = []
         var recodes = [NSURL]()
         
         //TODO:いつかFileクラスにまとめる
@@ -37,7 +37,7 @@ class RecodeManager: NSObject {
         }
         
         for path in recodes {
-            let recode = Recode()
+            let recode = Rap()
             recode.path = path
             recode.name = path.lastPathComponent!
             
@@ -66,7 +66,7 @@ class RecodeManager: NSObject {
     }
 }
 
-class Recode: NSObject {
+class Rap: NSObject {
     var name:String = ""
     var path:NSURL! = nil
 }

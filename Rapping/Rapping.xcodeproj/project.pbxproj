@@ -14,14 +14,23 @@
 		FF0A05511C6645BC00B6511A /* FS_Here_We_Come.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A05501C6645BC00B6511A /* FS_Here_We_Come.mp3 */; };
 		FF0A05531C66460A00B6511A /* FS_Still_Waving.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A05521C66460A00B6511A /* FS_Still_Waving.mp3 */; };
 		FF0A05551C6666AF00B6511A /* RecodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A05541C6666AF00B6511A /* RecodeListViewController.swift */; };
-		FF0A05571C6667C000B6511A /* Recode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A05561C6667C000B6511A /* Recode.swift */; };
+		FF0A05571C6667C000B6511A /* Rap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A05561C6667C000B6511A /* Rap.swift */; };
 		FF0A05591C67097900B6511A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0A05581C67097900B6511A /* AdSupport.framework */; };
 		FF0A055B1C67097F00B6511A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0A055A1C67097F00B6511A /* AudioToolbox.framework */; };
 		FF0A055D1C67299F00B6511A /* RecodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A055C1C67299F00B6511A /* RecodeViewController.swift */; };
 		FF2B24A41C68F00C00FDF0D5 /* BeatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B24A21C68F00C00FDF0D5 /* BeatTableViewCell.swift */; };
 		FF2B24A51C68F00C00FDF0D5 /* BeatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2B24A31C68F00C00FDF0D5 /* BeatTableViewCell.xib */; };
+		FF2B24C11C76044600FDF0D5 /* BeatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B24C01C76044600FDF0D5 /* BeatListViewController.swift */; };
+		FF2B24C31C76046200FDF0D5 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B24C21C76046200FDF0D5 /* MyPageViewController.swift */; };
+		FF2B24C71C7606C800FDF0D5 /* TPCircularBuffer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2B24C61C7606C800FDF0D5 /* TPCircularBuffer.framework */; };
+		FF2B24C91C7606D000FDF0D5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2B24C81C7606D000FDF0D5 /* Accelerate.framework */; };
+		FF2B24CB1C7606E500FDF0D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2B24CA1C7606E500FDF0D5 /* Foundation.framework */; };
+		FF2B24CD1C7606EA00FDF0D5 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2B24CC1C7606EA00FDF0D5 /* GLKit.framework */; };
+		FF2B24D01C760D8000FDF0D5 /* RapListViewSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B24CE1C760D8000FDF0D5 /* RapListViewSectionCell.swift */; };
+		FF2B24D11C760D8000FDF0D5 /* RapListViewSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2B24CF1C760D8000FDF0D5 /* RapListViewSectionCell.xib */; };
+		FF2B24D41C760FE800FDF0D5 /* RapListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B24D21C760FE800FDF0D5 /* RapListTableViewCell.swift */; };
+		FF2B24D51C760FE800FDF0D5 /* RapListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2B24D31C760FE800FDF0D5 /* RapListTableViewCell.xib */; };
 		FFCA99AA1C58A4ED00F78684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCA99A91C58A4ED00F78684 /* AppDelegate.swift */; };
-		FFCA99AC1C58A4ED00F78684 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCA99AB1C58A4ED00F78684 /* ViewController.swift */; };
 		FFCA99AF1C58A4ED00F78684 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99AD1C58A4ED00F78684 /* Main.storyboard */; };
 		FFCA99B21C58A4ED00F78684 /* Rapping.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FFCA99B01C58A4ED00F78684 /* Rapping.xcdatamodeld */; };
 		FFCA99B41C58A4ED00F78684 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99B31C58A4ED00F78684 /* Assets.xcassets */; };
@@ -63,15 +72,24 @@
 		FF0A05501C6645BC00B6511A /* FS_Here_We_Come.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FS_Here_We_Come.mp3; sourceTree = "<group>"; };
 		FF0A05521C66460A00B6511A /* FS_Still_Waving.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FS_Still_Waving.mp3; sourceTree = "<group>"; };
 		FF0A05541C6666AF00B6511A /* RecodeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecodeListViewController.swift; sourceTree = "<group>"; };
-		FF0A05561C6667C000B6511A /* Recode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recode.swift; sourceTree = "<group>"; };
+		FF0A05561C6667C000B6511A /* Rap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rap.swift; sourceTree = "<group>"; };
 		FF0A05581C67097900B6511A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		FF0A055A1C67097F00B6511A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FF0A055C1C67299F00B6511A /* RecodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecodeViewController.swift; sourceTree = "<group>"; };
 		FF2B24A21C68F00C00FDF0D5 /* BeatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatTableViewCell.swift; sourceTree = "<group>"; };
 		FF2B24A31C68F00C00FDF0D5 /* BeatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeatTableViewCell.xib; sourceTree = "<group>"; };
+		FF2B24C01C76044600FDF0D5 /* BeatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatListViewController.swift; sourceTree = "<group>"; };
+		FF2B24C21C76046200FDF0D5 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		FF2B24C61C7606C800FDF0D5 /* TPCircularBuffer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TPCircularBuffer.framework; path = "Pods/../build/Debug-iphoneos/TPCircularBuffer.framework"; sourceTree = "<group>"; };
+		FF2B24C81C7606D000FDF0D5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		FF2B24CA1C7606E500FDF0D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FF2B24CC1C7606EA00FDF0D5 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		FF2B24CE1C760D8000FDF0D5 /* RapListViewSectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RapListViewSectionCell.swift; sourceTree = "<group>"; };
+		FF2B24CF1C760D8000FDF0D5 /* RapListViewSectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RapListViewSectionCell.xib; sourceTree = "<group>"; };
+		FF2B24D21C760FE800FDF0D5 /* RapListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RapListTableViewCell.swift; sourceTree = "<group>"; };
+		FF2B24D31C760FE800FDF0D5 /* RapListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RapListTableViewCell.xib; sourceTree = "<group>"; };
 		FFCA99A61C58A4ED00F78684 /* Rapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFCA99A91C58A4ED00F78684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FFCA99AB1C58A4ED00F78684 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FFCA99AE1C58A4ED00F78684 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFCA99B11C58A4ED00F78684 /* Rapping.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rapping.xcdatamodel; sourceTree = "<group>"; };
 		FFCA99B31C58A4ED00F78684 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,9 +114,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF0A055B1C67097F00B6511A /* AudioToolbox.framework in Frameworks */,
-				FF0A05591C67097900B6511A /* AdSupport.framework in Frameworks */,
+				FF2B24CD1C7606EA00FDF0D5 /* GLKit.framework in Frameworks */,
+				FF2B24CB1C7606E500FDF0D5 /* Foundation.framework in Frameworks */,
 				FFCA99DB1C58A5C600F78684 /* AVFoundation.framework in Frameworks */,
+				FF0A055B1C67097F00B6511A /* AudioToolbox.framework in Frameworks */,
+				FF2B24C91C7606D000FDF0D5 /* Accelerate.framework in Frameworks */,
+				FF2B24C71C7606C800FDF0D5 /* TPCircularBuffer.framework in Frameworks */,
+				FF0A05591C67097900B6511A /* AdSupport.framework in Frameworks */,
 				88395D6C06A9916B370F2B17 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +145,10 @@
 		57B627FD474670D6198FBA97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF2B24CC1C7606EA00FDF0D5 /* GLKit.framework */,
+				FF2B24CA1C7606E500FDF0D5 /* Foundation.framework */,
+				FF2B24C81C7606D000FDF0D5 /* Accelerate.framework */,
+				FF2B24C61C7606C800FDF0D5 /* TPCircularBuffer.framework */,
 				FF0A055A1C67097F00B6511A /* AudioToolbox.framework */,
 				FF0A05581C67097900B6511A /* AdSupport.framework */,
 				FFCA99DA1C58A5C600F78684 /* AVFoundation.framework */,
@@ -143,9 +169,10 @@
 		FF2B24A61C75FE3B00FDF0D5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FFCA99AB1C58A4ED00F78684 /* ViewController.swift */,
+				FF2B24C01C76044600FDF0D5 /* BeatListViewController.swift */,
 				FF0A05541C6666AF00B6511A /* RecodeListViewController.swift */,
 				FF0A055C1C67299F00B6511A /* RecodeViewController.swift */,
+				FF2B24C21C76046200FDF0D5 /* MyPageViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -154,7 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				FFEEE54B1C66218500B8E0A6 /* Beat.swift */,
-				FF0A05561C6667C000B6511A /* Recode.swift */,
+				FF0A05561C6667C000B6511A /* Rap.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -162,6 +189,10 @@
 		FF2B24A91C75FE8900FDF0D5 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				FF2B24CE1C760D8000FDF0D5 /* RapListViewSectionCell.swift */,
+				FF2B24CF1C760D8000FDF0D5 /* RapListViewSectionCell.xib */,
+				FF2B24D21C760FE800FDF0D5 /* RapListTableViewCell.swift */,
+				FF2B24D31C760FE800FDF0D5 /* RapListTableViewCell.xib */,
 				FF2B24A21C68F00C00FDF0D5 /* BeatTableViewCell.swift */,
 				FF2B24A31C68F00C00FDF0D5 /* BeatTableViewCell.xib */,
 			);
@@ -377,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFCA99B71C58A4ED00F78684 /* LaunchScreen.storyboard in Resources */,
+				FF2B24D51C760FE800FDF0D5 /* RapListTableViewCell.xib in Resources */,
 				FF2B24A51C68F00C00FDF0D5 /* BeatTableViewCell.xib in Resources */,
 				FF0A05531C66460A00B6511A /* FS_Still_Waving.mp3 in Resources */,
 				FF0A054F1C66458200B6511A /* FS_Reflection.mp3 in Resources */,
@@ -384,6 +416,7 @@
 				FFCA99E61C58EE8300F78684 /* HIPHOP_140BPM.mp3 in Resources */,
 				FFCA99E21C58EE5800F78684 /* HIPHOP_106BPM.mp3 in Resources */,
 				FF0A054D1C66454B00B6511A /* FS_Look_At_Yourself.mp3 in Resources */,
+				FF2B24D11C760D8000FDF0D5 /* RapListViewSectionCell.xib in Resources */,
 				FF0A05511C6645BC00B6511A /* FS_Here_We_Come.mp3 in Resources */,
 				FFCA99B41C58A4ED00F78684 /* Assets.xcassets in Resources */,
 				FFCA99DF1C58C2B100F78684 /* FS_89BPM.mp3 in Resources */,
@@ -461,13 +494,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFCA99AC1C58A4ED00F78684 /* ViewController.swift in Sources */,
 				FF2B24A41C68F00C00FDF0D5 /* BeatTableViewCell.swift in Sources */,
+				FF2B24C31C76046200FDF0D5 /* MyPageViewController.swift in Sources */,
+				FF2B24D01C760D8000FDF0D5 /* RapListViewSectionCell.swift in Sources */,
 				FFEEE54C1C66218500B8E0A6 /* Beat.swift in Sources */,
 				FFCA99AA1C58A4ED00F78684 /* AppDelegate.swift in Sources */,
-				FF0A05571C6667C000B6511A /* Recode.swift in Sources */,
+				FF2B24D41C760FE800FDF0D5 /* RapListTableViewCell.swift in Sources */,
+				FF0A05571C6667C000B6511A /* Rap.swift in Sources */,
 				FF0A055D1C67299F00B6511A /* RecodeViewController.swift in Sources */,
 				FFCA99B21C58A4ED00F78684 /* Rapping.xcdatamodeld in Sources */,
+				FF2B24C11C76044600FDF0D5 /* BeatListViewController.swift in Sources */,
 				FF0A05551C6666AF00B6511A /* RecodeListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,6 +647,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Rapping/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) -D DEBUG -D COCOAPODS";
@@ -626,6 +666,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Rapping/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
