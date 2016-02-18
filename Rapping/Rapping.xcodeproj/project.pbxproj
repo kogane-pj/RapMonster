@@ -188,10 +188,20 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
+		FF2B24BF1C76037500FDF0D5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FFCA99E01C58EE1B00F78684 /* Beats */,
+			);
+			name = Resource;
+			path = Rapping;
+			sourceTree = "<group>";
+		};
 		FFCA999D1C58A4ED00F78684 = {
 			isa = PBXGroup;
 			children = (
 				FFCA99A81C58A4ED00F78684 /* Rapping */,
+				FF2B24BF1C76037500FDF0D5 /* Resource */,
 				FFCA99C01C58A4ED00F78684 /* RappingTests */,
 				FFCA99CB1C58A4EE00F78684 /* RappingUITests */,
 				FFCA99A71C58A4ED00F78684 /* Products */,
@@ -217,7 +227,6 @@
 				FF2B24A61C75FE3B00FDF0D5 /* ViewController */,
 				FF2B24A81C75FE6F00FDF0D5 /* Model */,
 				FF2B24A91C75FE8900FDF0D5 /* Cell */,
-				FFCA99E01C58EE1B00F78684 /* Beats */,
 				FF2B24AB1C75FF1300FDF0D5 /* Storyboard */,
 			);
 			path = Rapping;
