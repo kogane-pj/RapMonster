@@ -140,6 +140,54 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FF2B24A61C75FE3B00FDF0D5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FFCA99AB1C58A4ED00F78684 /* ViewController.swift */,
+				FF0A05541C6666AF00B6511A /* RecodeListViewController.swift */,
+				FF0A055C1C67299F00B6511A /* RecodeViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		FF2B24A81C75FE6F00FDF0D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFEEE54B1C66218500B8E0A6 /* Beat.swift */,
+				FF0A05561C6667C000B6511A /* Recode.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FF2B24A91C75FE8900FDF0D5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FF2B24A21C68F00C00FDF0D5 /* BeatTableViewCell.swift */,
+				FF2B24A31C68F00C00FDF0D5 /* BeatTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		FF2B24AA1C75FEE900FDF0D5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FFCA99A91C58A4ED00F78684 /* AppDelegate.swift */,
+				FFCA99B51C58A4ED00F78684 /* LaunchScreen.storyboard */,
+				FFCA99B31C58A4ED00F78684 /* Assets.xcassets */,
+				FFCA99B81C58A4ED00F78684 /* Info.plist */,
+				FFCA99B01C58A4ED00F78684 /* Rapping.xcdatamodeld */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		FF2B24AB1C75FF1300FDF0D5 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FFCA99AD1C58A4ED00F78684 /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
 		FFCA999D1C58A4ED00F78684 = {
 			isa = PBXGroup;
 			children = (
@@ -165,20 +213,12 @@
 		FFCA99A81C58A4ED00F78684 /* Rapping */ = {
 			isa = PBXGroup;
 			children = (
-				FFCA99A91C58A4ED00F78684 /* AppDelegate.swift */,
-				FFCA99AB1C58A4ED00F78684 /* ViewController.swift */,
-				FF0A05541C6666AF00B6511A /* RecodeListViewController.swift */,
-				FF0A055C1C67299F00B6511A /* RecodeViewController.swift */,
-				FFEEE54B1C66218500B8E0A6 /* Beat.swift */,
-				FF0A05561C6667C000B6511A /* Recode.swift */,
-				FF2B24A21C68F00C00FDF0D5 /* BeatTableViewCell.swift */,
-				FF2B24A31C68F00C00FDF0D5 /* BeatTableViewCell.xib */,
-				FFCA99AD1C58A4ED00F78684 /* Main.storyboard */,
-				FFCA99B31C58A4ED00F78684 /* Assets.xcassets */,
-				FFCA99B51C58A4ED00F78684 /* LaunchScreen.storyboard */,
-				FFCA99B81C58A4ED00F78684 /* Info.plist */,
-				FFCA99B01C58A4ED00F78684 /* Rapping.xcdatamodeld */,
+				FF2B24AA1C75FEE900FDF0D5 /* App */,
+				FF2B24A61C75FE3B00FDF0D5 /* ViewController */,
+				FF2B24A81C75FE6F00FDF0D5 /* Model */,
+				FF2B24A91C75FE8900FDF0D5 /* Cell */,
 				FFCA99E01C58EE1B00F78684 /* Beats */,
+				FF2B24AB1C75FF1300FDF0D5 /* Storyboard */,
 			);
 			path = Rapping;
 			sourceTree = "<group>";

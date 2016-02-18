@@ -42,8 +42,24 @@ class RecodeManager: NSObject {
             recode.name = path.lastPathComponent!
             
             print(recode.name)
-            
+            print(recode.path)
             recodeList.append(recode)
+           
+
+            var fileManager = NSFileManager.defaultManager()
+            var documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first
+            //var filePath = documentsPath!.
+            let path = NSURL(fileURLWithPath: documentsPath!).URLByAppendingPathComponent(recode.name).path
+            
+            var fileExists = fileManager.fileExistsAtPath(path!)
+            print(fileExists)
+            //ファイルサイズ
+            do {
+                let attr: NSDictionary = try NSFileManager.defaultManager().attributesOfItemAtPath(path!)
+                print(attr.fileSize())
+            } catch let error as NSError {
+                print(error)
+            }
         }
         
         return recodeList
