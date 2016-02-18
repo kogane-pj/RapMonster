@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import GoogleMobileAds
 
-class ViewController: UIViewController,
+class BeatListViewController: UIViewController,
     AVAudioRecorderDelegate,
     AVAudioPlayerDelegate,
     UITableViewDataSource,

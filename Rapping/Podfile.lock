@@ -1,13 +1,23 @@
 PODS:
+  - EZAudio (1.1.5):
+    - EZAudio/Full (= 1.1.5)
+  - EZAudio/Core (1.1.5)
+  - EZAudio/Full (1.1.5):
+    - EZAudio/Core
+    - TPCircularBuffer (= 1.1)
   - Google-Mobile-Ads-SDK (7.6.0)
   - SwiftFilePath (0.0.6)
+  - TPCircularBuffer (1.1)
 
 DEPENDENCIES:
+  - EZAudio
   - Google-Mobile-Ads-SDK
   - SwiftFilePath
 
 SPEC CHECKSUMS:
+  EZAudio: 3b1cb4b6d7ebca68f0c2478576d75940aad4aa99
   Google-Mobile-Ads-SDK: 0290020329c61183c4685304264b73382bc49fb4
   SwiftFilePath: 52c1db61018e0a3941191eb71002cb5cbdaa39e7
+  TPCircularBuffer: 4960a919e667280f7f38963d771f45871b64fe62
 
 COCOAPODS: 0.39.0

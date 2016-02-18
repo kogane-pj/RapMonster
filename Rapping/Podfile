@@ -2,3 +2,4 @@ use_frameworks!
 
 pod 'SwiftFilePath'
 pod 'Google-Mobile-Ads-SDK'
+pod 'EZAudio-Swift'
