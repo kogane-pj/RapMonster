@@ -33,6 +33,9 @@ UITableViewDataSource
     func registNib() {
         let nib = UINib(nibName: "RapListTableViewCell", bundle: nil)
         self.recListView.registerNib(nib, forCellReuseIdentifier: "Cell")
+        
+        let nib2 = UINib(nibName: "RapListViewSectionCell", bundle: nil)
+        self.recListView.registerNib(nib2, forCellReuseIdentifier: "sectionCell")
     }
     
     //MARK: UITableViewDataSource
@@ -47,9 +50,7 @@ UITableViewDataSource
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = self.recListView.dequeueReusableCellWithIdentifier("Cell") as! RapListTableViewCell
-        
         let beat = BeatManager.sharedInstance.allBeat[indexPath.row]
-        //cell.textLabel?.text = beat.name
        
         return cell
     }
@@ -63,15 +64,14 @@ UITableViewDataSource
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 84;
     }
-   
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50;
     }
-    */
-
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        var cell = self.recListView.dequeueReusableCellWithIdentifier("sectionCell") as! RapListViewSectionCell
+        return cell
+    }
+   
 }
