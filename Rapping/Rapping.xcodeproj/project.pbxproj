@@ -18,6 +18,9 @@
 		FF0A05591C67097900B6511A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0A05581C67097900B6511A /* AdSupport.framework */; };
 		FF0A055B1C67097F00B6511A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0A055A1C67097F00B6511A /* AudioToolbox.framework */; };
 		FF0A055D1C67299F00B6511A /* RecodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A055C1C67299F00B6511A /* RecodeViewController.swift */; };
+		FF15CE111C831D030017BCEB /* RMNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF15CE101C831D030017BCEB /* RMNavigationItem.swift */; };
+		FF15CE131C831E2C0017BCEB /* RMTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF15CE121C831E2C0017BCEB /* RMTitleView.swift */; };
+		FF15CE151C831E3D0017BCEB /* RMTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF15CE141C831E3D0017BCEB /* RMTitleView.xib */; };
 		FF2B24A41C68F00C00FDF0D5 /* BeatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B24A21C68F00C00FDF0D5 /* BeatTableViewCell.swift */; };
 		FF2B24A51C68F00C00FDF0D5 /* BeatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2B24A31C68F00C00FDF0D5 /* BeatTableViewCell.xib */; };
 		FF2B24C11C76044600FDF0D5 /* BeatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B24C01C76044600FDF0D5 /* BeatListViewController.swift */; };
@@ -76,6 +79,9 @@
 		FF0A05581C67097900B6511A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		FF0A055A1C67097F00B6511A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FF0A055C1C67299F00B6511A /* RecodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecodeViewController.swift; sourceTree = "<group>"; };
+		FF15CE101C831D030017BCEB /* RMNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMNavigationItem.swift; sourceTree = "<group>"; };
+		FF15CE121C831E2C0017BCEB /* RMTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMTitleView.swift; sourceTree = "<group>"; };
+		FF15CE141C831E3D0017BCEB /* RMTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RMTitleView.xib; sourceTree = "<group>"; };
 		FF2B24A21C68F00C00FDF0D5 /* BeatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatTableViewCell.swift; sourceTree = "<group>"; };
 		FF2B24A31C68F00C00FDF0D5 /* BeatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeatTableViewCell.xib; sourceTree = "<group>"; };
 		FF2B24C01C76044600FDF0D5 /* BeatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatListViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +170,16 @@
 				9F71E139E42B286689C25AD8 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF15CE0D1C831AD60017BCEB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF15CE101C831D030017BCEB /* RMNavigationItem.swift */,
+				FF15CE121C831E2C0017BCEB /* RMTitleView.swift */,
+				FF15CE141C831E3D0017BCEB /* RMTitleView.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		FF2B24A61C75FE3B00FDF0D5 /* ViewController */ = {
@@ -258,6 +274,7 @@
 				FF2B24A61C75FE3B00FDF0D5 /* ViewController */,
 				FF2B24A81C75FE6F00FDF0D5 /* Model */,
 				FF2B24A91C75FE8900FDF0D5 /* Cell */,
+				FF15CE0D1C831AD60017BCEB /* View */,
 				FF2B24AB1C75FF1300FDF0D5 /* Storyboard */,
 			);
 			path = Rapping;
@@ -419,6 +436,7 @@
 				FF2B24D11C760D8000FDF0D5 /* RapListViewSectionCell.xib in Resources */,
 				FF0A05511C6645BC00B6511A /* FS_Here_We_Come.mp3 in Resources */,
 				FFCA99B41C58A4ED00F78684 /* Assets.xcassets in Resources */,
+				FF15CE151C831E3D0017BCEB /* RMTitleView.xib in Resources */,
 				FFCA99DF1C58C2B100F78684 /* FS_89BPM.mp3 in Resources */,
 				FF0A054B1C66450D00B6511A /* FS_Three_Keys.mp3 in Resources */,
 				FFCA99AF1C58A4ED00F78684 /* Main.storyboard in Resources */,
@@ -501,10 +519,12 @@
 				FFCA99AA1C58A4ED00F78684 /* AppDelegate.swift in Sources */,
 				FF2B24D41C760FE800FDF0D5 /* RapListTableViewCell.swift in Sources */,
 				FF0A05571C6667C000B6511A /* Rap.swift in Sources */,
+				FF15CE111C831D030017BCEB /* RMNavigationItem.swift in Sources */,
 				FF0A055D1C67299F00B6511A /* RecodeViewController.swift in Sources */,
 				FFCA99B21C58A4ED00F78684 /* Rapping.xcdatamodeld in Sources */,
 				FF2B24C11C76044600FDF0D5 /* BeatListViewController.swift in Sources */,
 				FF0A05551C6666AF00B6511A /* RecodeListViewController.swift in Sources */,
+				FF15CE131C831E2C0017BCEB /* RMTitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

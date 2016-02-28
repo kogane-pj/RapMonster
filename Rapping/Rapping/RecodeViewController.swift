@@ -8,10 +8,13 @@
 
 import UIKit
 import AVFoundation
+import EZAudio
 
 class RecodeViewController: UIViewController,
     AVAudioRecorderDelegate,
-    AVAudioPlayerDelegate
+    AVAudioPlayerDelegate,
+    EZAudioFileDelegate,
+    EZMicrophoneDelegate
 {
     @IBOutlet weak var seek: UISlider!
     @IBOutlet weak var currentTime: UILabel!
@@ -23,6 +26,10 @@ class RecodeViewController: UIViewController,
     var audioRecorder: AVAudioRecorder!
     var recodeFilePath:NSURL!
     
+    @IBOutlet weak var audioPlot: EZAudioPlot!
+    private var audioFile:EZAudioFile!
+    private var mic:EZMicrophone!
+    
     @IBOutlet weak var recodeButton: UIButton!
     
     override func viewDidLoad() {
@@ -30,9 +37,39 @@ class RecodeViewController: UIViewController,
         self.setupAudioSession()
         self.setupAudioRecoder()
         self.setupSeek()
+        self.setupAudioPlot()
         
         self.resultView.hidden = true
     }
+    
+    //ファイルの読み込みと波形の読み込み
+    func openFileWithFilePathURL(filePathURL:NSURL) {
+        self.audioFile = EZAudioFile(URL: filePathURL)
+        self.audioFile.delegate = self
+        
+        var buffer = self.audioFile.getWaveformData().bufferForChannel(0)
+        var bufferSize = self.audioFile.getWaveformData().bufferSize
+        self.audioPlot.updateBuffer(buffer, withBufferSize: bufferSize)
+    }
+    
+    func setupAudioPlot() {
+        self.mic = EZMicrophone.init(delegate: self)
+        self.mic.startFetchingAudio()
+        let device = EZAudioDevice.inputDevices().last
+        self.mic.device = device as! EZAudioDevice!
+        
+        self.audioPlot.plotType = EZPlotType.Buffer
+        self.audioPlot.shouldFill = true
+        self.audioPlot.shouldMirror = true
+    }
+   
+    func microphone(microphone: EZMicrophone!, hasAudioReceived buffer: UnsafeMutablePointer<UnsafeMutablePointer<Float>>, withBufferSize bufferSize: UInt32, withNumberOfChannels numberOfChannels: UInt32) {
+        
+        dispatch_async(dispatch_get_main_queue(), {() -> Void in
+            self.audioPlot.updateBuffer(buffer[0], withBufferSize: bufferSize)
+        })
+    }
+    
     
     func setupSeek() {
         self.currentTime.text = String(Float(self.audioPlayer.currentTime))
