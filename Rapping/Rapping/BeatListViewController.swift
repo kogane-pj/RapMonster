@@ -15,7 +15,8 @@ class BeatListViewController: UIViewController,
     AVAudioPlayerDelegate,
     UITableViewDataSource,
     UITableViewDelegate,
-    GADBannerViewDelegate
+    GADBannerViewDelegate,
+    BeatTableViewCellDelegate
 {
     var audioRecorder: AVAudioRecorder?
     var audioPlayer: AVAudioPlayer!
@@ -175,16 +176,21 @@ class BeatListViewController: UIViewController,
         self.audioPlayer.play()
     }
     
+    //MARK: UITableViewDelegate
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return BeatManager.sharedInstance.allBeat.count
     }
     
-    // セルのテキストを追加
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = self.beatTable.dequeueReusableCellWithIdentifier("Cell") as! BeatTableViewCell
         
         let beat = BeatManager.sharedInstance.allBeat[indexPath.row]
         cell.titleLabel.text = beat.name
+        cell.delegate = self
+        
+        cell.practiceButton.hidden = (self.selectedIndexPath != indexPath)
         return cell
     }
     
@@ -206,25 +212,23 @@ class BeatListViewController: UIViewController,
             print("error")
         }
         
-        self.selectedIndexPath = indexPath
-        self.beatTable.reloadData()
-        
         self.audioPlayer.delegate = self
         self.audioPlayer.volume = 1.0
         self.audioPlayer.prepareToPlay()
         self.audioPlayer.play()
+        
+        self.selectedIndexPath = indexPath
+        self.beatTable.reloadData()
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        guard let _selectedIndexPath = self.selectedIndexPath else {
-            return 50
+        
+        print(indexPath)
+        if self.selectedIndexPath == indexPath {
+            return 190
         }
         
-        if _selectedIndexPath == indexPath {
-            return 100
-        }
-        
-        return 50
+        return 110
         
     }
     override func didReceiveMemoryWarning() {
@@ -239,5 +243,6 @@ class BeatListViewController: UIViewController,
     func adView(bannerView: GADBannerView!, didFailToReceiveAdWithError error: GADRequestError!) {
         print(error)
     }
+   
 }
 
