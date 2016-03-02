@@ -96,6 +96,9 @@
                                 <exclude reference="q4q-mc-mhA"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <action selector="didTapSelectButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xln-5u-mBt"/>
+                        </connections>
                     </button>
                 </subviews>
                 <color key="backgroundColor" white="0.10050884046052633" alpha="1" colorSpace="calibratedWhite"/>
@@ -135,7 +138,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="beatImage" destination="oIY-ly-cf2" id="Mvm-uP-saI"/>
-                <outlet property="practiceButton" destination="Xu9-cl-uDD" id="jc5-BF-hcb"/>
+                <outlet property="practiceButton" destination="Xu9-cl-uDD" id="WYf-Fj-6MX"/>
                 <outlet property="titleLabel" destination="R3G-1Y-Jhw" id="YSD-tb-EXG"/>
             </connections>
             <point key="canvasLocation" x="110" y="331"/>

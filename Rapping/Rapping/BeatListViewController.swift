@@ -15,7 +15,8 @@ class BeatListViewController: UIViewController,
     AVAudioPlayerDelegate,
     UITableViewDataSource,
     UITableViewDelegate,
-    GADBannerViewDelegate
+    GADBannerViewDelegate,
+    BeatTableViewCellDelegate
 {
     var audioRecorder: AVAudioRecorder?
     var audioPlayer: AVAudioPlayer!
@@ -187,6 +188,7 @@ class BeatListViewController: UIViewController,
         
         let beat = BeatManager.sharedInstance.allBeat[indexPath.row]
         cell.titleLabel.text = beat.name
+        cell.delegate = self
         
         cell.practiceButton.hidden = (self.selectedIndexPath != indexPath)
         return cell
@@ -198,7 +200,6 @@ class BeatListViewController: UIViewController,
             self.audioPlayer.stop()
             self.audioPlayer.prepareToPlay()
             
-            performSegueWithIdentifier("presentRecVC" ,sender: nil)
             return
         }
         
@@ -233,7 +234,13 @@ class BeatListViewController: UIViewController,
         super.didReceiveMemoryWarning()
     }
     
+    //MARK: BeatTableViewCell
+    func didTapSelectButton() {
+        performSegueWithIdentifier("presentRecVC" ,sender: nil)
+    }
+    
     //MARK: Ad
+    
     func adViewDidReceiveAd(bannerView: GADBannerView!) {
         print("sucess")
     }

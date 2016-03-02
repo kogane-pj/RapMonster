@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol BeatTableViewCellDelegate {
+    func didTapSelectButton()
+}
+
 class BeatTableViewCell: UITableViewCell {
 
     @IBOutlet weak var beatImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var practiceButton: UIButton!
+    
+    var delegate:BeatTableViewCellDelegate! = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,4 +30,7 @@ class BeatTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func didTapSelectButton(sender: AnyObject) {
+        self.delegate.didTapSelectButton()
+    }
 }
