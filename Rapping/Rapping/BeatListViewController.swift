@@ -236,6 +236,8 @@ class BeatListViewController: UIViewController,
     
     //MARK: BeatTableViewCell
     func didTapSelectButton() {
+        self.audioPlayer.stop()
+        self.audioPlayer.prepareToPlay()
         performSegueWithIdentifier("presentRecVC" ,sender: nil)
     }
     

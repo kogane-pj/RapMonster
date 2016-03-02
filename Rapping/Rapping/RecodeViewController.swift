@@ -16,10 +16,10 @@ class RecodeViewController: UIViewController,
     EZAudioFileDelegate,
     EZMicrophoneDelegate
 {
-    @IBOutlet weak var seek: UISlider!
+    //@IBOutlet weak var seek: UISlider!
     @IBOutlet weak var currentTime: UILabel!
-    @IBOutlet weak var endTime: UILabel!
-    @IBOutlet weak var resultView: UIView!
+    //@IBOutlet weak var endTime: UILabel!
+    //@IBOutlet weak var resultView: UIView!
     
     var audioPlayer: AVAudioPlayer!
     var audioSession: AVAudioSession!
@@ -39,7 +39,7 @@ class RecodeViewController: UIViewController,
         self.setupSeek()
         self.setupAudioPlot()
         
-        self.resultView.hidden = true
+        //self.resultView.hidden = true
     }
     
     //ファイルの読み込みと波形の読み込み
@@ -73,7 +73,7 @@ class RecodeViewController: UIViewController,
     
     func setupSeek() {
         self.currentTime.text = String(Float(self.audioPlayer.currentTime))
-        self.endTime.text = String(Float(self.audioPlayer.duration))
+        //self.endTime.text = String(Float(self.audioPlayer.duration))
     }
     
     func setupAudioSession() {
@@ -102,11 +102,11 @@ class RecodeViewController: UIViewController,
     
     func updateSeekTime() {
         self.currentTime.text = String(Float(self.audioPlayer.currentTime))
-        self.seek.value = Float(self.audioPlayer.currentTime)
+        //self.seek.value = Float(self.audioPlayer.currentTime)
     }
     
     @IBAction func sliderMove(sender: AnyObject) {
-        self.audioPlayer.currentTime = Double(seek.value)
+        //self.audioPlayer.currentTime = Double(seek.value)
         self.updateSeekTime()
     }
     
@@ -117,11 +117,11 @@ class RecodeViewController: UIViewController,
             self.recodeButton.setTitle("録音", forState: .Normal)
             self.audioPlayer.stop()
             
-            self.resultView.hidden = false
+            //self.resultView.hidden = false
             return
         }
        
-        self.resultView.hidden = true
+        //self.resultView.hidden = true
         let path = BeatManager.sharedInstance.allBeat[0].path
         
         do {
@@ -133,7 +133,7 @@ class RecodeViewController: UIViewController,
         self.audioPlayer.delegate = self
         self.audioPlayer.volume = 1.0
         self.audioPlayer.prepareToPlay()
-        self.seek.maximumValue = Float(self.audioPlayer.duration)
+        //self.seek.maximumValue = Float(self.audioPlayer.duration)
         
         self.audioPlayer.play()
         
