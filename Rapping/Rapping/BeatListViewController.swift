@@ -223,7 +223,7 @@ class BeatListViewController: UIViewController,
         
         print(indexPath)
         if self.selectedIndexPath == indexPath {
-            return 190
+            return 204
         }
         
         return 110

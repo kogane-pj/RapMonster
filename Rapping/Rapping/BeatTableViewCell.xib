@@ -9,31 +9,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="102" id="KGk-i7-Jjw" customClass="BeatTableViewCell" customModule="Rapping" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="204"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="189.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="203.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xu9-cl-uDD">
-                        <rect key="frame" x="40" y="114.5" width="240" height="60"/>
-                        <color key="backgroundColor" white="0.53205089976913056" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="30" id="49s-Zl-QBi"/>
-                            <constraint firstAttribute="width" constant="240" id="aTR-Nq-uxG"/>
-                            <constraint firstAttribute="height" constant="60" id="flm-NM-eA3"/>
-                            <constraint firstAttribute="width" constant="204" id="q4q-mc-mhA"/>
-                        </constraints>
-                        <state key="normal" title="SELECT">
-                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </state>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="49s-Zl-QBi"/>
-                                <exclude reference="q4q-mc-mhA"/>
-                            </mask>
-                        </variation>
-                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUg-V6-PcG">
                         <rect key="frame" x="107" y="54" width="201" height="18"/>
                         <constraints>
@@ -91,12 +72,39 @@
                             <constraint firstItem="oIY-ly-cf2" firstAttribute="centerY" secondItem="FQs-27-b8D" secondAttribute="centerY" id="wmq-9V-ukA"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qub-FC-MK0" userLabel="line">
+                        <rect key="frame" x="15" y="110" width="290" height="0.5"/>
+                        <color key="backgroundColor" red="0.69803921568627447" green="0.69803921568627447" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="jqF-w0-zpX"/>
+                        </constraints>
+                    </view>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xu9-cl-uDD">
+                        <rect key="frame" x="40" y="128.5" width="240" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="49s-Zl-QBi"/>
+                            <constraint firstAttribute="width" constant="240" id="aTR-Nq-uxG"/>
+                            <constraint firstAttribute="height" constant="60" id="flm-NM-eA3"/>
+                            <constraint firstAttribute="width" constant="204" id="q4q-mc-mhA"/>
+                        </constraints>
+                        <state key="normal" title="SELECT" backgroundImage="beat_select_button">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="49s-Zl-QBi"/>
+                                <exclude reference="q4q-mc-mhA"/>
+                            </mask>
+                        </variation>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.10050884046052633" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="R3G-1Y-Jhw" secondAttribute="trailing" constant="17" id="1fp-4x-ZGu"/>
+                    <constraint firstAttribute="trailing" secondItem="qub-FC-MK0" secondAttribute="trailing" constant="15" id="4lL-MC-cay"/>
                     <constraint firstItem="FQs-27-b8D" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="ETk-HH-KNv"/>
                     <constraint firstAttribute="trailing" secondItem="iUg-V6-PcG" secondAttribute="trailing" constant="12" id="FOL-go-QqZ"/>
+                    <constraint firstItem="qub-FC-MK0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="HkH-2x-viP"/>
                     <constraint firstItem="R3G-1Y-Jhw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="Kym-0R-S7R"/>
                     <constraint firstItem="R3G-1Y-Jhw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="35" id="Lrq-H3-Ha3"/>
                     <constraint firstAttribute="bottom" secondItem="Xu9-cl-uDD" secondAttribute="bottom" constant="15" id="MtE-Pn-xnS"/>
@@ -104,6 +112,7 @@
                     <constraint firstItem="FQs-27-b8D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Wqd-g4-Eb1"/>
                     <constraint firstItem="Xu9-cl-uDD" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Yew-GB-3hi"/>
                     <constraint firstItem="R3G-1Y-Jhw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="bGw-Ut-WQC"/>
+                    <constraint firstItem="qub-FC-MK0" firstAttribute="top" secondItem="FQs-27-b8D" secondAttribute="bottom" constant="15" id="eY4-0K-Clq"/>
                     <constraint firstItem="iUg-V6-PcG" firstAttribute="top" secondItem="R3G-1Y-Jhw" secondAttribute="bottom" constant="7" id="jpm-LF-ZqB"/>
                     <constraint firstAttribute="trailingMargin" secondItem="R3G-1Y-Jhw" secondAttribute="trailing" constant="12" id="ogX-EY-isQ"/>
                     <constraint firstItem="iUg-V6-PcG" firstAttribute="top" secondItem="R3G-1Y-Jhw" secondAttribute="bottom" constant="7" id="r1x-eM-lOs"/>
@@ -133,6 +142,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="beat_select_button" width="240" height="60"/>
         <image name="recode" width="60" height="60"/>
     </resources>
 </document>
