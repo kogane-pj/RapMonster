@@ -443,7 +443,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="MY PAGE" id="Bnw-My-6sX">
-                        <barButtonItem key="rightBarButtonItem" title="設定" id="FO6-ne-fDd"/>
+                        <barButtonItem key="rightBarButtonItem" image="setting" id="FO6-ne-fDd"/>
                     </navigationItem>
                     <connections>
                         <outlet property="recListView" destination="gTJ-b4-IDC" id="hrw-eS-97n"/>
@@ -583,6 +583,7 @@
         <image name="exitButton" width="18" height="18"/>
         <image name="onpu" width="13" height="15"/>
         <image name="rec_button" width="99" height="99"/>
+        <image name="setting" width="21" height="21"/>
         <image name="tab_battle" width="26" height="25"/>
         <image name="tab_mypage" width="19" height="26"/>
         <image name="tab_rec" width="25" height="25"/>

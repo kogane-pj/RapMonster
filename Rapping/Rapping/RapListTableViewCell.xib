@@ -41,13 +41,13 @@
                         <color key="textColor" red="0.52941176470588236" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeW-40-JNp">
-                        <rect key="frame" x="267" y="27" width="45" height="30"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeW-40-JNp">
+                        <rect key="frame" x="250" y="29" width="79" height="25"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="45" id="qPM-XX-nnw"/>
-                            <constraint firstAttribute="height" constant="30" id="xIB-ca-loI"/>
+                            <constraint firstAttribute="width" constant="79" id="qPM-XX-nnw"/>
+                            <constraint firstAttribute="height" constant="25" id="xIB-ca-loI"/>
                         </constraints>
-                        <state key="normal" title="シェア"/>
+                        <state key="normal" image="share"/>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eik-ZF-Xxm">
                         <rect key="frame" x="8" y="10" width="67" height="63"/>
@@ -59,16 +59,16 @@
                 </subviews>
                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstItem="KeW-40-JNp" firstAttribute="leading" secondItem="YoL-gE-nVB" secondAttribute="trailing" constant="8" id="5tf-p2-pPZ"/>
+                    <constraint firstItem="KeW-40-JNp" firstAttribute="leading" secondItem="YoL-gE-nVB" secondAttribute="trailing" constant="-9" id="5tf-p2-pPZ"/>
                     <constraint firstItem="g9A-4r-gHa" firstAttribute="leading" secondItem="eik-ZF-Xxm" secondAttribute="trailing" constant="8" id="A7A-9d-lzD"/>
                     <constraint firstItem="eik-ZF-Xxm" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Enp-qF-3FT"/>
                     <constraint firstItem="eik-ZF-Xxm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Jg8-ck-A1p"/>
                     <constraint firstItem="f2E-Ja-ltZ" firstAttribute="leading" secondItem="eik-ZF-Xxm" secondAttribute="trailing" constant="7" id="RiV-Ox-F5e"/>
                     <constraint firstItem="g9A-4r-gHa" firstAttribute="top" secondItem="f2E-Ja-ltZ" secondAttribute="bottom" id="VOC-Om-Cb5"/>
                     <constraint firstItem="YoL-gE-nVB" firstAttribute="leading" secondItem="eik-ZF-Xxm" secondAttribute="trailing" constant="9" id="hXw-gn-zag"/>
-                    <constraint firstItem="KeW-40-JNp" firstAttribute="leading" secondItem="f2E-Ja-ltZ" secondAttribute="trailing" constant="8" id="nbJ-Ah-IOG"/>
-                    <constraint firstAttribute="trailing" secondItem="KeW-40-JNp" secondAttribute="trailing" constant="8" id="oKI-nC-gkU"/>
-                    <constraint firstItem="KeW-40-JNp" firstAttribute="leading" secondItem="g9A-4r-gHa" secondAttribute="trailing" constant="8" id="p0q-Ns-hzz"/>
+                    <constraint firstItem="KeW-40-JNp" firstAttribute="leading" secondItem="f2E-Ja-ltZ" secondAttribute="trailing" constant="-9" id="nbJ-Ah-IOG"/>
+                    <constraint firstAttribute="trailing" secondItem="KeW-40-JNp" secondAttribute="trailing" constant="-9" id="oKI-nC-gkU"/>
+                    <constraint firstItem="KeW-40-JNp" firstAttribute="leading" secondItem="g9A-4r-gHa" secondAttribute="trailing" constant="-9" id="p0q-Ns-hzz"/>
                     <constraint firstItem="YoL-gE-nVB" firstAttribute="top" secondItem="g9A-4r-gHa" secondAttribute="bottom" id="qmU-lY-jrX"/>
                     <constraint firstItem="f2E-Ja-ltZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="wf0-hf-1Io"/>
                     <constraint firstItem="KeW-40-JNp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yQ4-xk-3Fq"/>
@@ -77,4 +77,7 @@
             <point key="canvasLocation" x="524" y="217"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="share" width="25" height="25"/>
+    </resources>
 </document>
