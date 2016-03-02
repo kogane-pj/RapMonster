@@ -418,11 +418,11 @@
             </objects>
             <point key="canvasLocation" x="1038" y="1138"/>
         </scene>
-        <!--録音-->
+        <!--Rec-->
         <scene sceneID="alU-sc-bUS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TXK-dK-kDL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="録音" image="mic2" id="axd-K8-08F"/>
+                    <tabBarItem key="tabBarItem" title="Rec" image="tab_rec" id="axd-K8-08F"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cFe-94-hZx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -563,7 +563,7 @@
         <scene sceneID="8ab-Pg-bn9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rA7-NU-l8f" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="MyPage" id="BTB-56-n5P"/>
+                    <tabBarItem key="tabBarItem" title="MyPage" image="tab_mypage" id="BTB-56-n5P"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RgJ-v7-J4o">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -586,7 +586,7 @@
         <scene sceneID="hiA-7w-MNT">
             <objects>
                 <navigationController title="BATTLE" automaticallyAdjustsScrollViewInsets="NO" id="PgQ-8c-3H3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="BATTLE" id="Co7-BU-AZ6"/>
+                    <tabBarItem key="tabBarItem" title="BATTLE" image="tab_battle" id="Co7-BU-AZ6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uzL-Aa-LcJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -609,6 +609,8 @@
     <resources>
         <image name="battle" width="670" height="504"/>
         <image name="dafaultIcon" width="338" height="342"/>
-        <image name="mic2" width="16" height="16"/>
+        <image name="tab_battle" width="26" height="25"/>
+        <image name="tab_mypage" width="19" height="26"/>
+        <image name="tab_rec" width="25" height="25"/>
     </resources>
 </document>

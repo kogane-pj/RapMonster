@@ -17,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="splash_icon" translatesAutoresizingMaskIntoConstraints="NO" id="yjs-BQ-8C3">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="splash_icon" translatesAutoresizingMaskIntoConstraints="NO" id="yjs-BQ-8C3">
                                 <rect key="frame" x="195" y="140" width="210" height="208"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="splash_text" translatesAutoresizingMaskIntoConstraints="NO" id="uU1-yY-oBX">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="splash_text" translatesAutoresizingMaskIntoConstraints="NO" id="uU1-yY-oBX">
                                 <rect key="frame" x="202" y="373" width="197" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="197" id="QWr-7M-THi"/>
