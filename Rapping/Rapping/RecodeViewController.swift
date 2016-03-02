@@ -209,5 +209,9 @@ class RecodeViewController: UIViewController,
         print(urls.description)
         return urls[0]
     }
+    
+    @IBAction func didTapExitButton(sender: AnyObject) {
+        self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
 

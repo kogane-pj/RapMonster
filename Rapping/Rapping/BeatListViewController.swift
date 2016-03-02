@@ -198,7 +198,7 @@ class BeatListViewController: UIViewController,
             self.audioPlayer.stop()
             self.audioPlayer.prepareToPlay()
             
-            performSegueWithIdentifier("showRecodeVC" ,sender: nil)
+            performSegueWithIdentifier("presentRecVC" ,sender: nil)
             return
         }
         
