@@ -14,8 +14,6 @@ class BeatTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var practiceButton: UIButton!
     
-    var delegate:BeatTableViewCellDelegate!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

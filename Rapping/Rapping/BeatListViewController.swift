@@ -15,8 +15,7 @@ class BeatListViewController: UIViewController,
     AVAudioPlayerDelegate,
     UITableViewDataSource,
     UITableViewDelegate,
-    GADBannerViewDelegate,
-    BeatTableViewCellDelegate
+    GADBannerViewDelegate
 {
     var audioRecorder: AVAudioRecorder?
     var audioPlayer: AVAudioPlayer!
@@ -188,7 +187,6 @@ class BeatListViewController: UIViewController,
         
         let beat = BeatManager.sharedInstance.allBeat[indexPath.row]
         cell.titleLabel.text = beat.name
-        cell.delegate = self
         
         cell.practiceButton.hidden = (self.selectedIndexPath != indexPath)
         return cell
