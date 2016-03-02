@@ -17,18 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="pk0-1J-eY9">
-                                <rect key="frame" x="170" y="193" width="261" height="235"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="splash_icon" translatesAutoresizingMaskIntoConstraints="NO" id="yjs-BQ-8C3">
+                                <rect key="frame" x="195" y="140" width="210" height="208"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="splash_text" translatesAutoresizingMaskIntoConstraints="NO" id="uU1-yY-oBX">
+                                <rect key="frame" x="202" y="373" width="197" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="261" id="G4y-h2-3I9"/>
-                                    <constraint firstAttribute="height" constant="235" id="zXN-TF-xnQ"/>
+                                    <constraint firstAttribute="width" constant="197" id="QWr-7M-THi"/>
+                                    <constraint firstAttribute="height" constant="22" id="m4t-yW-WWc"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="pk0-1J-eY9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Aye-x9-Nf1"/>
-                            <constraint firstItem="pk0-1J-eY9" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="10.5" id="HYR-Oh-Z5l"/>
+                            <constraint firstItem="yjs-BQ-8C3" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="120" id="4YT-Pp-2yb"/>
+                            <constraint firstItem="uU1-yY-oBX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="5mb-6m-jbt"/>
+                            <constraint firstItem="yjs-BQ-8C3" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="U20-kz-F7Z"/>
+                            <constraint firstItem="uU1-yY-oBX" firstAttribute="top" secondItem="yjs-BQ-8C3" secondAttribute="bottom" constant="25" id="XJN-3i-pDc"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,6 +43,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launch" width="642" height="652"/>
+        <image name="splash_icon" width="210" height="208"/>
+        <image name="splash_text" width="197" height="22"/>
     </resources>
 </document>
