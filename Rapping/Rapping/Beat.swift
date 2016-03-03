@@ -36,15 +36,15 @@ class BeatManager: NSObject {
    
     // これ他のとこの方がいい説
     func getBeatName() -> Array<String> {
-        return ["RB_85BPM",
-                "FS_89BPM",
-                "HIPHOP_106BPM",
-                "HIPHOP_140BPM",
-                "FS_Three_Keys",
-                "FS_Look_At_Yourself",
-                "FS_Here_We_Come",
-                "FS_Reflection",
-                "FS_Still_Waving"]
+        return ["DownBeats",
+                "StreetNuts",
+                "Future",
+                "Evening",
+                "ThreeKeys",
+                "LookAtYourself",
+                "HereWeCome",
+                "Reflection",
+                "StillWaving"]
     }
 }
 

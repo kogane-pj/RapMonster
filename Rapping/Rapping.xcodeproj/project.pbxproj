@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		88395D6C06A9916B370F2B17 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7BD1FF3B26F420F551A5A9 /* Pods.framework */; };
-		FF0A054B1C66450D00B6511A /* FS_Three_Keys.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A054A1C66450D00B6511A /* FS_Three_Keys.mp3 */; };
-		FF0A054D1C66454B00B6511A /* FS_Look_At_Yourself.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A054C1C66454B00B6511A /* FS_Look_At_Yourself.mp3 */; };
-		FF0A054F1C66458200B6511A /* FS_Reflection.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A054E1C66458200B6511A /* FS_Reflection.mp3 */; };
-		FF0A05511C6645BC00B6511A /* FS_Here_We_Come.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A05501C6645BC00B6511A /* FS_Here_We_Come.mp3 */; };
-		FF0A05531C66460A00B6511A /* FS_Still_Waving.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A05521C66460A00B6511A /* FS_Still_Waving.mp3 */; };
+		FF0A054B1C66450D00B6511A /* ThreeKeys.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A054A1C66450D00B6511A /* ThreeKeys.mp3 */; };
+		FF0A054D1C66454B00B6511A /* LookAtYourself.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A054C1C66454B00B6511A /* LookAtYourself.mp3 */; };
+		FF0A054F1C66458200B6511A /* Reflection.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A054E1C66458200B6511A /* Reflection.mp3 */; };
+		FF0A05511C6645BC00B6511A /* HereWeCome.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A05501C6645BC00B6511A /* HereWeCome.mp3 */; };
+		FF0A05531C66460A00B6511A /* StillWaving.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A05521C66460A00B6511A /* StillWaving.mp3 */; };
 		FF0A05551C6666AF00B6511A /* RecodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A05541C6666AF00B6511A /* RecodeListViewController.swift */; };
 		FF0A05571C6667C000B6511A /* Rap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A05561C6667C000B6511A /* Rap.swift */; };
 		FF0A05591C67097900B6511A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0A05581C67097900B6511A /* AdSupport.framework */; };
@@ -41,10 +41,10 @@
 		FFCA99C21C58A4ED00F78684 /* RappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCA99C11C58A4ED00F78684 /* RappingTests.swift */; };
 		FFCA99CD1C58A4EE00F78684 /* RappingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCA99CC1C58A4EE00F78684 /* RappingUITests.swift */; };
 		FFCA99DB1C58A5C600F78684 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFCA99DA1C58A5C600F78684 /* AVFoundation.framework */; };
-		FFCA99DF1C58C2B100F78684 /* FS_89BPM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99DE1C58C2B100F78684 /* FS_89BPM.mp3 */; };
-		FFCA99E21C58EE5800F78684 /* HIPHOP_106BPM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99E11C58EE5800F78684 /* HIPHOP_106BPM.mp3 */; };
-		FFCA99E41C58EE7000F78684 /* RB_85BPM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99E31C58EE7000F78684 /* RB_85BPM.mp3 */; };
-		FFCA99E61C58EE8300F78684 /* HIPHOP_140BPM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99E51C58EE8300F78684 /* HIPHOP_140BPM.mp3 */; };
+		FFCA99DF1C58C2B100F78684 /* StreetNuts.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99DE1C58C2B100F78684 /* StreetNuts.mp3 */; };
+		FFCA99E21C58EE5800F78684 /* DownBeats.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99E11C58EE5800F78684 /* DownBeats.mp3 */; };
+		FFCA99E41C58EE7000F78684 /* Evening.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99E31C58EE7000F78684 /* Evening.mp3 */; };
+		FFCA99E61C58EE8300F78684 /* Future.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99E51C58EE8300F78684 /* Future.mp3 */; };
 		FFEEE54C1C66218500B8E0A6 /* Beat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEEE54B1C66218500B8E0A6 /* Beat.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,11 +69,11 @@
 		682B5F0FFDD17E11249D8F55 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8B7BD1FF3B26F420F551A5A9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F71E139E42B286689C25AD8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		FF0A054A1C66450D00B6511A /* FS_Three_Keys.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FS_Three_Keys.mp3; sourceTree = "<group>"; };
-		FF0A054C1C66454B00B6511A /* FS_Look_At_Yourself.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FS_Look_At_Yourself.mp3; sourceTree = "<group>"; };
-		FF0A054E1C66458200B6511A /* FS_Reflection.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FS_Reflection.mp3; sourceTree = "<group>"; };
-		FF0A05501C6645BC00B6511A /* FS_Here_We_Come.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FS_Here_We_Come.mp3; sourceTree = "<group>"; };
-		FF0A05521C66460A00B6511A /* FS_Still_Waving.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FS_Still_Waving.mp3; sourceTree = "<group>"; };
+		FF0A054A1C66450D00B6511A /* ThreeKeys.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ThreeKeys.mp3; sourceTree = "<group>"; };
+		FF0A054C1C66454B00B6511A /* LookAtYourself.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LookAtYourself.mp3; sourceTree = "<group>"; };
+		FF0A054E1C66458200B6511A /* Reflection.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Reflection.mp3; sourceTree = "<group>"; };
+		FF0A05501C6645BC00B6511A /* HereWeCome.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HereWeCome.mp3; sourceTree = "<group>"; };
+		FF0A05521C66460A00B6511A /* StillWaving.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = StillWaving.mp3; sourceTree = "<group>"; };
 		FF0A05541C6666AF00B6511A /* RecodeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecodeListViewController.swift; sourceTree = "<group>"; };
 		FF0A05561C6667C000B6511A /* Rap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rap.swift; sourceTree = "<group>"; };
 		FF0A05581C67097900B6511A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -108,10 +108,10 @@
 		FFCA99CC1C58A4EE00F78684 /* RappingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RappingUITests.swift; sourceTree = "<group>"; };
 		FFCA99CE1C58A4EE00F78684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFCA99DA1C58A5C600F78684 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		FFCA99DE1C58C2B100F78684 /* FS_89BPM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FS_89BPM.mp3; sourceTree = "<group>"; };
-		FFCA99E11C58EE5800F78684 /* HIPHOP_106BPM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HIPHOP_106BPM.mp3; sourceTree = "<group>"; };
-		FFCA99E31C58EE7000F78684 /* RB_85BPM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = RB_85BPM.mp3; sourceTree = "<group>"; };
-		FFCA99E51C58EE8300F78684 /* HIPHOP_140BPM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HIPHOP_140BPM.mp3; sourceTree = "<group>"; };
+		FFCA99DE1C58C2B100F78684 /* StreetNuts.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = StreetNuts.mp3; sourceTree = "<group>"; };
+		FFCA99E11C58EE5800F78684 /* DownBeats.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DownBeats.mp3; sourceTree = "<group>"; };
+		FFCA99E31C58EE7000F78684 /* Evening.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Evening.mp3; sourceTree = "<group>"; };
+		FFCA99E51C58EE8300F78684 /* Future.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Future.mp3; sourceTree = "<group>"; };
 		FFEEE54B1C66218500B8E0A6 /* Beat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -301,15 +301,15 @@
 		FFCA99E01C58EE1B00F78684 /* Beats */ = {
 			isa = PBXGroup;
 			children = (
-				FFCA99E11C58EE5800F78684 /* HIPHOP_106BPM.mp3 */,
-				FFCA99DE1C58C2B100F78684 /* FS_89BPM.mp3 */,
-				FFCA99E51C58EE8300F78684 /* HIPHOP_140BPM.mp3 */,
-				FFCA99E31C58EE7000F78684 /* RB_85BPM.mp3 */,
-				FF0A054A1C66450D00B6511A /* FS_Three_Keys.mp3 */,
-				FF0A054C1C66454B00B6511A /* FS_Look_At_Yourself.mp3 */,
-				FF0A05501C6645BC00B6511A /* FS_Here_We_Come.mp3 */,
-				FF0A054E1C66458200B6511A /* FS_Reflection.mp3 */,
-				FF0A05521C66460A00B6511A /* FS_Still_Waving.mp3 */,
+				FFCA99E11C58EE5800F78684 /* DownBeats.mp3 */,
+				FFCA99DE1C58C2B100F78684 /* StreetNuts.mp3 */,
+				FFCA99E51C58EE8300F78684 /* Future.mp3 */,
+				FFCA99E31C58EE7000F78684 /* Evening.mp3 */,
+				FF0A054A1C66450D00B6511A /* ThreeKeys.mp3 */,
+				FF0A054C1C66454B00B6511A /* LookAtYourself.mp3 */,
+				FF0A05501C6645BC00B6511A /* HereWeCome.mp3 */,
+				FF0A054E1C66458200B6511A /* Reflection.mp3 */,
+				FF0A05521C66460A00B6511A /* StillWaving.mp3 */,
 			);
 			name = Beats;
 			sourceTree = "<group>";
@@ -427,18 +427,18 @@
 				FFCA99B71C58A4ED00F78684 /* LaunchScreen.storyboard in Resources */,
 				FF2B24D51C760FE800FDF0D5 /* RapListTableViewCell.xib in Resources */,
 				FF2B24A51C68F00C00FDF0D5 /* BeatTableViewCell.xib in Resources */,
-				FF0A05531C66460A00B6511A /* FS_Still_Waving.mp3 in Resources */,
-				FF0A054F1C66458200B6511A /* FS_Reflection.mp3 in Resources */,
-				FFCA99E41C58EE7000F78684 /* RB_85BPM.mp3 in Resources */,
-				FFCA99E61C58EE8300F78684 /* HIPHOP_140BPM.mp3 in Resources */,
-				FFCA99E21C58EE5800F78684 /* HIPHOP_106BPM.mp3 in Resources */,
-				FF0A054D1C66454B00B6511A /* FS_Look_At_Yourself.mp3 in Resources */,
+				FF0A05531C66460A00B6511A /* StillWaving.mp3 in Resources */,
+				FF0A054F1C66458200B6511A /* Reflection.mp3 in Resources */,
+				FFCA99E41C58EE7000F78684 /* Evening.mp3 in Resources */,
+				FFCA99E61C58EE8300F78684 /* Future.mp3 in Resources */,
+				FFCA99E21C58EE5800F78684 /* DownBeats.mp3 in Resources */,
+				FF0A054D1C66454B00B6511A /* LookAtYourself.mp3 in Resources */,
 				FF2B24D11C760D8000FDF0D5 /* RapListViewSectionCell.xib in Resources */,
-				FF0A05511C6645BC00B6511A /* FS_Here_We_Come.mp3 in Resources */,
+				FF0A05511C6645BC00B6511A /* HereWeCome.mp3 in Resources */,
 				FFCA99B41C58A4ED00F78684 /* Assets.xcassets in Resources */,
 				FF15CE151C831E3D0017BCEB /* RMTitleView.xib in Resources */,
-				FFCA99DF1C58C2B100F78684 /* FS_89BPM.mp3 in Resources */,
-				FF0A054B1C66450D00B6511A /* FS_Three_Keys.mp3 in Resources */,
+				FFCA99DF1C58C2B100F78684 /* StreetNuts.mp3 in Resources */,
+				FF0A054B1C66450D00B6511A /* ThreeKeys.mp3 in Resources */,
 				FFCA99AF1C58A4ED00F78684 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
