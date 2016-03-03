@@ -19,36 +19,51 @@ class BeatManager: NSObject {
     }
     
     func getAll() -> Array<Beat> {
-        
-        var allPath:[Beat] = []
-        
-        for name in self.getBeatName() {
-            let beat = Beat()
-            beat.name = name;
-            beat.path = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(name, ofType: "mp3")!)
-
-            allPath.append(beat)
-            
+        return BeatStore.getBeatDate().map {
+            Beat(name: $0["title"]!, artist:$0["artist"]!, imageName: $0["imageName"]!)
         }
-        
-        return allPath
-    }
-   
-    // これ他のとこの方がいい説
-    func getBeatName() -> Array<String> {
-        return ["DownBeats",
-                "StreetNuts",
-                "Future",
-                "Evening",
-                "ThreeKeys",
-                "LookAtYourself",
-                "HereWeCome",
-                "Reflection",
-                "StillWaving"]
     }
 }
 
 class Beat: NSObject {
-    var name:String = ""
-    var path:NSURL! = nil
+    
+    var name:String
+    var artist:String
+    var path:NSURL
+    var image:UIImage
+    
+    init(name:String, artist:String, imageName:String) {
+        self.name   = name
+        self.artist = artist
+        self.path   = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(name, ofType: "mp3")!)
+        self.image  = UIImage(named: imageName) ?? UIImage(named: "recode")!
+        
+        super.init()
+    }
+    
+    private static func getPathWithName(name:String) -> NSURL {
+        return NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(name, ofType: "mp3")!)
+    }
+}
+
+struct BeatStore {
+    
+    static let TITLE        = "title"
+    static let ARTIST       = "artist"
+    static let IMAGE_NAME   = "imageName"
+    
+    static func getBeatDate() -> Array<[String : String]> {
+        return [
+            [TITLE : "DownBeats",       ARTIST : "タイムレスビーツ",       IMAGE_NAME : "recode"],
+            [TITLE : "StreetNuts",      ARTIST : "タイムレスビーツ",       IMAGE_NAME : "recode"],
+            [TITLE : "Future",          ARTIST : "タイムレスビーツ",       IMAGE_NAME : "recode"],
+            [TITLE : "Evening",         ARTIST : "タイムレスビーツ",       IMAGE_NAME : "recode"],
+            [TITLE : "ThreeKeys",       ARTIST : "Kimy from Black Art", IMAGE_NAME : "recode"],
+            [TITLE : "LookAtYourself",  ARTIST : "Kimy from Black Art", IMAGE_NAME : "recode"],
+            [TITLE : "HereWeCome",      ARTIST : "Kimy from Black Art", IMAGE_NAME : "recode"],
+            [TITLE : "Reflection",      ARTIST : "Kimy from Black Art", IMAGE_NAME : "recode"],
+            [TITLE : "StillWaving",     ARTIST : "Kimy from Black Art", IMAGE_NAME : "recode"],
+        ]
+    }
+   
 }
