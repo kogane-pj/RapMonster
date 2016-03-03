@@ -6,17 +6,29 @@ PODS:
     - EZAudio/Core
     - TPCircularBuffer (~> 0.0)
   - Google-Mobile-Ads-SDK (7.6.0)
+  - NCMB (2.3.0)
   - SwiftFilePath (0.0.6)
   - TPCircularBuffer (0.0.1)
 
 DEPENDENCIES:
   - EZAudio (= 1.1.2)
   - Google-Mobile-Ads-SDK
+  - NCMB (from `https://github.com/NIFTYCloud-mbaas/ncmb_ios.git`)
   - SwiftFilePath
+
+EXTERNAL SOURCES:
+  NCMB:
+    :git: https://github.com/NIFTYCloud-mbaas/ncmb_ios.git
+
+CHECKOUT OPTIONS:
+  NCMB:
+    :commit: e599f10d7dadb6b4248d3e5bf9d674d6ad2b212d
+    :git: https://github.com/NIFTYCloud-mbaas/ncmb_ios.git
 
 SPEC CHECKSUMS:
   EZAudio: 01373de2b1257b77be1bf13753fb1c4ea8a9777e
   Google-Mobile-Ads-SDK: 0290020329c61183c4685304264b73382bc49fb4
+  NCMB: a153b3f99d7b3d530eba60dba065487c63962e2d
   SwiftFilePath: 52c1db61018e0a3941191eb71002cb5cbdaa39e7
   TPCircularBuffer: 949e9632b9fb99b7274d7b2296ee22bff5841e35
 
