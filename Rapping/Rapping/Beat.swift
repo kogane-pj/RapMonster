@@ -44,10 +44,6 @@ class Beat: NSObject {
         
         super.init()
     }
-    
-    private static func getPathWithName(name:String) -> NSURL {
-        return NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(name, ofType: "mp3")!)
-    }
 }
 
 struct BeatStore {
@@ -63,6 +59,7 @@ struct BeatStore {
             [TITLE : "HereWeCome",      ARTIST : "Kimy from Black Art", IMAGE_NAME : "recode"],
             [TITLE : "Reflection",      ARTIST : "Kimy from Black Art", IMAGE_NAME : "recode"],
             [TITLE : "StillWaving",     ARTIST : "Kimy from Black Art", IMAGE_NAME : "recode"],
+            [TITLE : "TimeIsMine",      ARTIST : "Kimy from Black Art", IMAGE_NAME : "recode"],
         ]
     }
    
