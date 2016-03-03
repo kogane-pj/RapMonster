@@ -8,6 +8,10 @@
 
 import UIKit
 
+private let TITLE        = "title"
+private let ARTIST       = "artist"
+private let IMAGE_NAME   = "imageName"
+
 class BeatManager: NSObject {
     
     static let sharedInstance = BeatManager()
@@ -20,7 +24,7 @@ class BeatManager: NSObject {
     
     func getAll() -> Array<Beat> {
         return BeatStore.getBeatDate().map {
-            Beat(name: $0["title"]!, artist:$0["artist"]!, imageName: $0["imageName"]!)
+            Beat(name: $0[TITLE]!, artist:$0[ARTIST]!, imageName: $0[IMAGE_NAME]!)
         }
     }
 }
@@ -47,10 +51,6 @@ class Beat: NSObject {
 }
 
 struct BeatStore {
-    
-    static let TITLE        = "title"
-    static let ARTIST       = "artist"
-    static let IMAGE_NAME   = "imageName"
     
     static func getBeatDate() -> Array<[String : String]> {
         return [
