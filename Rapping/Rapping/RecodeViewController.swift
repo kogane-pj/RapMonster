@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import EZAudio
+import UNAlertView
 
 class RecodeViewController: UIViewController,
     AVAudioRecorderDelegate,
@@ -112,11 +113,13 @@ class RecodeViewController: UIViewController,
     
     @IBAction func didTapRecodeButton(sender: AnyObject) {
         print(self.audioRecorder.recording)
+        
+        // 録音停止
         if self.audioRecorder!.recording == true {
             self.audioRecorder!.stop()
             self.recodeButton.setTitle("録音", forState: .Normal)
             self.audioPlayer.stop()
-            
+            showSaveAlert()
             //self.resultView.hidden = false
             return
         }
@@ -147,6 +150,20 @@ class RecodeViewController: UIViewController,
         
     }
     
+    private func showSaveAlert() {
+        let alertView = UNAlertView(title: "録音終了", message: "保存しますか？")
+        
+        alertView.addButton("No", backgroundColor: RapOrangeColor, action: {
+            print("No action")
+        })
+        
+        alertView.addButton("Yes", backgroundColor: RapOrangeColor, action: {
+            
+            print("Yes action")
+        })
+        // Show
+        alertView.show()
+    }
    
     
     @IBAction func didTapRecodePlayBackButton(sender: AnyObject) {
