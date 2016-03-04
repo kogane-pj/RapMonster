@@ -159,10 +159,15 @@ class RecodeViewController: UIViewController,
         
         alertView.addButton("Yes", backgroundColor: RapOrangeColor, action: {
             
+            self.saveData()
             print("Yes action")
         })
         // Show
         alertView.show()
+    }
+    
+    private func saveData() {
+        // TODO: 録音したファイルをアップロード
     }
    
     
