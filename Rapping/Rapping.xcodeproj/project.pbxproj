@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		88395D6C06A9916B370F2B17 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7BD1FF3B26F420F551A5A9 /* Pods.framework */; };
+		8F308BAB1C8B302F0011E60C /* ActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F308BAA1C8B302F0011E60C /* ActivityController.swift */; };
 		8F8530201C888CB8005D361B /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F85301F1C888CB8005D361B /* UIImage+Color.swift */; };
 		8F8530221C888D2A005D361B /* NCMBFile+Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530211C888D2A005D361B /* NCMBFile+Sync.swift */; };
 		8F85302A1C89D361005D361B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530291C89D361005D361B /* Constants.swift */; };
-		8F85302D1C89E0BA005D361B /* ActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F85302C1C89E0BA005D361B /* ActivityController.swift */; };
 		8F85302F1C89E44F005D361B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8F85302E1C89E44F005D361B /* Settings.bundle */; };
+		8F8530371C8A954A005D361B /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530361C8A954A005D361B /* AudioManager.swift */; };
 		FF0A054B1C66450D00B6511A /* ThreeKeys.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A054A1C66450D00B6511A /* ThreeKeys.mp3 */; };
 		FF0A054D1C66454B00B6511A /* LookAtYourself.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A054C1C66454B00B6511A /* LookAtYourself.mp3 */; };
 		FF0A054F1C66458200B6511A /* Reflection.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A054E1C66458200B6511A /* Reflection.mp3 */; };
@@ -74,11 +75,12 @@
 /* Begin PBXFileReference section */
 		682B5F0FFDD17E11249D8F55 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8B7BD1FF3B26F420F551A5A9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F308BAA1C8B302F0011E60C /* ActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityController.swift; sourceTree = "<group>"; };
 		8F85301F1C888CB8005D361B /* UIImage+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Color.swift"; path = "Extension/UIImage+Color.swift"; sourceTree = "<group>"; };
 		8F8530211C888D2A005D361B /* NCMBFile+Sync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NCMBFile+Sync.swift"; path = "Extension/NCMBFile+Sync.swift"; sourceTree = "<group>"; };
 		8F8530291C89D361005D361B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		8F85302C1C89E0BA005D361B /* ActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityController.swift; path = Util/ActivityController.swift; sourceTree = "<group>"; };
 		8F85302E1C89E44F005D361B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		8F8530361C8A954A005D361B /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioManager.swift; path = Manager/AudioManager.swift; sourceTree = "<group>"; };
 		9F71E139E42B286689C25AD8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FF0A054A1C66450D00B6511A /* ThreeKeys.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ThreeKeys.mp3; sourceTree = "<group>"; };
 		FF0A054C1C66454B00B6511A /* LookAtYourself.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LookAtYourself.mp3; sourceTree = "<group>"; };
@@ -175,6 +177,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8F308BA91C8B302F0011E60C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8F308BAA1C8B302F0011E60C /* ActivityController.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		8F85301E1C888C8C005D361B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,12 +194,12 @@
 			name = Extension;
 			sourceTree = "<group>";
 		};
-		8F85302B1C89E084005D361B /* Util */ = {
+		8F8530351C8A951C005D361B /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				8F85302C1C89E0BA005D361B /* ActivityController.swift */,
+				8F8530361C8A954A005D361B /* AudioManager.swift */,
 			);
-			name = Util;
+			name = Manager;
 			sourceTree = "<group>";
 		};
 		C929C9C09E025DDBBD81400C /* Pods */ = {
@@ -301,7 +311,8 @@
 		FFCA99A81C58A4ED00F78684 /* Rapping */ = {
 			isa = PBXGroup;
 			children = (
-				8F85302B1C89E084005D361B /* Util */,
+				8F308BA91C8B302F0011E60C /* Util */,
+				8F8530351C8A951C005D361B /* Manager */,
 				8F85301E1C888C8C005D361B /* Extension */,
 				FF2B24AA1C75FEE900FDF0D5 /* App */,
 				FF2B24A61C75FE3B00FDF0D5 /* ViewController */,
@@ -564,11 +575,12 @@
 			files = (
 				FF2B24A41C68F00C00FDF0D5 /* BeatTableViewCell.swift in Sources */,
 				FF2B24C31C76046200FDF0D5 /* MyPageViewController.swift in Sources */,
+				8F308BAB1C8B302F0011E60C /* ActivityController.swift in Sources */,
 				FF2B24D01C760D8000FDF0D5 /* RapListViewSectionCell.swift in Sources */,
 				FFEEE54C1C66218500B8E0A6 /* Beat.swift in Sources */,
-				8F85302D1C89E0BA005D361B /* ActivityController.swift in Sources */,
 				FFCA99AA1C58A4ED00F78684 /* AppDelegate.swift in Sources */,
 				8F8530201C888CB8005D361B /* UIImage+Color.swift in Sources */,
+				8F8530371C8A954A005D361B /* AudioManager.swift in Sources */,
 				FF2B24D41C760FE800FDF0D5 /* RapListTableViewCell.swift in Sources */,
 				8F85302A1C89D361005D361B /* Constants.swift in Sources */,
 				8F8530221C888D2A005D361B /* NCMBFile+Sync.swift in Sources */,
