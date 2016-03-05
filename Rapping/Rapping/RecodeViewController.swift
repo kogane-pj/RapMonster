@@ -74,6 +74,8 @@ class RecodeViewController: UIViewController, EZMicrophoneDelegate
         if AudioController.sharedInstance.isRecording() == true {
             AudioController.sharedInstance.stopRecord()
             self.recodeButton.setTitle("録音", forState: .Normal)
+            AudioController.sharedInstance.stop()
+            showSaveAlert()
             return
         }
         let randomIndex = Int(arc4random()) % BeatManager.sharedInstance.allBeat.count
@@ -83,6 +85,27 @@ class RecodeViewController: UIViewController, EZMicrophoneDelegate
         
         self.recodeButton.setTitle("停止", forState: .Normal)
     }
+    
+    private func showSaveAlert() {
+        let alertView = UNAlertView(title: "録音終了", message: "保存しますか？")
+        
+        alertView.addButton("No", backgroundColor: RapOrangeColor, action: {
+            print("No action")
+        })
+        
+        alertView.addButton("Yes", backgroundColor: RapOrangeColor, action: {
+            
+            self.saveData()
+            print("Yes action")
+        })
+        // Show
+        alertView.show()
+    }
+    
+    private func saveData() {
+        // TODO: 録音したファイルをアップロード
+    }
+   
     
     @IBAction func didTapRecodePlayBackButton(sender: AnyObject) {
         AudioController.sharedInstance.playBackRecord()
