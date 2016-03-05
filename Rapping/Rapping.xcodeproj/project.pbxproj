@@ -180,6 +180,14 @@
 			name = Extension;
 			sourceTree = "<group>";
 		};
+		8F85302B1C89E084005D361B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8F85302C1C89E0BA005D361B /* ActivityController.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		C929C9C09E025DDBBD81400C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +296,7 @@
 		FFCA99A81C58A4ED00F78684 /* Rapping */ = {
 			isa = PBXGroup;
 			children = (
+				8F85302B1C89E084005D361B /* Util */,
 				8F85301E1C888C8C005D361B /* Extension */,
 				FF2B24AA1C75FEE900FDF0D5 /* App */,
 				FF2B24A61C75FE3B00FDF0D5 /* ViewController */,
@@ -552,9 +561,11 @@
 				FF2B24C31C76046200FDF0D5 /* MyPageViewController.swift in Sources */,
 				FF2B24D01C760D8000FDF0D5 /* RapListViewSectionCell.swift in Sources */,
 				FFEEE54C1C66218500B8E0A6 /* Beat.swift in Sources */,
+				8F85302D1C89E0BA005D361B /* ActivityController.swift in Sources */,
 				FFCA99AA1C58A4ED00F78684 /* AppDelegate.swift in Sources */,
 				8F8530201C888CB8005D361B /* UIImage+Color.swift in Sources */,
 				FF2B24D41C760FE800FDF0D5 /* RapListTableViewCell.swift in Sources */,
+				8F85302A1C89D361005D361B /* Constants.swift in Sources */,
 				8F8530221C888D2A005D361B /* NCMBFile+Sync.swift in Sources */,
 				FF0A05571C6667C000B6511A /* Rap.swift in Sources */,
 				FF15CE111C831D030017BCEB /* RMNavigationItem.swift in Sources */,
