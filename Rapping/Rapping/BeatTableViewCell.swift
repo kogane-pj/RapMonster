@@ -18,6 +18,7 @@ class BeatTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var practiceButton: UIButton!
+    @IBOutlet weak var expandLine: UIView!
     
     var delegate:BeatTableViewCellDelegate! = nil
     

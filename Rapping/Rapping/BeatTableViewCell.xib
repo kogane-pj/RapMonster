@@ -21,7 +21,7 @@
                             <constraint firstAttribute="height" constant="18" id="BVg-7Y-Mvy"/>
                             <constraint firstAttribute="height" constant="18" id="hjW-qO-6Km"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.52941176470588236" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                         <variation key="default">
@@ -72,11 +72,11 @@
                             <constraint firstItem="oIY-ly-cf2" firstAttribute="centerY" secondItem="FQs-27-b8D" secondAttribute="centerY" id="wmq-9V-ukA"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qub-FC-MK0" userLabel="line">
-                        <rect key="frame" x="15" y="110" width="290" height="0.5"/>
+                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qub-FC-MK0" userLabel="line">
+                        <rect key="frame" x="15" y="110" width="290" height="2"/>
                         <color key="backgroundColor" red="0.69803921568627447" green="0.69803921568627447" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="0.5" id="jqF-w0-zpX"/>
+                            <constraint firstAttribute="height" constant="2" id="jqF-w0-zpX"/>
                         </constraints>
                     </view>
                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xu9-cl-uDD">
@@ -139,6 +139,7 @@
             <connections>
                 <outlet property="artistLabel" destination="iUg-V6-PcG" id="dWF-S2-qps"/>
                 <outlet property="beatImage" destination="oIY-ly-cf2" id="Mvm-uP-saI"/>
+                <outlet property="expandLine" destination="qub-FC-MK0" id="wJK-7f-qpG"/>
                 <outlet property="practiceButton" destination="Xu9-cl-uDD" id="WYf-Fj-6MX"/>
                 <outlet property="titleLabel" destination="R3G-1Y-Jhw" id="YSD-tb-EXG"/>
             </connections>

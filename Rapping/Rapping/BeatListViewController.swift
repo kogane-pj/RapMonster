@@ -193,6 +193,8 @@ class BeatListViewController: UIViewController,
         cell.delegate           = self
         
         cell.practiceButton.hidden = (self.selectedIndexPath != indexPath)
+        cell.expandLine.hidden     = (self.selectedIndexPath != indexPath)
+        
         return cell
     }
     
