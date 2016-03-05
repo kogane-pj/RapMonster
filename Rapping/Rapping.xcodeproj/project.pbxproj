@@ -10,6 +10,7 @@
 		88395D6C06A9916B370F2B17 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7BD1FF3B26F420F551A5A9 /* Pods.framework */; };
 		8F8530201C888CB8005D361B /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F85301F1C888CB8005D361B /* UIImage+Color.swift */; };
 		8F8530221C888D2A005D361B /* NCMBFile+Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530211C888D2A005D361B /* NCMBFile+Sync.swift */; };
+		8F85302A1C89D361005D361B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530291C89D361005D361B /* Constants.swift */; };
 		FF0A054B1C66450D00B6511A /* ThreeKeys.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A054A1C66450D00B6511A /* ThreeKeys.mp3 */; };
 		FF0A054D1C66454B00B6511A /* LookAtYourself.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A054C1C66454B00B6511A /* LookAtYourself.mp3 */; };
 		FF0A054F1C66458200B6511A /* Reflection.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A054E1C66458200B6511A /* Reflection.mp3 */; };
@@ -73,6 +74,7 @@
 		8B7BD1FF3B26F420F551A5A9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F85301F1C888CB8005D361B /* UIImage+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Color.swift"; path = "Extension/UIImage+Color.swift"; sourceTree = "<group>"; };
 		8F8530211C888D2A005D361B /* NCMBFile+Sync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NCMBFile+Sync.swift"; path = "Extension/NCMBFile+Sync.swift"; sourceTree = "<group>"; };
+		8F8530291C89D361005D361B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9F71E139E42B286689C25AD8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FF0A054A1C66450D00B6511A /* ThreeKeys.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ThreeKeys.mp3; sourceTree = "<group>"; };
 		FF0A054C1C66454B00B6511A /* LookAtYourself.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LookAtYourself.mp3; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				FFCA99B31C58A4ED00F78684 /* Assets.xcassets */,
 				FFCA99B81C58A4ED00F78684 /* Info.plist */,
 				FFCA99B01C58A4ED00F78684 /* Rapping.xcdatamodeld */,
+				8F8530291C89D361005D361B /* Constants.swift */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				FFCA99AA1C58A4ED00F78684 /* AppDelegate.swift in Sources */,
 				8F8530201C888CB8005D361B /* UIImage+Color.swift in Sources */,
 				FF2B24D41C760FE800FDF0D5 /* RapListTableViewCell.swift in Sources */,
+				8F85302A1C89D361005D361B /* Constants.swift in Sources */,
 				8F8530221C888D2A005D361B /* NCMBFile+Sync.swift in Sources */,
 				FF0A05571C6667C000B6511A /* Rap.swift in Sources */,
 				FF15CE111C831D030017BCEB /* RMNavigationItem.swift in Sources */,
