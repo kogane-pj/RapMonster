@@ -248,6 +248,7 @@
 				FFCA99B31C58A4ED00F78684 /* Assets.xcassets */,
 				FFCA99B81C58A4ED00F78684 /* Info.plist */,
 				FFCA99B01C58A4ED00F78684 /* Rapping.xcdatamodeld */,
+				8F8530291C89D361005D361B /* Constants.swift */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -549,6 +550,7 @@
 				FFCA99AA1C58A4ED00F78684 /* AppDelegate.swift in Sources */,
 				8F8530201C888CB8005D361B /* UIImage+Color.swift in Sources */,
 				FF2B24D41C760FE800FDF0D5 /* RapListTableViewCell.swift in Sources */,
+				8F85302A1C89D361005D361B /* Constants.swift in Sources */,
 				8F8530221C888D2A005D361B /* NCMBFile+Sync.swift in Sources */,
 				FF0A05571C6667C000B6511A /* Rap.swift in Sources */,
 				FF15CE111C831D030017BCEB /* RMNavigationItem.swift in Sources */,
