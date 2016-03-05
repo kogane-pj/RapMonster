@@ -16,7 +16,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUg-V6-PcG">
-                        <rect key="frame" x="107" y="54" width="201" height="18"/>
+                        <rect key="frame" x="107" y="60" width="201" height="18"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="BVg-7Y-Mvy"/>
                             <constraint firstAttribute="height" constant="18" id="hjW-qO-6Km"/>
@@ -31,10 +31,10 @@
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIPHOP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3G-1Y-Jhw">
-                        <rect key="frame" x="107" y="35" width="201" height="12"/>
+                        <rect key="frame" x="107" y="32" width="201" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="12" id="8dh-Ap-7kX"/>
-                            <constraint firstAttribute="height" constant="12" id="jT4-aP-8zh"/>
+                            <constraint firstAttribute="height" constant="21" id="jT4-aP-8zh"/>
                             <constraint firstAttribute="height" constant="13" id="qT4-7A-Vam"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
@@ -87,6 +87,7 @@
                             <constraint firstAttribute="height" constant="60" id="flm-NM-eA3"/>
                             <constraint firstAttribute="width" constant="204" id="q4q-mc-mhA"/>
                         </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                         <state key="normal" title="SELECT" backgroundImage="beat_select_button">
                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
@@ -114,7 +115,7 @@
                     <constraint firstAttribute="trailing" secondItem="R3G-1Y-Jhw" secondAttribute="trailing" constant="12" id="P0A-Dz-Al8"/>
                     <constraint firstItem="FQs-27-b8D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Wqd-g4-Eb1"/>
                     <constraint firstItem="Xu9-cl-uDD" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Yew-GB-3hi"/>
-                    <constraint firstItem="R3G-1Y-Jhw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="bGw-Ut-WQC"/>
+                    <constraint firstItem="R3G-1Y-Jhw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="32" id="bGw-Ut-WQC"/>
                     <constraint firstItem="qub-FC-MK0" firstAttribute="top" secondItem="FQs-27-b8D" secondAttribute="bottom" constant="15" id="eY4-0K-Clq"/>
                     <constraint firstItem="iUg-V6-PcG" firstAttribute="top" secondItem="R3G-1Y-Jhw" secondAttribute="bottom" constant="7" id="jpm-LF-ZqB"/>
                     <constraint firstAttribute="trailingMargin" secondItem="R3G-1Y-Jhw" secondAttribute="trailing" constant="12" id="ogX-EY-isQ"/>
@@ -143,7 +144,7 @@
                 <outlet property="practiceButton" destination="Xu9-cl-uDD" id="WYf-Fj-6MX"/>
                 <outlet property="titleLabel" destination="R3G-1Y-Jhw" id="YSD-tb-EXG"/>
             </connections>
-            <point key="canvasLocation" x="110" y="331"/>
+            <point key="canvasLocation" x="38" y="313"/>
         </tableViewCell>
     </objects>
     <resources>
