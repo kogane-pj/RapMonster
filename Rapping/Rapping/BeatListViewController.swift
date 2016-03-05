@@ -198,14 +198,13 @@ class BeatListViewController: UIViewController,
         return cell
     }
     
-    
-    
     // 7. セルがタップされた時
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
         if self.selectedIndexPath == indexPath {
             self.audioPlayer.stop()
             self.audioPlayer.prepareToPlay()
-            
+            self.selectedIndexPath = nil //TODO:定数化
+            self.beatTable.reloadData()
             return
         }
         
