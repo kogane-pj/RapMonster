@@ -34,7 +34,7 @@ class RecodeViewController: UIViewController, EZMicrophoneDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AudioController.sharedInstance.start()
+        AudioManager.sharedInstance.start()
         self.mic.delegate = self
         
         self.setupSeek()
@@ -42,7 +42,7 @@ class RecodeViewController: UIViewController, EZMicrophoneDelegate
     
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
-        AudioController.sharedInstance.stop()
+        AudioManager.sharedInstance.stop()
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,11 +57,11 @@ class RecodeViewController: UIViewController, EZMicrophoneDelegate
     }
     
     func setupSeek() {
-        self.currentTime.text = AudioController.sharedInstance.getCurrentTime()
+        self.currentTime.text = AudioManager.sharedInstance.getCurrentTime()
     }
     
     func updateSeekTime() {
-        self.currentTime.text = AudioController.sharedInstance.getCurrentTime()
+        self.currentTime.text = AudioManager.sharedInstance.getCurrentTime()
     }
     
     
@@ -71,15 +71,15 @@ class RecodeViewController: UIViewController, EZMicrophoneDelegate
     }
     
     @IBAction func didTapRecodeButton(sender: AnyObject) {
-        if AudioController.sharedInstance.isRecording() == true {
-            AudioController.sharedInstance.stopRecord()
+        if AudioManager.sharedInstance.isRecording() == true {
+            AudioManager.sharedInstance.stopRecord()
             self.recodeButton.setTitle("録音", forState: .Normal)
-            AudioController.sharedInstance.stop()
+            AudioManager.sharedInstance.stop()
             showSaveAlert()
             return
         }
         let randomIndex = Int(arc4random()) % BeatManager.sharedInstance.allBeat.count
-        AudioController.sharedInstance.startRecord(randomIndex)
+        AudioManager.sharedInstance.startRecord(randomIndex)
         
         _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateSeekTime"), userInfo: nil, repeats: true)
         
@@ -108,7 +108,7 @@ class RecodeViewController: UIViewController, EZMicrophoneDelegate
    
     
     @IBAction func didTapRecodePlayBackButton(sender: AnyObject) {
-        AudioController.sharedInstance.playBackRecord()
+        AudioManager.sharedInstance.playBackRecord()
     }
     
     @IBAction func didTapExitButton(sender: AnyObject) {

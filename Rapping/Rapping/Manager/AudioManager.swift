@@ -1,5 +1,5 @@
 //
-//  AudioController.swift
+//  AudioManager.swift
 //  Rapping
 //
 //  Created by 千葉 俊輝 on 2016/03/05.
@@ -8,9 +8,9 @@
 
 import AVFoundation
 
-class AudioController: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
+class AudioManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
-    static let sharedInstance = AudioController()
+    static let sharedInstance = AudioManager()
     
     var audioPlayer: AVAudioPlayer!
     var audioSession: AVAudioSession!
