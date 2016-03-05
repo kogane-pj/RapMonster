@@ -184,15 +184,19 @@ class BeatListViewController: UIViewController,
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = self.beatTable.dequeueReusableCellWithIdentifier("Cell") as! BeatTableViewCell
+        let cell = self.beatTable.dequeueReusableCellWithIdentifier("Cell") as! BeatTableViewCell
         
         let beat = BeatManager.sharedInstance.allBeat[indexPath.row]
-        cell.titleLabel.text = beat.name
-        cell.delegate = self
+        cell.titleLabel.text    = beat.name
+        cell.beatImage.image    = beat.image
+        cell.artistLabel.text   = beat.artist
+        cell.delegate           = self
         
         cell.practiceButton.hidden = (self.selectedIndexPath != indexPath)
         return cell
     }
+    
+    
     
     // 7. セルがタップされた時
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {

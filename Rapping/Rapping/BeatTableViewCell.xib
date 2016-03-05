@@ -137,6 +137,7 @@
                 </variation>
             </tableViewCellContentView>
             <connections>
+                <outlet property="artistLabel" destination="iUg-V6-PcG" id="dWF-S2-qps"/>
                 <outlet property="beatImage" destination="oIY-ly-cf2" id="Mvm-uP-saI"/>
                 <outlet property="practiceButton" destination="Xu9-cl-uDD" id="WYf-Fj-6MX"/>
                 <outlet property="titleLabel" destination="R3G-1Y-Jhw" id="YSD-tb-EXG"/>
