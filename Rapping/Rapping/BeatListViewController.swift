@@ -34,6 +34,7 @@ class BeatListViewController: UIViewController,
         self.registerNib()
         self.beatTable.delegate = self;
         self.beatTable.dataSource = self;
+        self.beatTable.separatorStyle = UITableViewCellSeparatorStyle.None;
         self.setupAudioSession()
         self.setupBanner()
         
@@ -193,7 +194,6 @@ class BeatListViewController: UIViewController,
         cell.delegate           = self
         
         cell.practiceButton.hidden = (self.selectedIndexPath != indexPath)
-        cell.expandLine.hidden     = (self.selectedIndexPath != indexPath)
         
         return cell
     }
@@ -232,7 +232,7 @@ class BeatListViewController: UIViewController,
             return 204
         }
         
-        return 110
+        return 112
         
     }
     override func didReceiveMemoryWarning() {
