@@ -22,7 +22,6 @@ class RecodeViewController: UIViewController, EZMicrophoneDelegate
         }
     }
     
-    private var audioFile: EZAudioFile!
     private var mic: EZMicrophone! = {
         let _mic = EZMicrophone.sharedMicrophone()
         _mic.startFetchingAudio()
