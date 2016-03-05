@@ -12,6 +12,7 @@
 		8F8530221C888D2A005D361B /* NCMBFile+Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530211C888D2A005D361B /* NCMBFile+Sync.swift */; };
 		8F85302A1C89D361005D361B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530291C89D361005D361B /* Constants.swift */; };
 		8F85302D1C89E0BA005D361B /* ActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F85302C1C89E0BA005D361B /* ActivityController.swift */; };
+		8F85302F1C89E44F005D361B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8F85302E1C89E44F005D361B /* Settings.bundle */; };
 		FF0A054B1C66450D00B6511A /* ThreeKeys.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A054A1C66450D00B6511A /* ThreeKeys.mp3 */; };
 		FF0A054D1C66454B00B6511A /* LookAtYourself.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A054C1C66454B00B6511A /* LookAtYourself.mp3 */; };
 		FF0A054F1C66458200B6511A /* Reflection.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A054E1C66458200B6511A /* Reflection.mp3 */; };
@@ -77,6 +78,7 @@
 		8F8530211C888D2A005D361B /* NCMBFile+Sync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NCMBFile+Sync.swift"; path = "Extension/NCMBFile+Sync.swift"; sourceTree = "<group>"; };
 		8F8530291C89D361005D361B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8F85302C1C89E0BA005D361B /* ActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityController.swift; path = Util/ActivityController.swift; sourceTree = "<group>"; };
+		8F85302E1C89E44F005D361B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		9F71E139E42B286689C25AD8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FF0A054A1C66450D00B6511A /* ThreeKeys.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ThreeKeys.mp3; sourceTree = "<group>"; };
 		FF0A054C1C66454B00B6511A /* LookAtYourself.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LookAtYourself.mp3; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				FFCA99B81C58A4ED00F78684 /* Info.plist */,
 				FFCA99B01C58A4ED00F78684 /* Rapping.xcdatamodeld */,
 				8F8530291C89D361005D361B /* Constants.swift */,
+				8F85302E1C89E44F005D361B /* Settings.bundle */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				FFCA99A41C58A4ED00F78684 /* Resources */,
 				0C2096EA7FFF8620659364E5 /* Embed Pods Frameworks */,
 				0708E76589BB67C60B527B98 /* Copy Pods Resources */,
+				8F8530301C89E4E4005D361B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -471,6 +475,7 @@
 				FF15CE151C831E3D0017BCEB /* RMTitleView.xib in Resources */,
 				FFCA99DF1C58C2B100F78684 /* StreetNuts.mp3 in Resources */,
 				FF0A054B1C66450D00B6511A /* ThreeKeys.mp3 in Resources */,
+				8F85302F1C89E44F005D361B /* Settings.bundle in Resources */,
 				FFCA99AF1C58A4ED00F78684 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,6 +541,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		8F8530301C89E4E4005D361B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PP_VERSION=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" $PRODUCT_SETTINGS_PATH)\n/usr/libexec/PlistBuddy -c \"Set :PreferenceSpecifiers:1:DefaultValue ${APP_VERSION}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Settings.bundle/Root.plist\"\n\nBUILD_NUMBER=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" $PRODUCT_SETTINGS_PATH)\n/usr/libexec/PlistBuddy -c \"Set :PreferenceSpecifiers:2:DefaultValue ${BUILD_NUMBER}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Settings.bundle/Root.plist\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
