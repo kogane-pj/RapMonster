@@ -10,7 +10,6 @@ import UIKit
 
 private let TITLE        = "title"
 private let ARTIST       = "artist"
-private let IMAGE_NAME   = "imageName"
 
 class BeatManager: NSObject {
     
@@ -24,7 +23,7 @@ class BeatManager: NSObject {
     
     func getAll() -> Array<Beat> {
         return BeatStore.getBeatDate().map {
-            Beat(name: $0[TITLE]!, artist:$0[ARTIST]!, imageName: $0[IMAGE_NAME]!)
+            Beat(name: $0[TITLE]!, artist:$0[ARTIST]!)
         }
     }
 }
@@ -36,11 +35,11 @@ class Beat: NSObject {
     var path:NSURL
     var image:UIImage
     
-    init(name:String, artist:String, imageName:String) {
+    init(name:String, artist:String) {
         self.name   = name
         self.artist = artist
         self.path   = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(name, ofType: "mp3")!)
-        self.image  = UIImage(named: imageName) ?? UIImage(named: "recode")!
+        self.image  = UIImage(named: name) ?? UIImage(named: "recode")!
         
         super.init()
     }
@@ -48,18 +47,19 @@ class Beat: NSObject {
 
 struct BeatStore {
     
+    // titleとimageNameは合わせる
     static func getBeatDate() -> Array<[String : String]> {
         return [
-            [TITLE : "DownBeats",       ARTIST : "タイムレスビーツ",       IMAGE_NAME : "recode"],
-            [TITLE : "StreetNuts",      ARTIST : "タイムレスビーツ",       IMAGE_NAME : "recode"],
-            [TITLE : "Future",          ARTIST : "タイムレスビーツ",       IMAGE_NAME : "recode"],
-            [TITLE : "Evening",         ARTIST : "タイムレスビーツ",       IMAGE_NAME : "recode"],
-            [TITLE : "ThreeKeys",       ARTIST : "Kimy from Black Art", IMAGE_NAME : "recode"],
-            [TITLE : "LookAtYourself",  ARTIST : "Kimy from Black Art", IMAGE_NAME : "recode"],
-            [TITLE : "HereWeCome",      ARTIST : "Kimy from Black Art", IMAGE_NAME : "recode"],
-            [TITLE : "Reflection",      ARTIST : "Kimy from Black Art", IMAGE_NAME : "recode"],
-            [TITLE : "StillWaving",     ARTIST : "Kimy from Black Art", IMAGE_NAME : "recode"],
-            [TITLE : "TimeIsMine",      ARTIST : "Kimy from Black Art", IMAGE_NAME : "recode"],
+            [TITLE : "DownBeats",       ARTIST : "タイムレスビーツ"],
+            [TITLE : "StreetNuts",      ARTIST : "タイムレスビーツ"],
+            [TITLE : "Future",          ARTIST : "タイムレスビーツ"],
+            [TITLE : "Evening",         ARTIST : "タイムレスビーツ"],
+            [TITLE : "ThreeKeys",       ARTIST : "Kimy from Black Art"],
+            [TITLE : "LookAtYourself",  ARTIST : "Kimy from Black Art"],
+            [TITLE : "HereWeCome",      ARTIST : "Kimy from Black Art"],
+            [TITLE : "Reflection",      ARTIST : "Kimy from Black Art"],
+            [TITLE : "StillWaving",     ARTIST : "Kimy from Black Art"],
+            [TITLE : "TimeIsMine",      ARTIST : "Kimy from Black Art"]
         ]
     }
    

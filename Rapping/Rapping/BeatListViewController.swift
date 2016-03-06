@@ -34,6 +34,7 @@ class BeatListViewController: UIViewController,
         self.registerNib()
         self.beatTable.delegate = self;
         self.beatTable.dataSource = self;
+        self.beatTable.separatorStyle = UITableViewCellSeparatorStyle.None;
         self.setupAudioSession()
         self.setupBanner()
         
@@ -184,13 +185,16 @@ class BeatListViewController: UIViewController,
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = self.beatTable.dequeueReusableCellWithIdentifier("Cell") as! BeatTableViewCell
+        let cell = self.beatTable.dequeueReusableCellWithIdentifier("Cell") as! BeatTableViewCell
         
         let beat = BeatManager.sharedInstance.allBeat[indexPath.row]
-        cell.titleLabel.text = beat.name
-        cell.delegate = self
+        cell.titleLabel.text    = beat.name
+        cell.beatImage.image    = beat.image
+        cell.artistLabel.text   = beat.artist
+        cell.delegate           = self
         
         cell.practiceButton.hidden = (self.selectedIndexPath != indexPath)
+        
         return cell
     }
     
@@ -199,7 +203,8 @@ class BeatListViewController: UIViewController,
         if self.selectedIndexPath == indexPath {
             self.audioPlayer.stop()
             self.audioPlayer.prepareToPlay()
-            
+            self.selectedIndexPath = nil //TODO:定数化
+            self.beatTable.reloadData()
             return
         }
         
@@ -227,7 +232,7 @@ class BeatListViewController: UIViewController,
             return 204
         }
         
-        return 110
+        return 112
         
     }
     override func didReceiveMemoryWarning() {

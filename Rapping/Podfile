@@ -4,3 +4,8 @@ pod 'SwiftFilePath'
 pod 'Google-Mobile-Ads-SDK'
 pod 'EZAudio','1.1.2'
 pod 'NCMB', :git => 'https://github.com/NIFTYCloud-mbaas/ncmb_ios.git'
+pod 'UNAlertView'
+post_install do | installer |
+    require 'fileutils'
+    FileUtils.cp_r('Pods/Target Support Files/Pods/Pods-Acknowledgements.plist', 'Rapping/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
+end
