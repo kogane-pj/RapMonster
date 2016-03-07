@@ -9,4 +9,10 @@
 import Foundation
 import UIKit
 
-let RapOrangeColor = UIColor(red:242/255, green: 175/255, blue: 48/255, alpha: 1)
+struct API_ID {
+    static let NCMB_APP_KEY = "自分の入れて"
+    static let NCMB_CLIENT_KEY = "自分の入れて"
+}
+struct Color {
+    static let RapOrangeColor = UIColor(red:242/255, green: 175/255, blue: 48/255, alpha: 1)
+}

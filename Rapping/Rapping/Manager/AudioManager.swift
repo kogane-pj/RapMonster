@@ -26,12 +26,14 @@ class AudioManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
         setupAudioSession()
         setupAudioRecoder()
         self.audioPlayer.delegate = self
+        self.audioRecorder.delegate = self
     }
     
     func stop() {
-        self.audioPlayer.delegate = nil
         self.audioRecorder.stop()
         self.audioPlayer.stop()
+        self.audioPlayer.delegate = nil
+        self.audioRecorder.delegate = nil
     }
     
     func setupAudioSession() {
@@ -155,5 +157,18 @@ class AudioManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
     func getCurrentTime() -> String {
         return String(Float(self.audioPlayer.currentTime))
+    }
+    
+    func saveRecordFile() {
+        FileManager.sharedInstance.uploadFile(NSUUID().UUIDString + ".caf",
+            url: self.audioRecorder.url)
+    }
+    
+    func deleteRecordFile() {
+        self.audioRecorder.deleteRecording()
+    }
+    
+    // MARK: - AudioRecorderDelgate
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
     }
 }
