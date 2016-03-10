@@ -69,4 +69,6 @@ class RapManager: NSObject {
 class Rap: NSObject {
     var name:String = ""
     var path:NSURL! = nil
+    var date:NSDate! = nil
+    var beat:String = ""
 }

@@ -48,7 +48,7 @@ RapListTableViewCellDelegate
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = self.recListView.dequeueReusableCellWithIdentifier("Cell") as! RapListTableViewCell
+        let cell = self.recListView.dequeueReusableCellWithIdentifier("Cell") as! RapListTableViewCell
         
         cell.delegate = self
         let beat = RapManager.sharedInstance.allRap[indexPath.row]
