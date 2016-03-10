@@ -14,12 +14,14 @@ UITableViewDataSource
 {
     @IBOutlet weak var recListView: UITableView!
     
-    var rapArray:[Rap] = []
+    private var rapArray:[Rap] = []
+    private var selectedIndexPath:NSIndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.recListView.delegate = self
         self.recListView.dataSource = self
+        self.recListView.separatorStyle = .None;
         
         self.registNib()
         self.setupRapArray()
@@ -49,20 +51,36 @@ UITableViewDataSource
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = self.recListView.dequeueReusableCellWithIdentifier("Cell") as! RapListTableViewCell
-        let beat = BeatManager.sharedInstance.allBeat[indexPath.row]
-       
+        let cell = self.recListView.dequeueReusableCellWithIdentifier("Cell") as! RapListTableViewCell
+        let beat = RapManager.sharedInstance.allRap[indexPath.row]
+      
+        cell.openCellIfNeeded(self.selectedIndexPath == indexPath)
+        
         return cell
     }
   
     //MARK: UITableViewDelegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if self.selectedIndexPath == indexPath {
+            self.selectedIndexPath = nil //TODO:定数化
+            self.recListView.reloadData()
+            return
+        }
         
+        self.selectedIndexPath = indexPath
+        let cell = self.recListView.cellForRowAtIndexPath(indexPath) as! RapListTableViewCell
+        cell.openCellIfNeeded(true)
+    
+        self.recListView.reloadData()
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 84;
+        if self.selectedIndexPath == indexPath {
+            return 167
+        }
+        
+        return 110;
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -70,8 +88,7 @@ UITableViewDataSource
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        var cell = self.recListView.dequeueReusableCellWithIdentifier("sectionCell") as! RapListViewSectionCell
-        return cell
+        return self.recListView.dequeueReusableCellWithIdentifier("sectionCell") as! RapListViewSectionCell
     }
    
 }

@@ -26,7 +26,7 @@ class BeatListViewController: UIViewController,
     
     
     @IBOutlet weak var banner: GADBannerView!
-    var selectedIndexPath:NSIndexPath?
+    private var selectedIndexPath:NSIndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
