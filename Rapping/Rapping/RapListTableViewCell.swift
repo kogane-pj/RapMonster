@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol RapListTableViewCellDelegate {
+    func didTapPlayButton()
+}
+
 class RapListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var startTime: UILabel!
     @IBOutlet weak var endTime: UILabel!
     @IBOutlet weak var playSlider: UISlider!
+    
+    var delegate:RapListTableViewCellDelegate! = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,5 +39,10 @@ class RapListTableViewCell: UITableViewCell {
         
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.width,167)
     }
+    
+    @IBAction func didTapPlayButton(sender: AnyObject) {
+        self.delegate.didTapPlayButton()
+    }
+    
     
 }

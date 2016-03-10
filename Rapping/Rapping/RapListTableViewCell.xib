@@ -90,6 +90,9 @@
                             <constraint firstAttribute="height" constant="23" id="ddd-1l-v1F"/>
                         </constraints>
                         <state key="normal" backgroundImage="play"/>
+                        <connections>
+                            <action selector="didTapPlayButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TN8-lJ-fxa"/>
+                        </connections>
                     </button>
                 </subviews>
                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

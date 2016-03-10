@@ -10,7 +10,8 @@ import UIKit
 
 class MyPageViewController: UIViewController,
 UITableViewDelegate,
-UITableViewDataSource
+UITableViewDataSource,
+RapListTableViewCellDelegate
 {
     @IBOutlet weak var recListView: UITableView!
     
@@ -19,13 +20,9 @@ UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.recListView.delegate = self
-        self.recListView.dataSource = self
-        self.recListView.separatorStyle = .None;
         
         self.registNib()
         self.setupRapArray()
-        // Do any additional setup after loading the view.
     }
 
     func setupRapArray() {
@@ -51,7 +48,9 @@ UITableViewDataSource
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.recListView.dequeueReusableCellWithIdentifier("Cell") as! RapListTableViewCell
+        var cell = self.recListView.dequeueReusableCellWithIdentifier("Cell") as! RapListTableViewCell
+        
+        cell.delegate = self
         let beat = RapManager.sharedInstance.allRap[indexPath.row]
       
         cell.openCellIfNeeded(self.selectedIndexPath == indexPath)
@@ -91,4 +90,14 @@ UITableViewDataSource
         return self.recListView.dequeueReusableCellWithIdentifier("sectionCell") as! RapListViewSectionCell
     }
    
+    //MARK: RapListTableViewCell Delegate
+    func didTapPlayButton() {
+        guard let row = self.selectedIndexPath?.row else{
+            //TODO:Alert
+            return
+        }
+        
+        let path = RapManager.sharedInstance.allRap[row].path
+        AudioManager.sharedInstance.playRap(path)
+    }
 }

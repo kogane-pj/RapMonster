@@ -102,18 +102,7 @@ class AudioManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     }
     
     private func playBeat(index: Int) {
-        let path = BeatManager.sharedInstance.allBeat[index].path
-        
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOfURL: path)
-        } catch {
-            print("error")
-        }
-        
-        self.audioPlayer.delegate = self
-        self.audioPlayer.volume = 1.0
-        self.audioPlayer.prepareToPlay()
-        self.audioPlayer.play()
+        playWithSetupPlayer(BeatManager.sharedInstance.allBeat[index].path)
     }
     
     func startRecord(beatIndex: Int) {
@@ -134,27 +123,21 @@ class AudioManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     }
     
     func playBackRecord() {
-        self.audioPlayer.stop()
-        self.audioPlayer.prepareToPlay()
-        
-        let path = self.recodeFilePath
-        
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOfURL: path)
-        } catch {
-            print("error")
-        }
-        
-        self.audioPlayer.delegate = self
-        self.audioPlayer.volume = 1.0
-        self.audioPlayer.prepareToPlay()
-        self.audioPlayer.play()
+        stopPlayer()
+        playWithSetupPlayer(self.recodeFilePath)
     }
     
     func isRecording() -> Bool {
         return self.audioRecorder.recording
     }
+   
+    //MARK: - Play Rap
     
+    func playRap(filePath:NSURL) {
+        stopPlayer()
+        playWithSetupPlayer(filePath)
+    }
+   
     func getCurrentTime() -> String {
         return String(Float(self.audioPlayer.currentTime))
     }
@@ -166,6 +149,26 @@ class AudioManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
     func deleteRecordFile() {
         self.audioRecorder.deleteRecording()
+    }
+    
+    // MARK: - Private Method
+    
+    private func stopPlayer() {
+        self.audioPlayer.stop()
+        self.audioPlayer.prepareToPlay()
+    }
+    
+    private func playWithSetupPlayer(contentsOfURL: NSURL) {
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOfURL: contentsOfURL)
+        } catch {
+            print("error")
+        }
+        
+        self.audioPlayer.delegate = self
+        self.audioPlayer.volume = 1.0
+        self.audioPlayer.prepareToPlay()
+        self.audioPlayer.play()
     }
     
     // MARK: - AudioRecorderDelgate
