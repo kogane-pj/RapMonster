@@ -166,7 +166,7 @@ class AudioManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     func saveRecordFile() {
 //        FileManager.sharedInstance.uploadFile(NSUUID().UUIDString + ".caf",
 //            url: self.audioRecorder.url)
-        RapObjectManager.sharedInstance.save(NSUUID().UUIDString + ".caf",
+        RecordRapManager.sharedInstance.save(NSUUID().UUIDString + ".caf",
             url: self.audioRecorder.url)
     }
     
