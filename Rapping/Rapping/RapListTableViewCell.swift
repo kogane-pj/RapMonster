@@ -48,6 +48,11 @@ class RapListTableViewCell: UITableViewCell {
        
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.width,167)
     }
+   
+    func setupSeek(rap:Rap) {
+        self.startTime.text = AudioManager.sharedInstance.getPlayTimeInfo(rap.path).startTime
+        self.endTime.text   = AudioManager.sharedInstance.getPlayTimeInfo(rap.path).endTime
+    }
     
     private func setTextColor(isOpen:Bool) -> UIColor {
         return (isOpen) ? UIColor.blackColor() : UIColor.whiteColor()

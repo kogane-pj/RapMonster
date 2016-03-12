@@ -51,7 +51,7 @@ RapListTableViewCellDelegate
         let cell = self.recListView.dequeueReusableCellWithIdentifier("Cell") as! RapListTableViewCell
         
         cell.delegate = self
-        let beat = RapManager.sharedInstance.allRap[indexPath.row]
+        let rap = RapManager.sharedInstance.allRap[indexPath.row]
       
         cell.openCellIfNeeded(self.selectedIndexPath == indexPath)
         
@@ -72,7 +72,9 @@ RapListTableViewCellDelegate
         self.selectedIndexPath = indexPath
         let cell = self.recListView.cellForRowAtIndexPath(indexPath) as! RapListTableViewCell
         cell.openCellIfNeeded(true)
-    
+        let rap = RapManager.sharedInstance.allRap[indexPath.row]
+        cell.setupSeek(rap)
+       
         self.recListView.reloadData()
     }
     

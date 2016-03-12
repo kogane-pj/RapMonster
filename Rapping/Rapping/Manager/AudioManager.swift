@@ -151,6 +151,19 @@ class AudioManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
         self.audioRecorder.deleteRecording()
     }
     
+    func getPlayTimeInfo(contentsOfURL:NSURL) -> (startTime:String, endTime:String) {
+        setupPlayerWithContentsOfURL(contentsOfURL)
+        
+        let startTime = Int(self.audioPlayer.currentTime)
+        // 秒数から分数を計算
+        let startTimeString = String(format:"%02d:%02d", (startTime/60)%60, startTime%60)
+        
+        let endTime = Int(self.audioPlayer.duration)
+        let endTimeString = String(format:"%02d:%02d", (endTime/60)%60, endTime%60)
+        
+        return (startTimeString,endTimeString)
+    }
+    
     // MARK: - Private Method
     
     private func stopPlayer() {
@@ -169,6 +182,16 @@ class AudioManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
         self.audioPlayer.volume = 1.0
         self.audioPlayer.prepareToPlay()
         self.audioPlayer.play()
+    }
+    
+    private func setupPlayerWithContentsOfURL(contentsOfURL: NSURL) {
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOfURL: contentsOfURL)
+        } catch {
+            print("error")
+        }
+        
+        self.audioPlayer.delegate = self
     }
     
     // MARK: - AudioRecorderDelgate
