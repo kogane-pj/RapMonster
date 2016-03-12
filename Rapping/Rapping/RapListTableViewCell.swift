@@ -50,8 +50,13 @@ class RapListTableViewCell: UITableViewCell {
     }
    
     func setupSeek(rap:Rap) {
-        self.startTime.text = AudioManager.sharedInstance.getPlayTimeInfo(rap.path).startTime
-        self.endTime.text   = AudioManager.sharedInstance.getPlayTimeInfo(rap.path).endTime
+        let playTimeInfo = AudioManager.sharedInstance.getPlayEndTimeInfo(rap.path)
+        
+        updateSeekTime()
+        
+        self.endTime.text   = playTimeInfo.endTimeString
+        self.playSlider.minimumValue = 0
+        self.playSlider.maximumValue = playTimeInfo.endTime
     }
     
     private func setTextColor(isOpen:Bool) -> UIColor {
@@ -59,12 +64,18 @@ class RapListTableViewCell: UITableViewCell {
     }
     
     @IBAction func didTapPlayButton(sender: AnyObject) {
-        if self.playButton.selected {
-            //TODO:stopボタンがきたらそれを埋め込む
-        }
-        
+        _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateSeekTime"), userInfo: nil, repeats: true)
+
         self.delegate.didTapPlayButton()
     }
     
+    func updateSeekTime() {
+        self.startTime.text = AudioManager.sharedInstance.getCurretTimeForString()
+        self.playSlider.value = AudioManager.sharedInstance.getCurrentTime()
+    }
     
+    @IBAction func sliderMove(sender: AnyObject) {
+        AudioManager.sharedInstance.setCurrentTime(Double(self.playSlider.value))
+        self.updateSeekTime()
+    }
 }

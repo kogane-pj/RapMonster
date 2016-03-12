@@ -56,11 +56,11 @@ class RecodeViewController: UIViewController, EZMicrophoneDelegate
     }
     
     func setupSeek() {
-        self.currentTime.text = AudioManager.sharedInstance.getCurrentTime()
+        self.currentTime.text = String(AudioManager.sharedInstance.getCurrentTime())
     }
     
     func updateSeekTime() {
-        self.currentTime.text = AudioManager.sharedInstance.getCurrentTime()
+        self.currentTime.text = String(AudioManager.sharedInstance.getCurrentTime())
     }
     
     

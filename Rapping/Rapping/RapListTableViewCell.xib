@@ -82,6 +82,9 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="epH-S1-6YO"/>
                         </constraints>
+                        <connections>
+                            <action selector="sliderMove:" destination="KGk-i7-Jjw" eventType="valueChanged" id="qsZ-QR-9vR"/>
+                        </connections>
                     </slider>
                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8u8-K9-Daq">
                         <rect key="frame" x="27" y="108" width="17" height="23"/>

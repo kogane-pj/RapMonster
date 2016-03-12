@@ -70,9 +70,11 @@ RapListTableViewCellDelegate
         }
         
         self.selectedIndexPath = indexPath
+        
         let cell = self.recListView.cellForRowAtIndexPath(indexPath) as! RapListTableViewCell
-        cell.openCellIfNeeded(true)
         let rap = RapManager.sharedInstance.allRap[indexPath.row]
+        
+        cell.openCellIfNeeded(true)
         cell.setupSeek(rap)
        
         self.recListView.reloadData()
@@ -99,6 +101,12 @@ RapListTableViewCellDelegate
         guard let row = self.selectedIndexPath?.row else{
             //TODO:Alert
             return
+        }
+       
+        if AudioManager.sharedInstance.isPlaying() {
+            AudioManager.sharedInstance.stop()
+            return
+            //TODO:stopボタンがきたらそれを埋め込む
         }
         
         let path = RapManager.sharedInstance.allRap[row].path

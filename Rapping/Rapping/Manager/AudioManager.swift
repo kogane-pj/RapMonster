@@ -12,10 +12,10 @@ class AudioManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
     static let sharedInstance = AudioManager()
     
-    var audioPlayer: AVAudioPlayer!
-    var audioSession: AVAudioSession!
-    var audioRecorder: AVAudioRecorder!
-    var recodeFilePath:NSURL!
+    private var audioPlayer: AVAudioPlayer!
+    private var audioSession: AVAudioSession!
+    private var audioRecorder: AVAudioRecorder!
+    private var recodeFilePath:NSURL!
     
     override init() {
         super.init()
@@ -130,16 +130,36 @@ class AudioManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     func isRecording() -> Bool {
         return self.audioRecorder.recording
     }
-   
+  
+    func isPlaying() -> Bool {
+        return self.audioPlayer.playing
+    }
+    
     //MARK: - Play Rap
     
     func playRap(filePath:NSURL) {
         stopPlayer()
+        
+        // 一時停止の場合を考慮
+        if self.audioPlayer.currentTime > 0 {
+            play()
+            return
+        }
+        
         playWithSetupPlayer(filePath)
     }
    
-    func getCurrentTime() -> String {
-        return String(Float(self.audioPlayer.currentTime))
+    func getCurrentTime() -> Float {
+        return Float(self.audioPlayer.currentTime)
+    }
+   
+    // 00:00形式にフォーマットされた現在再生時間を返す
+    func getCurretTimeForString() -> String {
+        return convertTimeFormat("%02d:%02d", time: self.audioPlayer.currentTime)
+    }
+    
+    func setCurrentTime(value:Double) {
+        self.audioPlayer.currentTime = value
     }
     
     func saveRecordFile() {
@@ -150,18 +170,15 @@ class AudioManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     func deleteRecordFile() {
         self.audioRecorder.deleteRecording()
     }
-    
-    func getPlayTimeInfo(contentsOfURL:NSURL) -> (startTime:String, endTime:String) {
+   
+    //あとで細分化するかも
+    func getPlayEndTimeInfo(contentsOfURL:NSURL) -> (endTimeString:String, endTime:Float) {
         setupPlayerWithContentsOfURL(contentsOfURL)
         
-        let startTime = Int(self.audioPlayer.currentTime)
         // 秒数から分数を計算
-        let startTimeString = String(format:"%02d:%02d", (startTime/60)%60, startTime%60)
+        let endTimeString   = convertTimeFormat("%02d:%02d", time: self.audioPlayer.duration)
         
-        let endTime = Int(self.audioPlayer.duration)
-        let endTimeString = String(format:"%02d:%02d", (endTime/60)%60, endTime%60)
-        
-        return (startTimeString,endTimeString)
+        return (endTimeString,Float(self.audioPlayer.duration))
     }
     
     // MARK: - Private Method
@@ -184,6 +201,13 @@ class AudioManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
         self.audioPlayer.play()
     }
     
+    private func play () {
+        self.audioPlayer.delegate = self
+        self.audioPlayer.volume = 1.0
+        self.audioPlayer.prepareToPlay()
+        self.audioPlayer.play()
+    }
+    
     private func setupPlayerWithContentsOfURL(contentsOfURL: NSURL) {
         do {
             audioPlayer = try AVAudioPlayer(contentsOfURL: contentsOfURL)
@@ -193,6 +217,12 @@ class AudioManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
         
         self.audioPlayer.delegate = self
     }
+    
+    private func convertTimeFormat(format:String,time:NSTimeInterval) -> String {
+        let time = Int(time)
+        return String(format:format, (time/60)%60, time%60)
+    }
+    
     
     // MARK: - AudioRecorderDelgate
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
