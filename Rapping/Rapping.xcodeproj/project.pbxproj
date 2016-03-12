@@ -16,6 +16,7 @@
 		8F8530371C8A954A005D361B /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530361C8A954A005D361B /* AudioManager.swift */; };
 		8F9D20D61C8C78EA00690D50 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D20D51C8C78E900690D50 /* FileManager.swift */; };
 		8F9D20DA1C91CC6A00690D50 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D20D91C91CC6A00690D50 /* User.swift */; };
+		8FABDB6F1C94860000993356 /* RecordRapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FABDB6E1C94860000993356 /* RecordRapManager.swift */; };
 		FF0A054B1C66450D00B6511A /* ThreeKeys.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A054A1C66450D00B6511A /* ThreeKeys.mp3 */; };
 		FF0A054D1C66454B00B6511A /* LookAtYourself.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A054C1C66454B00B6511A /* LookAtYourself.mp3 */; };
 		FF0A054F1C66458200B6511A /* Reflection.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF0A054E1C66458200B6511A /* Reflection.mp3 */; };
@@ -85,6 +86,7 @@
 		8F8530361C8A954A005D361B /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioManager.swift; path = Manager/AudioManager.swift; sourceTree = "<group>"; };
 		8F9D20D51C8C78E900690D50 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileManager.swift; path = Manager/FileManager.swift; sourceTree = "<group>"; };
 		8F9D20D91C91CC6A00690D50 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Manager/User.swift; sourceTree = "<group>"; };
+		8FABDB6E1C94860000993356 /* RecordRapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordRapManager.swift; path = Manager/RecordRapManager.swift; sourceTree = "<group>"; };
 		9F71E139E42B286689C25AD8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FF0A054A1C66450D00B6511A /* ThreeKeys.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ThreeKeys.mp3; sourceTree = "<group>"; };
 		FF0A054C1C66454B00B6511A /* LookAtYourself.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LookAtYourself.mp3; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			children = (
 				8F8530361C8A954A005D361B /* AudioManager.swift */,
 				8F9D20D51C8C78E900690D50 /* FileManager.swift */,
+				8FABDB6E1C94860000993356 /* RecordRapManager.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				8F8530201C888CB8005D361B /* UIImage+Color.swift in Sources */,
 				8F8530371C8A954A005D361B /* AudioManager.swift in Sources */,
 				8F9D20DA1C91CC6A00690D50 /* User.swift in Sources */,
+				8FABDB6F1C94860000993356 /* RecordRapManager.swift in Sources */,
 				FF2B24D41C760FE800FDF0D5 /* RapListTableViewCell.swift in Sources */,
 				8F9D20D61C8C78EA00690D50 /* FileManager.swift in Sources */,
 				8F85302A1C89D361005D361B /* Constants.swift in Sources */,
