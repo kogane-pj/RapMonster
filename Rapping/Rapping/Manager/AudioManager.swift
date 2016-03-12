@@ -141,6 +141,7 @@ class AudioManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
         stopPlayer()
         
         // 一時停止の場合を考慮
+        // TODO:playRap以外も同じ処理必要そう
         if self.audioPlayer.currentTime > 0 {
             play()
             return
