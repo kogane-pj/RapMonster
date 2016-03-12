@@ -14,6 +14,7 @@ protocol RapListTableViewCellDelegate {
 
 class RapListTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var rapTitle: UILabel!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var startTime: UILabel!
     @IBOutlet weak var endTime: UILabel!
@@ -23,12 +24,12 @@ class RapListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.selectionStyle = .None
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
     }
     
     func openCellIfNeeded(isOpen:Bool) {
@@ -37,7 +38,17 @@ class RapListTableViewCell: UITableViewCell {
         self.playButton.hidden  = !isOpen
         self.playSlider.hidden  = !isOpen
         
+        self.rapTitle.textColor  = setTextColor(isOpen)
+        self.startTime.textColor = setTextColor(isOpen)
+        self.endTime.textColor   = setTextColor(isOpen)
+        
+        self.contentView.backgroundColor = setTextColor(!isOpen)
+       
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.width,167)
+    }
+    
+    private func setTextColor(isOpen:Bool) -> UIColor {
+        return (isOpen) ? UIColor.blackColor() : UIColor.whiteColor()
     }
     
     @IBAction func didTapPlayButton(sender: AnyObject) {

@@ -61,6 +61,8 @@ RapListTableViewCellDelegate
     //MARK: UITableViewDelegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.recListView.deselectRowAtIndexPath(indexPath, animated: false)
+        
         if self.selectedIndexPath == indexPath {
             self.selectedIndexPath = nil //TODO:定数化
             self.recListView.reloadData()
