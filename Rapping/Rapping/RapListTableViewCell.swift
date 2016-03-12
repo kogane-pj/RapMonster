@@ -26,6 +26,8 @@ class RapListTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         self.selectionStyle = .None
+        self.playSlider.setThumbImage(UIImage.init(named:"rectangle199"), forState: .Normal)
+        self.playSlider.setThumbImage(UIImage.init(named:"rectangle199"), forState: .Selected)
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
@@ -52,6 +54,10 @@ class RapListTableViewCell: UITableViewCell {
     }
     
     @IBAction func didTapPlayButton(sender: AnyObject) {
+        if self.playButton.selected {
+            //TODO:stopボタンがきたらそれを埋め込む
+        }
+        
         self.delegate.didTapPlayButton()
     }
     

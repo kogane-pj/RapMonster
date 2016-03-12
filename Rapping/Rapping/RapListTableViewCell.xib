@@ -136,7 +136,7 @@
             <connections>
                 <outlet property="endTime" destination="fQ8-mh-Gge" id="huZ-FT-Cnj"/>
                 <outlet property="playButton" destination="8u8-K9-Daq" id="tTQ-Ty-kV4"/>
-                <outlet property="playSlider" destination="OXk-q9-fut" id="p1o-V8-WqC"/>
+                <outlet property="playSlider" destination="OXk-q9-fut" id="glf-IC-Hnt"/>
                 <outlet property="rapTitle" destination="f2E-Ja-ltZ" id="9QS-Nv-8Gz"/>
                 <outlet property="startTime" destination="jy5-Lh-qyl" id="wKT-cc-9f6"/>
             </connections>
