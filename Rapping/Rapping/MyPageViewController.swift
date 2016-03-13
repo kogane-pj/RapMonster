@@ -89,7 +89,7 @@ RapListTableViewCellDelegate
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50;
+        return 66;
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
