@@ -10,6 +10,7 @@ import UIKit
 
 protocol RapListTableViewCellDelegate {
     func didTapPlayButton()
+    func didTapShareButton()
 }
 
 class RapListTableViewCell: UITableViewCell {
@@ -79,5 +80,9 @@ class RapListTableViewCell: UITableViewCell {
     @IBAction func sliderMove(sender: AnyObject) {
         AudioManager.sharedInstance.setCurrentTime(Double(self.playSlider.value))
         self.updateSeekTime()
+    }
+    
+    @IBAction func didTapShareButton(sender: AnyObject) {
+       self.delegate.didTapShareButton()
     }
 }

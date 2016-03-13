@@ -76,6 +76,7 @@
 		FFCA99E41C58EE7000F78684 /* Evening.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99E31C58EE7000F78684 /* Evening.mp3 */; };
 		FFCA99E61C58EE8300F78684 /* Future.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFCA99E51C58EE8300F78684 /* Future.mp3 */; };
 		FFE6A48A1C88899100315044 /* TimeIsMine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFE6A4891C88899100315044 /* TimeIsMine.mp3 */; };
+		FFE6A48C1C9589BB00315044 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE6A48B1C9589BB00315044 /* Social.framework */; };
 		FFEEE54C1C66218500B8E0A6 /* Beat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEEE54B1C66218500B8E0A6 /* Beat.swift */; };
 /* End PBXBuildFile section */
 
@@ -174,6 +175,7 @@
 		FFCA99E31C58EE7000F78684 /* Evening.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Evening.mp3; sourceTree = "<group>"; };
 		FFCA99E51C58EE8300F78684 /* Future.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Future.mp3; sourceTree = "<group>"; };
 		FFE6A4891C88899100315044 /* TimeIsMine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TimeIsMine.mp3; sourceTree = "<group>"; };
+		FFE6A48B1C9589BB00315044 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FFEEE54B1C66218500B8E0A6 /* Beat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +184,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFE6A48C1C9589BB00315044 /* Social.framework in Frameworks */,
 				FF2B24CD1C7606EA00FDF0D5 /* GLKit.framework in Frameworks */,
 				FF2B24CB1C7606E500FDF0D5 /* Foundation.framework in Frameworks */,
 				FFCA99DB1C58A5C600F78684 /* AVFoundation.framework in Frameworks */,
@@ -213,6 +216,7 @@
 		57B627FD474670D6198FBA97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FFE6A48B1C9589BB00315044 /* Social.framework */,
 				FF2B24CC1C7606EA00FDF0D5 /* GLKit.framework */,
 				FF2B24CA1C7606E500FDF0D5 /* Foundation.framework */,
 				FF2B24C81C7606D000FDF0D5 /* Accelerate.framework */,

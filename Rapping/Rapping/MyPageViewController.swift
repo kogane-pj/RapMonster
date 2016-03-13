@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class MyPageViewController: UIViewController,
 UITableViewDelegate,
@@ -97,6 +98,7 @@ RapListTableViewCellDelegate
     }
    
     //MARK: RapListTableViewCell Delegate
+    
     func didTapPlayButton() {
         guard let row = self.selectedIndexPath?.row else{
             //TODO:Alert
@@ -111,5 +113,9 @@ RapListTableViewCellDelegate
         
         let path = RapManager.sharedInstance.allRap[row].path
         AudioManager.sharedInstance.playRap(path)
+    }
+    
+    func didTapShareButton() {
+        ActivityController().showActivityView(self)
     }
 }
