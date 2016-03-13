@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import Social
 
 class MyPageViewController: UIViewController,
 UITableViewDelegate,
 UITableViewDataSource,
+UIScrollViewDelegate,
 RapListTableViewCellDelegate
 {
     @IBOutlet weak var recListView: UITableView!
@@ -117,5 +117,11 @@ RapListTableViewCellDelegate
     
     func didTapShareButton() {
         ActivityController().showActivityView(self)
+    }
+    
+    //MARK : TableView in ScrollView Delegate
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        // TODO:スクロールにあわせてtableViewの位置をずらす
     }
 }
