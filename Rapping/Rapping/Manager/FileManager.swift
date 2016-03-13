@@ -33,4 +33,16 @@ class FileManager: NSObject {
         let file = NCMBFile.fileWithName(fileName, data: data)
         file.save(&error)
     }
+    
+    func uploadFile(fileName: String, url: NSURL, defaultUrl: NSURL?=nil) -> NSURL? {
+        let data = NSData(contentsOfURL: url)
+        var error: NSError?
+        let file = NCMBFile.fileWithName(fileName, data: data)
+        file.save(&error)
+        if error == nil {
+            return file.url
+        }
+        
+        return defaultUrl
+    }
 }

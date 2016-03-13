@@ -16,6 +16,7 @@
 		8F8530371C8A954A005D361B /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530361C8A954A005D361B /* AudioManager.swift */; };
 		8F9D20D61C8C78EA00690D50 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D20D51C8C78E900690D50 /* FileManager.swift */; };
 		8F9D20DA1C91CC6A00690D50 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D20D91C91CC6A00690D50 /* User.swift */; };
+		8FABDB6F1C94860000993356 /* RecordRapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FABDB6E1C94860000993356 /* RecordRapManager.swift */; };
 		8FABDB871C9488E700993356 /* SF-UI-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FABDB721C9488E700993356 /* SF-UI-Display-Black.otf */; };
 		8FABDB881C9488E700993356 /* SF-UI-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FABDB731C9488E700993356 /* SF-UI-Display-Bold.otf */; };
 		8FABDB891C9488E700993356 /* SF-UI-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FABDB741C9488E700993356 /* SF-UI-Display-Heavy.otf */; };
@@ -106,6 +107,7 @@
 		8F8530361C8A954A005D361B /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioManager.swift; path = Manager/AudioManager.swift; sourceTree = "<group>"; };
 		8F9D20D51C8C78E900690D50 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileManager.swift; path = Manager/FileManager.swift; sourceTree = "<group>"; };
 		8F9D20D91C91CC6A00690D50 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Manager/User.swift; sourceTree = "<group>"; };
+		8FABDB6E1C94860000993356 /* RecordRapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordRapManager.swift; path = Manager/RecordRapManager.swift; sourceTree = "<group>"; };
 		8FABDB721C9488E700993356 /* SF-UI-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Black.otf"; sourceTree = "<group>"; };
 		8FABDB731C9488E700993356 /* SF-UI-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Bold.otf"; sourceTree = "<group>"; };
 		8FABDB741C9488E700993356 /* SF-UI-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Heavy.otf"; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			children = (
 				8F8530361C8A954A005D361B /* AudioManager.swift */,
 				8F9D20D51C8C78E900690D50 /* FileManager.swift */,
+				8FABDB6E1C94860000993356 /* RecordRapManager.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -688,6 +691,7 @@
 				8F8530201C888CB8005D361B /* UIImage+Color.swift in Sources */,
 				8F8530371C8A954A005D361B /* AudioManager.swift in Sources */,
 				8F9D20DA1C91CC6A00690D50 /* User.swift in Sources */,
+				8FABDB6F1C94860000993356 /* RecordRapManager.swift in Sources */,
 				FF2B24D41C760FE800FDF0D5 /* RapListTableViewCell.swift in Sources */,
 				8F9D20D61C8C78EA00690D50 /* FileManager.swift in Sources */,
 				8F85302A1C89D361005D361B /* Constants.swift in Sources */,
