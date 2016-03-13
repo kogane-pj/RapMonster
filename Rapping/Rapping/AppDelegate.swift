@@ -22,6 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         NCMB.setApplicationKey(API_ID.NCMB_APP_KEY, clientKey: API_ID.NCMB_CLIENT_KEY)
+    
+        AdobeUXAuthManager.sharedManager().setAuthenticationParametersWithClientID(API_ID.ADOBE_CLIENT_ID_DEV, withClientSecret: API_ID.ADOBE_CLIEND_ID_SEC)
+        
         customizeLayout()
         return true
     }

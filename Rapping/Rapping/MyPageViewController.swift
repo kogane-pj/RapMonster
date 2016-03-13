@@ -12,7 +12,8 @@ class MyPageViewController: UIViewController,
 UITableViewDelegate,
 UITableViewDataSource,
 UIScrollViewDelegate,
-RapListTableViewCellDelegate
+RapListTableViewCellDelegate,
+AdobeUXImageEditorViewControllerDelegate
 {
     @IBOutlet weak var recListView: UITableView!
     
@@ -97,6 +98,28 @@ RapListTableViewCellDelegate
         return self.recListView.dequeueReusableCellWithIdentifier("sectionCell") as! RapListViewSectionCell
     }
    
+    //MARK: tap delegate
+    
+    @IBAction func didTapIconButton(sender: AnyObject) {
+        let adobeViewCtr = AdobeUXImageEditorViewController(image: UIImage(named: "battle")!)
+        adobeViewCtr.delegate = self
+        self.presentViewController(adobeViewCtr, animated: true) { () -> Void in
+            
+        }
+    }
+    
+    //MARK: AdobeUXImageEditorViewControllerDelegate
+    
+    func photoEditor(editor: AdobeUXImageEditorViewController!, finishedWithImage image: UIImage!) {
+        editor.dismissViewControllerAnimated(true, completion: nil)
+        
+        print(image)//これが編集された画像です
+    }
+    
+    func photoEditorCanceled(editor: AdobeUXImageEditorViewController!) {
+        editor.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     //MARK: RapListTableViewCell Delegate
     
     func didTapPlayButton() {
