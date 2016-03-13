@@ -94,6 +94,7 @@
 		FFE6A4B51C9599AE00315044 /* AdobeCreativeSDKImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE6A4B41C9599AE00315044 /* AdobeCreativeSDKImage.framework */; };
 		FFEEE54C1C66218500B8E0A6 /* Beat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEEE54B1C66218500B8E0A6 /* Beat.swift */; };
 		FFF7253A1C95A8E30070555F /* PictureUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF725391C95A8E30070555F /* PictureUtil.swift */; };
+		FFF7253E1C95B0F50070555F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF7253D1C95B0F50070555F /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +211,7 @@
 		FFE6A4B41C9599AE00315044 /* AdobeCreativeSDKImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdobeCreativeSDKImage.framework; sourceTree = "<group>"; };
 		FFEEE54B1C66218500B8E0A6 /* Beat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beat.swift; sourceTree = "<group>"; };
 		FFF725391C95A8E30070555F /* PictureUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureUtil.swift; sourceTree = "<group>"; };
+		FFF7253D1C95B0F50070555F /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,6 +382,7 @@
 				FF0A05541C6666AF00B6511A /* RecodeListViewController.swift */,
 				FF0A055C1C67299F00B6511A /* RecodeViewController.swift */,
 				FF2B24C21C76046200FDF0D5 /* MyPageViewController.swift */,
+				FFF7253D1C95B0F50070555F /* SettingViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -769,6 +772,7 @@
 				FF15CE111C831D030017BCEB /* RMNavigationItem.swift in Sources */,
 				FF0A055D1C67299F00B6511A /* RecodeViewController.swift in Sources */,
 				FFCA99B21C58A4ED00F78684 /* Rapping.xcdatamodeld in Sources */,
+				FFF7253E1C95B0F50070555F /* SettingViewController.swift in Sources */,
 				FF2B24C11C76044600FDF0D5 /* BeatListViewController.swift in Sources */,
 				FF0A05551C6666AF00B6511A /* RecodeListViewController.swift in Sources */,
 				FFF7253A1C95A8E30070555F /* PictureUtil.swift in Sources */,
