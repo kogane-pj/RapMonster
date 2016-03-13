@@ -74,7 +74,7 @@
                     </view>
                     <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qub-FC-MK0" userLabel="line">
                         <rect key="frame" x="15" y="110" width="290" height="2"/>
-                        <color key="backgroundColor" red="0.69803921568627447" green="0.69803921568627447" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.69803921568627447" green="0.69803921568627447" blue="0.69803921568627447" alpha="0.5" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="2" id="jqF-w0-zpX"/>
                         </constraints>
@@ -102,7 +102,7 @@
                         </connections>
                     </button>
                 </subviews>
-                <color key="backgroundColor" white="0.10050884046052633" alpha="1" colorSpace="calibratedWhite"/>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="R3G-1Y-Jhw" secondAttribute="trailing" constant="17" id="1fp-4x-ZGu"/>
                     <constraint firstAttribute="trailing" secondItem="qub-FC-MK0" secondAttribute="trailing" constant="15" id="4lL-MC-cay"/>

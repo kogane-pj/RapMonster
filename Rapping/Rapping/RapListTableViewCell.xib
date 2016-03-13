@@ -38,7 +38,7 @@
                     </label>
                     <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sS2-Fx-DHk" userLabel="line">
                         <rect key="frame" x="15" y="108" width="290" height="2"/>
-                        <color key="backgroundColor" red="0.69803921570000005" green="0.69803921570000005" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.69803921570000005" green="0.69803921570000005" blue="0.69803921570000005" alpha="0.5" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="2" id="Sq6-ya-9lx"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="lP0-fJ-r5s"/>

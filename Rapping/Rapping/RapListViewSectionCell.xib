@@ -21,7 +21,7 @@
                         <color key="textColor" red="0.98039215686274506" green="0.73333333333333328" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knZ-vq-CyJ">
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knZ-vq-CyJ">
                         <rect key="frame" x="266" y="18" width="38" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="38" id="sOH-sl-xbX"/>
@@ -34,7 +34,7 @@
                     </button>
                     <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ej7-MS-rzJ" userLabel="line">
                         <rect key="frame" x="15" y="0.0" width="290" height="2"/>
-                        <color key="backgroundColor" red="0.69803921570000005" green="0.69803921570000005" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.69803921570000005" green="0.69803921570000005" blue="0.69803921570000005" alpha="0.5" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="2" id="DjZ-MQ-eoG"/>
                             <constraint firstAttribute="height" constant="2" id="Fdz-6K-Q3U"/>
@@ -49,7 +49,7 @@
                     </view>
                     <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ke2-oU-coN" userLabel="line">
                         <rect key="frame" x="15" y="63" width="290" height="2"/>
-                        <color key="backgroundColor" red="0.69803921570000005" green="0.69803921570000005" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.69803921570000005" green="0.69803921570000005" blue="0.69803921570000005" alpha="0.5" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="4Dr-pD-lnR"/>
                             <constraint firstAttribute="height" constant="2" id="xoa-bO-daz"/>
