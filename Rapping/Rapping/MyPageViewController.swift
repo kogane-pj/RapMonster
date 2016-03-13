@@ -12,10 +12,14 @@ class MyPageViewController: UIViewController,
 UITableViewDelegate,
 UITableViewDataSource,
 UIScrollViewDelegate,
+UIImagePickerControllerDelegate,
+UINavigationControllerDelegate,
+UIActionSheetDelegate,
 RapListTableViewCellDelegate,
 AdobeUXImageEditorViewControllerDelegate
 {
     @IBOutlet weak var recListView: UITableView!
+    @IBOutlet weak var iconButton: UIButton!
     
     private var rapArray:[Rap] = []
     private var selectedIndexPath:NSIndexPath?
@@ -37,6 +41,17 @@ AdobeUXImageEditorViewControllerDelegate
         
         let nib2 = UINib(nibName: "RapListViewSectionCell", bundle: nil)
         self.recListView.registerNib(nib2, forCellReuseIdentifier: "sectionCell")
+    }
+   
+    private func updateIconImage(image:UIImage) {
+        image.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+        self.iconButton.setImage(image, forState: .Normal)
+        self.iconButton.setImage(image, forState: .Selected)
+        self.iconButton.setBackgroundImage(image, forState: .Normal)
+        self.iconButton.setBackgroundImage(image, forState: .Selected)
+        self.iconButton.imageView?.contentMode = UIViewContentMode.ScaleAspectFill
+        
+        // TODO:Userクラスに保存
     }
     
     //MARK: UITableViewDataSource
@@ -97,29 +112,82 @@ AdobeUXImageEditorViewControllerDelegate
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return self.recListView.dequeueReusableCellWithIdentifier("sectionCell") as! RapListViewSectionCell
     }
-   
-    //MARK: tap delegate
+  
+    //MARK: didTap delegate
     
     @IBAction func didTapIconButton(sender: AnyObject) {
-        let adobeViewCtr = AdobeUXImageEditorViewController(image: UIImage(named: "battle")!)
-        adobeViewCtr.delegate = self
-        self.presentViewController(adobeViewCtr, animated: true) { () -> Void in
-            
-        }
+        selectedPhotoAlert()
+    }
+    
+    func selectedPhotoAlert() {
+        let actionSheet:UIAlertController = UIAlertController(title:"",
+            message: "アイコンに使用する画像を選択してください",
+            preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        let cancelAction:UIAlertAction = UIAlertAction(title: "Cancel",
+            style: UIAlertActionStyle.Cancel,
+            handler:{
+                (action:UIAlertAction!) -> Void in
+        })
+        
+        let defaultAction:UIAlertAction = UIAlertAction(title: "写真を撮る",
+            style: UIAlertActionStyle.Default,
+            handler:{
+                (action:UIAlertAction!) -> Void in
+                //TODO: 循環参照のfix
+                PictureUtil.pickImageFromCamera(self, vc: self)
+        })
+        
+        let destructiveAction:UIAlertAction = UIAlertAction(title: "ライブラリから選択",
+            style: UIAlertActionStyle.Default,
+            handler:{
+                (action:UIAlertAction!) -> Void in
+                //TODO: 循環参照のfix
+                PictureUtil.pickImageFromLibrary(self, vc: self)
+        })
+        
+        actionSheet.addAction(cancelAction)
+        actionSheet.addAction(defaultAction)
+        actionSheet.addAction(destructiveAction)
+        
+        presentViewController(actionSheet, animated: true, completion: nil)
     }
     
     //MARK: AdobeUXImageEditorViewControllerDelegate
     
-    func photoEditor(editor: AdobeUXImageEditorViewController!, finishedWithImage image: UIImage!) {
+    func photoEditor(editor: AdobeUXImageEditorViewController, finishedWithImage image: UIImage?) {
         editor.dismissViewControllerAnimated(true, completion: nil)
+    
+        if let _image = image {
+            updateIconImage(_image)
+        } else {
+            print("error")
+        }
+    }
+   
+    func photoEditorCanceled(editor: AdobeUXImageEditorViewController) {
+        editor.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    //MARK: UIImagePickerControllerDelegate
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if info[UIImagePickerControllerOriginalImage] != nil {
+            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+            
+            let adobeViewCtr = AdobeUXImageEditorViewController(image: image)
+            adobeViewCtr.delegate = self
+            
+            picker.dismissViewControllerAnimated(true, completion:{
+                // TODO:循環参照を解消する
+                self.presentViewController(adobeViewCtr, animated: true, completion: nil)
+            });
+            return
+        }
         
-        print(image)//これが編集された画像です
+        picker.dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    func photoEditorCanceled(editor: AdobeUXImageEditorViewController!) {
-        editor.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
+   
     //MARK: RapListTableViewCell Delegate
     
     func didTapPlayButton() {
