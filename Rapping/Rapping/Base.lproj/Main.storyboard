@@ -584,4 +584,5 @@
         <image name="tab_mypage" width="19" height="26"/>
         <image name="tab_rec" width="25" height="25"/>
     </resources>
+    <color key="tintColor" red="0.94901960780000005" green="0.68627450980000004" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>

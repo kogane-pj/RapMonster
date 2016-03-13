@@ -210,6 +210,42 @@
 			name = Manager;
 			sourceTree = "<group>";
 		};
+		8FABDB701C9488CC00993356 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8FABDB711C9488E700993356 /* SF-UI */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		8FABDB711C9488E700993356 /* SF-UI */ = {
+			isa = PBXGroup;
+			children = (
+				8FABDB721C9488E700993356 /* SF-UI-Display-Black.otf */,
+				8FABDB731C9488E700993356 /* SF-UI-Display-Bold.otf */,
+				8FABDB741C9488E700993356 /* SF-UI-Display-Heavy.otf */,
+				8FABDB751C9488E700993356 /* SF-UI-Display-Light.otf */,
+				8FABDB761C9488E700993356 /* SF-UI-Display-Medium.otf */,
+				8FABDB771C9488E700993356 /* SF-UI-Display-Regular.otf */,
+				8FABDB781C9488E700993356 /* SF-UI-Display-Semibold.otf */,
+				8FABDB791C9488E700993356 /* SF-UI-Display-Thin.otf */,
+				8FABDB7A1C9488E700993356 /* SF-UI-Display-Ultralight.otf */,
+				8FABDB7B1C9488E700993356 /* SF-UI-Text-Bold.otf */,
+				8FABDB7C1C9488E700993356 /* SF-UI-Text-BoldItalic.otf */,
+				8FABDB7D1C9488E700993356 /* SF-UI-Text-Heavy.otf */,
+				8FABDB7E1C9488E700993356 /* SF-UI-Text-HeavyItalic.otf */,
+				8FABDB7F1C9488E700993356 /* SF-UI-Text-Light.otf */,
+				8FABDB801C9488E700993356 /* SF-UI-Text-LightItalic.otf */,
+				8FABDB811C9488E700993356 /* SF-UI-Text-Medium.otf */,
+				8FABDB821C9488E700993356 /* SF-UI-Text-MediumItalic.otf */,
+				8FABDB831C9488E700993356 /* SF-UI-Text-Regular.otf */,
+				8FABDB841C9488E700993356 /* SF-UI-Text-RegularItalic.otf */,
+				8FABDB851C9488E700993356 /* SF-UI-Text-Semibold.otf */,
+				8FABDB861C9488E700993356 /* SF-UI-Text-SemiboldItalic.otf */,
+			);
+			path = "SF-UI";
+			sourceTree = "<group>";
+		};
 		C929C9C09E025DDBBD81400C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +324,7 @@
 		FF2B24BF1C76037500FDF0D5 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				8FABDB701C9488CC00993356 /* Fonts */,
 				FFCA99E01C58EE1B00F78684 /* Beats */,
 			);
 			name = Resource;
@@ -481,21 +518,42 @@
 			files = (
 				FFCA99B71C58A4ED00F78684 /* LaunchScreen.storyboard in Resources */,
 				FF2B24D51C760FE800FDF0D5 /* RapListTableViewCell.xib in Resources */,
+				8FABDB981C9488E700993356 /* SF-UI-Text-Regular.otf in Resources */,
+				8FABDB8D1C9488E700993356 /* SF-UI-Display-Semibold.otf in Resources */,
+				8FABDB921C9488E700993356 /* SF-UI-Text-Heavy.otf in Resources */,
+				8FABDB961C9488E700993356 /* SF-UI-Text-Medium.otf in Resources */,
+				8FABDB9A1C9488E700993356 /* SF-UI-Text-Semibold.otf in Resources */,
 				FF2B24A51C68F00C00FDF0D5 /* BeatTableViewCell.xib in Resources */,
 				FF0A05531C66460A00B6511A /* StillWaving.mp3 in Resources */,
+				8FABDB941C9488E700993356 /* SF-UI-Text-Light.otf in Resources */,
+				8FABDB971C9488E700993356 /* SF-UI-Text-MediumItalic.otf in Resources */,
+				8FABDB991C9488E700993356 /* SF-UI-Text-RegularItalic.otf in Resources */,
+				8FABDB9B1C9488E700993356 /* SF-UI-Text-SemiboldItalic.otf in Resources */,
 				FF0A054F1C66458200B6511A /* Reflection.mp3 in Resources */,
 				FFCA99E41C58EE7000F78684 /* Evening.mp3 in Resources */,
+				8FABDB911C9488E700993356 /* SF-UI-Text-BoldItalic.otf in Resources */,
+				8FABDB881C9488E700993356 /* SF-UI-Display-Bold.otf in Resources */,
+				8FABDB8E1C9488E700993356 /* SF-UI-Display-Thin.otf in Resources */,
 				FFE6A48A1C88899100315044 /* TimeIsMine.mp3 in Resources */,
 				FFCA99E61C58EE8300F78684 /* Future.mp3 in Resources */,
 				FFCA99E21C58EE5800F78684 /* DownBeats.mp3 in Resources */,
 				FF0A054D1C66454B00B6511A /* LookAtYourself.mp3 in Resources */,
+				8FABDB951C9488E700993356 /* SF-UI-Text-LightItalic.otf in Resources */,
+				8FABDB871C9488E700993356 /* SF-UI-Display-Black.otf in Resources */,
 				FF2B24D11C760D8000FDF0D5 /* RapListViewSectionCell.xib in Resources */,
 				FF0A05511C6645BC00B6511A /* HereWeCome.mp3 in Resources */,
+				8FABDB8C1C9488E700993356 /* SF-UI-Display-Regular.otf in Resources */,
 				FFCA99B41C58A4ED00F78684 /* Assets.xcassets in Resources */,
 				FF15CE151C831E3D0017BCEB /* RMTitleView.xib in Resources */,
+				8FABDB8F1C9488E700993356 /* SF-UI-Display-Ultralight.otf in Resources */,
+				8FABDB8B1C9488E700993356 /* SF-UI-Display-Medium.otf in Resources */,
+				8FABDB8A1C9488E700993356 /* SF-UI-Display-Light.otf in Resources */,
+				8FABDB931C9488E700993356 /* SF-UI-Text-HeavyItalic.otf in Resources */,
+				8FABDB901C9488E700993356 /* SF-UI-Text-Bold.otf in Resources */,
 				FFCA99DF1C58C2B100F78684 /* StreetNuts.mp3 in Resources */,
 				FF0A054B1C66450D00B6511A /* ThreeKeys.mp3 in Resources */,
 				8F85302F1C89E44F005D361B /* Settings.bundle in Resources */,
+				8FABDB891C9488E700993356 /* SF-UI-Display-Heavy.otf in Resources */,
 				FFCA99AF1C58A4ED00F78684 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
