@@ -36,6 +36,21 @@
                             </mask>
                         </variation>
                     </label>
+                    <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sS2-Fx-DHk" userLabel="line">
+                        <rect key="frame" x="15" y="108" width="290" height="2"/>
+                        <color key="backgroundColor" red="0.69803921570000005" green="0.69803921570000005" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="Sq6-ya-9lx"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="lP0-fJ-r5s"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="oJB-KT-OVe"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="lP0-fJ-r5s"/>
+                                <exclude reference="oJB-KT-OVe"/>
+                            </mask>
+                        </variation>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoL-gE-nVB">
                         <rect key="frame" x="25" y="66" width="175" height="15"/>
                         <constraints>
@@ -78,7 +93,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OXk-q9-fut">
-                        <rect key="frame" x="109.5" y="103" width="145" height="31"/>
+                        <rect key="frame" x="109" y="103" width="145" height="31"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="epH-S1-6YO"/>
                         </constraints>
@@ -105,7 +120,9 @@
                     <constraint firstItem="520-3P-4vB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="42" id="3NO-OZ-nja"/>
                     <constraint firstItem="g9A-4r-gHa" firstAttribute="top" secondItem="f2E-Ja-ltZ" secondAttribute="bottom" constant="4" id="44i-BP-jEV"/>
                     <constraint firstItem="f2E-Ja-ltZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="5Yx-BJ-6oe"/>
+                    <constraint firstItem="sS2-Fx-DHk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="108" id="8xj-fl-fo2"/>
                     <constraint firstItem="f2E-Ja-ltZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="By9-xA-ImR"/>
+                    <constraint firstItem="sS2-Fx-DHk" firstAttribute="top" secondItem="YoL-gE-nVB" secondAttribute="bottom" constant="110" id="Ehm-bM-LkU"/>
                     <constraint firstItem="OXk-q9-fut" firstAttribute="leading" secondItem="jy5-Lh-qyl" secondAttribute="trailing" constant="11" id="Lky-7G-gX7"/>
                     <constraint firstAttribute="trailing" secondItem="fQ8-mh-Gge" secondAttribute="trailing" constant="20" id="NVp-5m-Mxi"/>
                     <constraint firstItem="jy5-Lh-qyl" firstAttribute="leading" secondItem="8u8-K9-Daq" secondAttribute="trailing" constant="20" id="NY9-E3-Sci"/>
@@ -113,6 +130,7 @@
                     <constraint firstItem="YoL-gE-nVB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="TUZ-ZX-AfO"/>
                     <constraint firstItem="jy5-Lh-qyl" firstAttribute="top" secondItem="YoL-gE-nVB" secondAttribute="bottom" constant="30" id="Uth-fI-QHp"/>
                     <constraint firstItem="g9A-4r-gHa" firstAttribute="top" secondItem="f2E-Ja-ltZ" secondAttribute="bottom" id="VOC-Om-Cb5"/>
+                    <constraint firstAttribute="trailing" secondItem="sS2-Fx-DHk" secondAttribute="trailing" constant="15" id="Vet-ET-xPw"/>
                     <constraint firstAttribute="trailing" secondItem="YoL-gE-nVB" secondAttribute="trailing" constant="120" id="Ybq-Dr-lrV"/>
                     <constraint firstItem="g9A-4r-gHa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="eBG-3r-mNk"/>
                     <constraint firstItem="YoL-gE-nVB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="67" id="f11-mJ-VGF"/>
@@ -121,6 +139,7 @@
                     <constraint firstAttribute="bottom" secondItem="OXk-q9-fut" secondAttribute="bottom" constant="33.5" id="kDh-S6-mhJ"/>
                     <constraint firstItem="8u8-K9-Daq" firstAttribute="top" secondItem="YoL-gE-nVB" secondAttribute="bottom" constant="27" id="mpZ-GP-Agn"/>
                     <constraint firstItem="YoL-gE-nVB" firstAttribute="top" secondItem="g9A-4r-gHa" secondAttribute="bottom" id="qmU-lY-jrX"/>
+                    <constraint firstItem="sS2-Fx-DHk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="re9-Al-XSh"/>
                     <constraint firstItem="YoL-gE-nVB" firstAttribute="top" secondItem="g9A-4r-gHa" secondAttribute="bottom" constant="4" id="s7S-va-jEJ"/>
                     <constraint firstItem="f2E-Ja-ltZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="wf0-hf-1Io"/>
                     <constraint firstAttribute="trailing" secondItem="520-3P-4vB" secondAttribute="trailing" constant="26" id="x4f-RR-8Dq"/>
@@ -133,6 +152,7 @@
                         <exclude reference="f11-mJ-VGF"/>
                         <exclude reference="f70-os-Ef0"/>
                         <exclude reference="qmU-lY-jrX"/>
+                        <exclude reference="Ehm-bM-LkU"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
@@ -141,6 +161,7 @@
                 <outlet property="playButton" destination="8u8-K9-Daq" id="tTQ-Ty-kV4"/>
                 <outlet property="playSlider" destination="OXk-q9-fut" id="glf-IC-Hnt"/>
                 <outlet property="rapTitle" destination="f2E-Ja-ltZ" id="9QS-Nv-8Gz"/>
+                <outlet property="separatorView" destination="sS2-Fx-DHk" id="9Vq-gV-oDT"/>
                 <outlet property="startTime" destination="jy5-Lh-qyl" id="wKT-cc-9f6"/>
             </connections>
             <point key="canvasLocation" x="360" y="169.5"/>

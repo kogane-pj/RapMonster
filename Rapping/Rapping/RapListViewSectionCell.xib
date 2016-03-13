@@ -33,7 +33,7 @@
                         </state>
                     </button>
                     <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ej7-MS-rzJ" userLabel="line">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="2"/>
+                        <rect key="frame" x="15" y="0.0" width="290" height="2"/>
                         <color key="backgroundColor" red="0.69803921570000005" green="0.69803921570000005" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="2" id="DjZ-MQ-eoG"/>
@@ -48,23 +48,28 @@
                         </variation>
                     </view>
                     <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ke2-oU-coN" userLabel="line">
-                        <rect key="frame" x="0.0" y="63" width="320" height="2"/>
+                        <rect key="frame" x="15" y="63" width="290" height="2"/>
                         <color key="backgroundColor" red="0.69803921570000005" green="0.69803921570000005" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="4Dr-pD-lnR"/>
                             <constraint firstAttribute="height" constant="2" id="xoa-bO-daz"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4Dr-pD-lnR"/>
+                            </mask>
+                        </variation>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ej7-MS-rzJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="0Bi-at-5uJ"/>
-                    <constraint firstItem="Ke2-oU-coN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6vV-7S-li9"/>
+                    <constraint firstItem="Ke2-oU-coN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="6vV-7S-li9"/>
                     <constraint firstItem="ej7-MS-rzJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="8Vt-aJ-l6B"/>
-                    <constraint firstItem="ej7-MS-rzJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HwO-x4-b9P"/>
-                    <constraint firstAttribute="trailing" secondItem="Ke2-oU-coN" secondAttribute="trailing" id="I9t-Ay-opV"/>
+                    <constraint firstItem="ej7-MS-rzJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="HwO-x4-b9P"/>
+                    <constraint firstAttribute="trailing" secondItem="Ke2-oU-coN" secondAttribute="trailing" constant="15" id="I9t-Ay-opV"/>
                     <constraint firstItem="8bM-sy-F30" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="IEy-x8-FyO"/>
                     <constraint firstAttribute="bottom" secondItem="Ke2-oU-coN" secondAttribute="bottom" id="Z4c-hc-2g3"/>
-                    <constraint firstAttribute="trailing" secondItem="ej7-MS-rzJ" secondAttribute="trailing" id="ZAN-p6-fhG"/>
+                    <constraint firstAttribute="trailing" secondItem="ej7-MS-rzJ" secondAttribute="trailing" constant="15" id="ZAN-p6-fhG"/>
                     <constraint firstItem="ej7-MS-rzJ" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Zzj-x5-kg2"/>
                     <constraint firstItem="8bM-sy-F30" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="jP2-zh-ccZ"/>
                     <constraint firstAttribute="trailing" secondItem="knZ-vq-CyJ" secondAttribute="trailing" constant="16" id="ng2-YB-190"/>

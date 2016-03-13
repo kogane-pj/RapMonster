@@ -19,6 +19,7 @@ class RapListTableViewCell: UITableViewCell {
     @IBOutlet weak var startTime: UILabel!
     @IBOutlet weak var endTime: UILabel!
     @IBOutlet weak var playSlider: UISlider!
+    @IBOutlet weak var separatorView: UIView!
     
     var delegate:RapListTableViewCellDelegate! = nil
     
@@ -35,10 +36,11 @@ class RapListTableViewCell: UITableViewCell {
     }
     
     func openCellIfNeeded(isOpen:Bool) {
-        self.startTime.hidden   = !isOpen
-        self.endTime.hidden     = !isOpen
-        self.playButton.hidden  = !isOpen
-        self.playSlider.hidden  = !isOpen
+        self.startTime.hidden       = !isOpen
+        self.endTime.hidden         = !isOpen
+        self.playButton.hidden      = !isOpen
+        self.playSlider.hidden      = !isOpen
+        self.separatorView.hidden   = isOpen
         
         self.rapTitle.textColor  = setTextColor(isOpen)
         self.startTime.textColor = setTextColor(isOpen)
