@@ -55,6 +55,8 @@ AdobeUXImageEditorViewControllerDelegate
     }
    
     private func selectedPhotoAlert() {
+        weak var vc = self
+        
         let actionSheet:UIAlertController = UIAlertController(title:"",
             message: "アイコンに使用する画像を選択してください",
             preferredStyle: UIAlertControllerStyle.ActionSheet)
@@ -69,8 +71,7 @@ AdobeUXImageEditorViewControllerDelegate
             style: UIAlertActionStyle.Default,
             handler:{
                 (action:UIAlertAction!) -> Void in
-                //TODO: 循環参照のfix
-                PictureUtil.pickImageFromCamera(self, vc: self)
+                PictureUtil.pickImageFromCamera(vc!, vc: vc!)
         })
         
         let destructiveAction:UIAlertAction = UIAlertAction(title: "ライブラリから選択",
@@ -78,7 +79,7 @@ AdobeUXImageEditorViewControllerDelegate
             handler:{
                 (action:UIAlertAction!) -> Void in
                 //TODO: 循環参照のfix
-                PictureUtil.pickImageFromLibrary(self, vc: self)
+                PictureUtil.pickImageFromLibrary(vc!, vc: vc!)
         })
         
         actionSheet.addAction(cancelAction)
@@ -182,10 +183,11 @@ AdobeUXImageEditorViewControllerDelegate
             
             let adobeViewCtr = AdobeUXImageEditorViewController(image: image)
             adobeViewCtr.delegate = self
-            
+           
+            weak var vc = self
             picker.dismissViewControllerAnimated(true, completion:{
                 // TODO:循環参照を解消する
-                self.presentViewController(adobeViewCtr, animated: true, completion: nil)
+                vc!.presentViewController(adobeViewCtr, animated: true, completion: nil)
             });
             return
         }
