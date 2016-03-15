@@ -14,6 +14,8 @@ class TimeLineManager: NSObject {
     
     static let sharedInstance = TimeLineManager()
     
+    var data: [RecordRap] = []
+    
     // TODO: ソートして配列に持たせて更新通知送る
     func findRecordRap() {
         let q = NCMBQuery(className: CLASS_NAME)
