@@ -10,7 +10,8 @@ import Foundation
 import NCMB
 
 protocol TimeLineManagerDelegate: class {
-    func didLoadData(raps: [RecordRap])
+    func didLoadData()
+    //func didLoadData(raps: [RecordRap])
 }
 
 class TimeLineManager: NSObject {
@@ -32,12 +33,41 @@ class TimeLineManager: NSObject {
             (array, error) in
             if let raps = array as? [RecordRap] {
                 self._data = raps
-                self.delegate?.didLoadData(raps)
+                self.delegate?.didLoadData()
+                //self.delegate?.didLoadData(raps)
             }
         })
     }
     
     func getRaps() -> [RecordRap] {
         return self._data
+    }
+}
+
+class TimeLineDataSource: NSObject, UITableViewDataSource, TimeLineManagerDelegate {
+    private let CELL_NAME = ""
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    override init() {
+        super.init()
+        TimeLineManager.sharedInstance.delegate = self
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return TimeLineManager.sharedInstance.getRaps().count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCellWithIdentifier(CELL_NAME) {
+            return cell
+        }
+        
+        return UITableViewCell()
+    }
+    
+    // MARK: - TimeLineManagerDelegate
+    func didLoadData() {
+        self.tableView.reloadData()
     }
 }
