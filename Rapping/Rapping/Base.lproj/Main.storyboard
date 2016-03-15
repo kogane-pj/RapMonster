@@ -5,6 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="SF-UI-Text-Regular.otf">
+            <string>SFUIText-Regular</string>
+            <string>SFUIText-Regular</string>
+        </mutableArray>
         <mutableArray key="SF-UI-Text-Semibold.otf">
             <string>SFUIText-Semibold</string>
         </mutableArray>
@@ -196,28 +200,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="再生時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbZ-hx-uQg">
-                                <rect key="frame" x="266" y="307" width="68" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="7wh-de-mVA"/>
-                                    <constraint firstAttribute="height" constant="21" id="Fe9-Io-NeR"/>
-                                    <constraint firstAttribute="width" constant="68" id="Kto-xy-ATO"/>
-                                    <constraint firstAttribute="width" constant="68" id="ccv-YX-0Z8"/>
-                                    <constraint firstAttribute="height" constant="21" id="cru-oz-8ZH"/>
-                                    <constraint firstAttribute="width" constant="68" id="dk4-ZD-DUa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="7wh-de-mVA"/>
-                                        <exclude reference="Kto-xy-ATO"/>
-                                        <exclude reference="cru-oz-8ZH"/>
-                                        <exclude reference="dk4-ZD-DUa"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfN-d8-xqQ" customClass="GADBannerView">
                                 <rect key="frame" x="140" y="550" width="320" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -276,10 +258,39 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIPHOP135" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBL-1a-5bJ">
-                                <rect key="frame" x="36" y="69" width="542" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="36" y="69" width="542" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="7XG-ey-yfL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="13"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbZ-hx-uQg">
+                                <rect key="frame" x="246" y="281" width="108" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="18h-xf-2Zn"/>
+                                    <constraint firstAttribute="width" constant="108" id="6HH-Cp-Jov"/>
+                                    <constraint firstAttribute="height" constant="21" id="7wh-de-mVA"/>
+                                    <constraint firstAttribute="height" constant="21" id="Fe9-Io-NeR"/>
+                                    <constraint firstAttribute="width" constant="68" id="Kto-xy-ATO"/>
+                                    <constraint firstAttribute="width" constant="68" id="ccv-YX-0Z8"/>
+                                    <constraint firstAttribute="height" constant="21" id="cru-oz-8ZH"/>
+                                    <constraint firstAttribute="width" constant="68" id="dk4-ZD-DUa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7wh-de-mVA"/>
+                                        <exclude reference="Fe9-Io-NeR"/>
+                                        <exclude reference="Kto-xy-ATO"/>
+                                        <exclude reference="ccv-YX-0Z8"/>
+                                        <exclude reference="cru-oz-8ZH"/>
+                                        <exclude reference="dk4-ZD-DUa"/>
+                                    </mask>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -304,15 +315,21 @@
                             <constraint firstItem="t7D-ls-qFv" firstAttribute="centerX" secondItem="zCX-Me-m1P" secondAttribute="centerX" id="kJL-M0-9Q7"/>
                             <constraint firstItem="g5C-NK-ePj" firstAttribute="top" secondItem="tBL-1a-5bJ" secondAttribute="bottom" constant="57.5" id="l0H-ux-L5y"/>
                             <constraint firstItem="tBL-1a-5bJ" firstAttribute="leading" secondItem="tbz-VH-4IW" secondAttribute="trailing" constant="8" id="mxX-4v-6JH"/>
+                            <constraint firstItem="g5C-NK-ePj" firstAttribute="top" secondItem="8cn-5Q-WG2" secondAttribute="bottom" constant="83" id="neM-kf-tgb"/>
                             <constraint firstItem="wbZ-hx-uQg" firstAttribute="centerX" secondItem="zCX-Me-m1P" secondAttribute="centerX" id="qqp-QR-z5h"/>
                             <constraint firstItem="t7D-ls-qFv" firstAttribute="centerX" secondItem="zCX-Me-m1P" secondAttribute="centerX" id="tbq-vM-219"/>
+                            <constraint firstItem="wbZ-hx-uQg" firstAttribute="top" secondItem="8cn-5Q-WG2" secondAttribute="bottom" constant="217" id="x22-6Z-XQu"/>
                             <constraint firstItem="t7D-ls-qFv" firstAttribute="centerY" secondItem="zCX-Me-m1P" secondAttribute="centerY" id="yV7-xz-0fp"/>
+                            <constraint firstItem="wbZ-hx-uQg" firstAttribute="top" secondItem="zCX-Me-m1P" secondAttribute="top" constant="217" id="ydh-6B-GRJ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="l0H-ux-L5y"/>
                                 <exclude reference="OYz-Yz-ywc"/>
                                 <exclude reference="QjE-Wk-cAX"/>
                                 <exclude reference="g3V-hJ-9uh"/>
+                                <exclude reference="hWM-AE-fa2"/>
+                                <exclude reference="ydh-6B-GRJ"/>
                                 <exclude reference="kJL-M0-9Q7"/>
                                 <exclude reference="yV7-xz-0fp"/>
                                 <exclude reference="239-HN-qUF"/>
@@ -320,7 +337,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="BEAT" id="6Jf-fH-JP4">
+                    <navigationItem key="navigationItem" title="REC" id="6Jf-fH-JP4">
                         <barButtonItem key="rightBarButtonItem" image="exitButton" id="d5n-g7-DBT">
                             <connections>
                                 <action selector="didTapExitButton:" destination="5op-tc-kbf" id="BcD-Gg-IpE"/>
@@ -329,6 +346,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="audioPlot" destination="g5C-NK-ePj" id="92s-ut-nhQ"/>
+                        <outlet property="beatTitle" destination="tBL-1a-5bJ" id="ADn-Ic-DU7"/>
                         <outlet property="currentTime" destination="wbZ-hx-uQg" id="cZp-tc-x1w"/>
                         <outlet property="recodeButton" destination="t7D-ls-qFv" id="40Z-3g-dsB"/>
                     </connections>

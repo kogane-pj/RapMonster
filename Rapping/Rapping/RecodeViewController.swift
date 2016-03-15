@@ -14,6 +14,14 @@ class RecodeViewController: UIViewController, EZMicrophoneDelegate
 {
     @IBOutlet weak var currentTime: UILabel!
     @IBOutlet weak var recodeButton: UIButton!
+    @IBOutlet weak var beatTitle: UILabel! {
+        didSet {
+            beatTitle.text = beat.name
+        }
+    }
+    
+    var beat:Beat! = nil
+    
     @IBOutlet weak var audioPlot: EZAudioPlot! {
         didSet {
             audioPlot.plotType = EZPlotType.Buffer
@@ -56,11 +64,11 @@ class RecodeViewController: UIViewController, EZMicrophoneDelegate
     }
     
     func setupSeek() {
-        self.currentTime.text = String(AudioManager.sharedInstance.getCurrentTime())
+        self.currentTime.text = AudioManager.sharedInstance.getCurretTimeForString()
     }
     
     func updateSeekTime() {
-        self.currentTime.text = String(AudioManager.sharedInstance.getCurrentTime())
+        self.currentTime.text = AudioManager.sharedInstance.getCurretTimeForString()
     }
     
     
@@ -78,8 +86,7 @@ class RecodeViewController: UIViewController, EZMicrophoneDelegate
         }
         
         self.recodeButton.setImage(UIImage(named: "recode_stop"), forState: .Normal)
-        let randomIndex = Int(arc4random()) % BeatManager.sharedInstance.allBeat.count
-        AudioManager.sharedInstance.startRecord(randomIndex)
+        AudioManager.sharedInstance.startRecord(self.beat)
         
         _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateSeekTime"), userInfo: nil, repeats: true)
     }

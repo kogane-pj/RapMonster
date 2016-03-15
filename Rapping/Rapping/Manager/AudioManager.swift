@@ -97,21 +97,12 @@ class AudioManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
         return urls[0]
     }
     
-    private func playBeat() {
-        playBeat(0)
+    private func playBeat(beat: Beat) {
+        playWithSetupPlayer(beat.path)
     }
     
-    private func playBeat(index: Int) {
-        playWithSetupPlayer(BeatManager.sharedInstance.allBeat[index].path)
-    }
-    
-    func startRecord(beatIndex: Int) {
-        playBeat(beatIndex)
-        self.audioRecorder.record()
-    }
-    
-    func startRecord() {
-        playBeat()
+    func startRecord(beat: Beat) {
+        playBeat(beat)
         self.audioRecorder.record()
     }
     

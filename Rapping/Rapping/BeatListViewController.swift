@@ -255,6 +255,20 @@ class BeatListViewController: UIViewController,
     func adView(bannerView: GADBannerView!, didFailToReceiveAdWithError error: GADRequestError!) {
         print(error)
     }
-   
+  
+    //MARK: Segue
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        guard let _identifier = segue.identifier else {
+            return
+        }
+        
+        //TODO:UIUtilまとめたい
+        //TODO:他のVCも立ち上げる必要があればここで分岐処理
+        let naviCon = segue.destinationViewController as! UINavigationController
+        let recodeVC = naviCon.viewControllers.first as! RecodeViewController
+       
+        recodeVC.beat = BeatManager.sharedInstance.allBeat[self.selectedIndexPath!.row]
+    }
 }
 
