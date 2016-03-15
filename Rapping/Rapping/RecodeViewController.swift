@@ -71,17 +71,17 @@ class RecodeViewController: UIViewController, EZMicrophoneDelegate
     
     @IBAction func didTapRecodeButton(sender: AnyObject) {
         if AudioManager.sharedInstance.isRecording() == true {
+            self.recodeButton.setImage(UIImage(named: "rec_button"), forState: .Normal)
             AudioManager.sharedInstance.stopRecord()
-            self.recodeButton.setTitle("録音", forState: .Normal)
             showSaveAlert()
             return
         }
+        
+        self.recodeButton.setImage(UIImage(named: "recode_stop"), forState: .Normal)
         let randomIndex = Int(arc4random()) % BeatManager.sharedInstance.allBeat.count
         AudioManager.sharedInstance.startRecord(randomIndex)
         
         _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateSeekTime"), userInfo: nil, repeats: true)
-        
-        self.recodeButton.setTitle("停止", forState: .Normal)
     }
     
     private func showSaveAlert() {
