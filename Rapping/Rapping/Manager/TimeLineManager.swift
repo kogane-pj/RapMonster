@@ -9,19 +9,35 @@
 import Foundation
 import NCMB
 
+protocol TimeLineManagerDelegate: class {
+    func didLoadData(raps: [RecordRap])
+}
+
 class TimeLineManager: NSObject {
     private let CLASS_NAME = "Rap"
-    
+    private var _data: [RecordRap] = []
+
     static let sharedInstance = TimeLineManager()
+    weak var delegate: TimeLineManagerDelegate?
     
-    var data: [RecordRap] = []
+    override init() {
+        super.init()
+        reloadRapsData()
+    }
     
-    // TODO: ソートして配列に持たせて更新通知送る
-    func findRecordRap() {
+    func reloadRapsData() {
+        self._data = []
         let q = NCMBQuery(className: CLASS_NAME)
         q.findObjectsInBackgroundWithBlock({
             (array, error) in
-            print(array)
+            if let raps = array as? [RecordRap] {
+                self._data = raps
+                self.delegate?.didLoadData(raps)
+            }
         })
+    }
+    
+    func getRaps() -> [RecordRap] {
+        return self._data
     }
 }
