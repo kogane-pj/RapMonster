@@ -98,9 +98,10 @@ class RecodeViewController: UIViewController, EZMicrophoneDelegate
         alertView.addButton("No", backgroundColor: Color.RapOrangeColor, action: {
             AudioManager.sharedInstance.deleteRecordFile()
         })
-        
+       
+        weak var _self = self
         alertView.addButton("Yes", backgroundColor: Color.RapOrangeColor, action: {
-            AudioManager.sharedInstance.saveRecordFile()
+            AudioManager.sharedInstance.saveRecordFile(_self!.beat)
         })
         // Show
         alertView.show()

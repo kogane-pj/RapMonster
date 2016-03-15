@@ -13,11 +13,16 @@ import NCMB
 class RecordRapManager: NSObject {
     static let sharedInstance = RecordRapManager()
     
-    func save(fileName: String, url: NSURL) {
+    func save(fileName: String, url: NSURL, beat:Beat) {
         if let _url = FileManager.sharedInstance.uploadFile(fileName, url: url, defaultUrl: nil) {
             let rap = RecordRap()
-            rap.url = _url.description
+            
             rap.rapperId = UserManager.sharedInstance.currentUser().id
+            rap.title = "hogehoge"
+            rap.url = _url.description
+            rap.beatTitle = beat.name
+            rap.beatCreaterName = beat.artist
+            
             var error: NSError?
             rap.save(&error)
         }
