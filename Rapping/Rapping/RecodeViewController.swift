@@ -53,22 +53,22 @@ class RecodeViewController: UIViewController, EZMicrophoneDelegate
         AudioManager.sharedInstance.stop()
     }
     
-    // MARK: - privae method
+    // MARK: - private method
     
     private func showSaveAlert() {
         AudioManager.sharedInstance.stopRecord()
         
         let alertView = UNAlertView(title: "録音終了", message: "保存しますか？")
-        alertView.addButton("No", backgroundColor: Color.RapOrangeColor, action: {
+        alertView.addButton("撮り直す", backgroundColor: Color.RapOrangeColor, action: {
             AudioManager.sharedInstance.deleteRecordFile()
+            AudioManager.sharedInstance.resetCurrentTime()
         })
        
         weak var _self = self
-        alertView.addButton("Yes", backgroundColor: Color.RapOrangeColor, action: {
+        alertView.addButton("保存する", backgroundColor: Color.RapOrangeColor, action: {
             AudioManager.sharedInstance.saveRecordFile(_self!.beat)
         })
         
-        // Show
         alertView.show()
     }
     

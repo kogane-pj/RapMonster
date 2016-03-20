@@ -154,6 +154,10 @@ class AudioManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
         self.audioPlayer.currentTime = value
     }
     
+    func resetCurrentTime() {
+        self.audioPlayer.currentTime = 0
+    }
+    
     func saveRecordFile(beat:Beat) {
 //        FileManager.sharedInstance.uploadFile(NSUUID().UUIDString + ".caf",
 //            url: self.audioRecorder.url)
