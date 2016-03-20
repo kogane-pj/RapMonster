@@ -32,45 +32,10 @@ AdobeUXImageEditorViewControllerDelegate
         // TODO:Userクラスに保存
     }
    
-    private func selectedPhotoAlert() {
-        weak var vc = self
-        
-        let actionSheet:UIAlertController = UIAlertController(title:"",
-            message: "アイコンに使用する画像を選択してください",
-            preferredStyle: UIAlertControllerStyle.ActionSheet)
-        
-        let cancelAction:UIAlertAction = UIAlertAction(title: "Cancel",
-            style: UIAlertActionStyle.Cancel,
-            handler:{
-                (action:UIAlertAction!) -> Void in
-        })
-        
-        let defaultAction:UIAlertAction = UIAlertAction(title: "写真を撮る",
-            style: UIAlertActionStyle.Default,
-            handler:{
-                (action:UIAlertAction!) -> Void in
-                PictureUtil.pickImageFromCamera(vc!, vc: vc!)
-        })
-        
-        let destructiveAction:UIAlertAction = UIAlertAction(title: "ライブラリから選択",
-            style: UIAlertActionStyle.Default,
-            handler:{
-                (action:UIAlertAction!) -> Void in
-                //TODO: 循環参照のfix
-                PictureUtil.pickImageFromLibrary(vc!, vc: vc!)
-        })
-        
-        actionSheet.addAction(cancelAction)
-        actionSheet.addAction(defaultAction)
-        actionSheet.addAction(destructiveAction)
-        
-        presentViewController(actionSheet, animated: true, completion: nil)
-    }
-    
     //MARK: didTap delegate
     
     @IBAction func didTapIconButton(sender: AnyObject) {
-        selectedPhotoAlert()
+        PictureUtil.showSelectedPhotoAlert(self, vc: self)
     }
     
     @IBAction func didTapSettingButton(sender: UIBarButtonItem) {
