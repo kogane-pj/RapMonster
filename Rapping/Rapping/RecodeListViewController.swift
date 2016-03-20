@@ -7,46 +7,19 @@
 //
 
 import UIKit
-import AVFoundation
 
 class RecodeListViewController: UIViewController,
-    AVAudioRecorderDelegate,
-    AVAudioPlayerDelegate,
     UITableViewDataSource,
     UITableViewDelegate
 {
     @IBOutlet weak var recodeListTableView: UITableView!
     
-    var audioPlayer: AVAudioPlayer!
-    var audioSession: AVAudioSession!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.recodeListTableView.delegate = self;
-        self.recodeListTableView.dataSource = self;
-        
-        self.setupAudioSession();
+        AudioManager.sharedInstance.start()
     }
-    
-    func setupAudioSession() {
-        self.audioSession = AVAudioSession.sharedInstance()
         
-        do {
-            try self.audioSession.setCategory(AVAudioSessionCategoryPlayback)
-        } catch { }
-        
-        do {
-            try self.audioSession.setActive(true)
-        } catch { }
-    }
-    
     //MARK: UITableViewDataSource
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return RapManager.sharedInstance.allRap.count
     }
@@ -62,16 +35,6 @@ class RecodeListViewController: UIViewController,
     
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
         let path = RapManager.sharedInstance.allRap[indexPath.row].path
-        
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOfURL: path)
-        } catch {
-            print("error")
-        }
-        
-        self.audioPlayer.delegate = self
-        self.audioPlayer.volume = 1.0
-        self.audioPlayer.prepareToPlay()
-        self.audioPlayer.play()
+        AudioManager.sharedInstance.playWithSetupPlayer(path)
     }
 }

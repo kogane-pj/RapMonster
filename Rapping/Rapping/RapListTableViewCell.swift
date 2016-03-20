@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol RapListTableViewCellDelegate {
+protocol RapListTableViewCellDelegate: class {
     func didTapPlayButton()
     func didTapShareButton()
 }
@@ -22,7 +22,7 @@ class RapListTableViewCell: UITableViewCell {
     @IBOutlet weak var playSlider: UISlider!
     @IBOutlet weak var separatorView: UIView!
     
-    var delegate:RapListTableViewCellDelegate! = nil
+    weak var delegate:RapListTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -69,7 +69,7 @@ class RapListTableViewCell: UITableViewCell {
     @IBAction func didTapPlayButton(sender: AnyObject) {
         _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateSeekTime"), userInfo: nil, repeats: true)
 
-        self.delegate.didTapPlayButton()
+        self.delegate?.didTapPlayButton()
     }
     
     func updateSeekTime() {
@@ -83,6 +83,6 @@ class RapListTableViewCell: UITableViewCell {
     }
     
     @IBAction func didTapShareButton(sender: AnyObject) {
-       self.delegate.didTapShareButton()
+       self.delegate?.didTapShareButton()
     }
 }
