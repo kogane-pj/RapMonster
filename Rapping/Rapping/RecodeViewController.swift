@@ -38,13 +38,14 @@ class RecodeViewController: UIViewController, EZMicrophoneDelegate
     }()
     
     // MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         AudioManager.sharedInstance.start()
         self.mic.delegate = self
         
-        self.setupSeek()
+        self.updateSeekTime()
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -52,29 +53,27 @@ class RecodeViewController: UIViewController, EZMicrophoneDelegate
         AudioManager.sharedInstance.stop()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+    // MARK: - privae method
     
-    func microphone(microphone: EZMicrophone!, hasAudioReceived buffer: UnsafeMutablePointer<UnsafeMutablePointer<Float>>, withBufferSize bufferSize: UInt32, withNumberOfChannels numberOfChannels: UInt32) {
+    private func showSaveAlert() {
+        AudioManager.sharedInstance.stopRecord()
         
-        dispatch_async(dispatch_get_main_queue(), {() -> Void in
-            self.audioPlot.updateBuffer(buffer[0], withBufferSize: bufferSize)
+        let alertView = UNAlertView(title: "録音終了", message: "保存しますか？")
+        alertView.addButton("No", backgroundColor: Color.RapOrangeColor, action: {
+            AudioManager.sharedInstance.deleteRecordFile()
         })
+       
+        weak var _self = self
+        alertView.addButton("Yes", backgroundColor: Color.RapOrangeColor, action: {
+            AudioManager.sharedInstance.saveRecordFile(_self!.beat)
+        })
+        
+        // Show
+        alertView.show()
     }
     
-    func setupSeek() {
+    @objc private func updateSeekTime() {
         self.currentTime.text = AudioManager.sharedInstance.getCurretTimeForString()
-    }
-    
-    func updateSeekTime() {
-        self.currentTime.text = AudioManager.sharedInstance.getCurretTimeForString()
-    }
-    
-    
-    // MARK: - IBAction
-    @IBAction func sliderMove(sender: AnyObject) {
-        self.updateSeekTime()
     }
     
     @IBAction func didTapRecodeButton(sender: AnyObject) {
@@ -91,27 +90,16 @@ class RecodeViewController: UIViewController, EZMicrophoneDelegate
         _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateSeekTime"), userInfo: nil, repeats: true)
     }
     
-    private func showSaveAlert() {
-        AudioManager.sharedInstance.stopRecord()
-        
-        let alertView = UNAlertView(title: "録音終了", message: "保存しますか？")
-        alertView.addButton("No", backgroundColor: Color.RapOrangeColor, action: {
-            AudioManager.sharedInstance.deleteRecordFile()
-        })
-       
-        weak var _self = self
-        alertView.addButton("Yes", backgroundColor: Color.RapOrangeColor, action: {
-            AudioManager.sharedInstance.saveRecordFile(_self!.beat)
-        })
-        // Show
-        alertView.show()
-    }
-    
-    @IBAction func didTapRecodePlayBackButton(sender: AnyObject) {
-        AudioManager.sharedInstance.playBackRecord()
-    }
-    
     @IBAction func didTapExitButton(sender: AnyObject) {
         self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // MARK: - Audio mic input delegate
+
+    func microphone(microphone: EZMicrophone!, hasAudioReceived buffer: UnsafeMutablePointer<UnsafeMutablePointer<Float>>, withBufferSize bufferSize: UInt32, withNumberOfChannels numberOfChannels: UInt32) {
+        
+        dispatch_async(dispatch_get_main_queue(), {() -> Void in
+            self.audioPlot.updateBuffer(buffer[0], withBufferSize: bufferSize)
+        })
     }
 }
