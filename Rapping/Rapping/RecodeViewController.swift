@@ -61,7 +61,6 @@ class RecodeViewController: UIViewController, EZMicrophoneDelegate
         let alertView = UNAlertView(title: "録音終了", message: "保存しますか？")
         alertView.addButton("撮り直す", backgroundColor: Color.RapOrangeColor, action: {
             AudioManager.sharedInstance.deleteRecordFile()
-            AudioManager.sharedInstance.resetCurrentTime()
         })
        
         weak var _self = self

@@ -215,6 +215,7 @@ extension AudioManager {
         if isRecording() == true {
             self.audioRecorder.stop()
             self.audioPlayer.stop()
+            self.audioPlayer = nil
         }
     }
     
