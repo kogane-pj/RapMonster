@@ -35,7 +35,7 @@ AdobeUXImageEditorViewControllerDelegate
     //MARK: didTap delegate
     
     @IBAction func didTapIconButton(sender: AnyObject) {
-        PictureUtil.showSelectedPhotoAlert(self, vc: self)
+        PictureUtil.showSelectedPhotoAlert(self)
     }
     
     @IBAction func didTapSettingButton(sender: UIBarButtonItem) {

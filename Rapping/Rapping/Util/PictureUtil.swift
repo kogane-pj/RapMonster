@@ -1,6 +1,6 @@
 class PictureUtil: NSObject {
    
-    class func showSelectedPhotoAlert(delegate:protocol<UIImagePickerControllerDelegate,UINavigationControllerDelegate>,vc:UIViewController) {
+    class func showSelectedPhotoAlert(vc:MyPageViewController) {
        
         weak var _vc = vc
         
@@ -18,14 +18,14 @@ class PictureUtil: NSObject {
             style: UIAlertActionStyle.Default,
             handler:{
                 (action:UIAlertAction!) -> Void in
-                PictureUtil.pickImageFromCamera(delegate, vc:_vc!)
+                PictureUtil.pickImageFromCamera(_vc!)
         })
         
         let destructiveAction:UIAlertAction = UIAlertAction(title: "ライブラリから選択",
             style: UIAlertActionStyle.Default,
             handler:{
                 (action:UIAlertAction!) -> Void in
-                PictureUtil.pickImageFromLibrary(delegate, vc:_vc!)
+                PictureUtil.pickImageFromLibrary(_vc!)
         })
         
         actionSheet.addAction(cancelAction)
@@ -35,21 +35,21 @@ class PictureUtil: NSObject {
         _vc!.presentViewController(actionSheet, animated: true, completion: nil)
     }
     
-    class func pickImageFromCamera(delegate:protocol<UIImagePickerControllerDelegate,UINavigationControllerDelegate>,vc:UIViewController) {
+    class func pickImageFromCamera(vc:MyPageViewController) {
         
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
             let controller = UIImagePickerController()
-            controller.delegate = delegate
+            controller.delegate = vc
             controller.sourceType = UIImagePickerControllerSourceType.Camera
             vc.presentViewController(controller, animated: true, completion: nil)
         }
     }
     
-    class func pickImageFromLibrary(delegate:protocol<UIImagePickerControllerDelegate,UINavigationControllerDelegate>,vc:UIViewController) {
+    class func pickImageFromLibrary(vc:MyPageViewController) {
         
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
             let controller = UIImagePickerController()
-            controller.delegate = delegate
+            controller.delegate = vc
             controller.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
             vc.presentViewController(controller, animated: true, completion: nil)
         }
