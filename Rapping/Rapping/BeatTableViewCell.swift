@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol BeatTableViewCellDelegate {
+protocol BeatTableViewCellDelegate: class {
     func didTapSelectButton()
 }
 
@@ -19,7 +19,7 @@ class BeatTableViewCell: UITableViewCell {
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var practiceButton: UIButton!
     
-    var delegate:BeatTableViewCellDelegate! = nil
+    weak var delegate: BeatTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,6 +32,6 @@ class BeatTableViewCell: UITableViewCell {
     }
     
     @IBAction func didTapSelectButton(sender: AnyObject) {
-        self.delegate.didTapSelectButton()
+        self.delegate?.didTapSelectButton()
     }
 }
